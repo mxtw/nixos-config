@@ -27,6 +27,20 @@
             unstablePkgs = import nixpkgs-unstable { inherit system; };
           };
         };
+        nixpad = lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./hosts/nixpad/configuration.nix
+            ./packages/cli/default.nix
+            ./packages/fonts/default.nix
+            ./packages/terminal/default.nix
+            ./packages/browsers/default.nix
+          ];
+
+          specialArgs = {
+            unstablePkgs = import nixpkgs-unstable { inherit system; };
+          };
+        };
       };
     };
 }
