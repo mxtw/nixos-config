@@ -1,4 +1,4 @@
-{ config, pkgs, unstablePkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   environment.systemPackages = [
@@ -10,6 +10,6 @@
     pkgs.nodejs_22
     pkgs.tmux
 
-    unstablePkgs.neovim
+   # unstablePkgs.neovim
   ];
 }

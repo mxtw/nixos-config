@@ -30,32 +30,19 @@
     LC_TIME = "de_DE.UTF-8";
   };
 
-  services.xserver = {
-    enable = true;
+  services = {
 
-    displayManager = {
-      sddm.enable = true;
-      defaultSession = "none+awesome";
-    };
 
-    windowManager.awesome = {
+    openssh = {
       enable = true;
-      luaModules = with pkgs.luaPackages; [
-        luarocks
-        luadbi-mysql
-      ];
-    };
-  };
-
-  services.openssh = {
-    enable = true;
-    ports = [ 22 ];
-    settings = {
-      PasswordAuthentication = true;
-      AllowUsers = null;
-      UseDns = true;
-      X11Forwarding = false;
-      PermitRootLogin = "prohibit-password";
+      ports = [ 22 ];
+      settings = {
+        PasswordAuthentication = true;
+        AllowUsers = null;
+        UseDns = true;
+        X11Forwarding = false;
+        PermitRootLogin = "prohibit-password";
+      };
     };
   };
 
