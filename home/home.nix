@@ -20,6 +20,8 @@
     enable = true;
   };
 
+  programs.fuzzel.enable = true;
+
   wayland.windowManager.river = {
     enable = true;
     systemd.enable = true;
@@ -27,16 +29,17 @@
       rivertile -view-padding 2 -outer-padding 0 &
     '';
     settings = {
+
+      default-layout = "rivertile";
       spawn = [
         "yambar"
-        "foot"
       ];
 
       map = {
         normal = {
           "Super Return" = "spawn foot";
-          "Super+Shift Return" = "librewolf";
-          "Super P" = "spawn fuzzel -I";
+          "Super+Shift Return" = "spawn librewolf";
+          "Super P" = "spawn 'fuzzel -I'";
 
           "Super+Shift C" = "close";
           "Super+Shift Q" = "exit";
