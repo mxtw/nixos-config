@@ -21,15 +21,16 @@
             ./hosts/configuration.nix
             (./. + "/hosts/${hostname}/hardware-configuration.nix")
 
-	    home-manager.nixosModules.home-manager {
-		home-manager = {
-		  useGlobalPkgs = true;
-		  useUserPackages = true;
-		  users.max = {...}: {
-		    	imports = [ ./home/home.nix ];
-		  };
-		};
-	    }
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.max = { ... }: {
+                  imports = [ ./home ];
+                };
+              };
+            }
 
             ./packages/cli/default.nix
             ./packages/fonts/default.nix
@@ -37,7 +38,7 @@
             ./packages/browsers/default.nix
           ];
           specialArgs = {
-	    unstable = import nixpkgs-unstable { inherit system; };
+            unstable = import nixpkgs-unstable { inherit system; };
             inherit inputs;
           };
         };
