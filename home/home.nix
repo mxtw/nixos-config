@@ -1,5 +1,16 @@
 { config, pkgs, ... }:
 
+let
+  tagValues = [ 4294967296 1 2 4 8 16 32 64 128 256 ];
+
+  # Function to generate key bindings for tags
+  keyBindingsForTags = { keyPrefix, command }:
+    map
+      (i: {
+        name = "${keyPrefix} ${toString i}";
+        value = "${command} ${toString (builtins.elemAt tagValues (i))}";
+      }) [ 0 1 2 3 4 5 6 7 8 9 ];
+in
 {
   home.username = "max";
   home.homeDirectory = "/home/max";
@@ -58,21 +69,28 @@
       ];
 
       map = {
-        normal = {
-          "Super Return" = "spawn foot";
-          "Super+Shift Return" = "spawn librewolf";
-          "Super P" = "spawn 'fuzzel -I'";
+        normal = builtins.listToAttrs
+          (
+            [
+              { name = "Super Return"; value = "spawn foot"; }
+              { name = "Super+Shift Return"; value = "spawn librewolf"; }
+              { name = "Super P"; value = "spawn 'fuzzel -I'"; }
 
-          "Super+Shift C" = "close";
-          "Super+Shift Q" = "exit";
+              { name = "Super+Shift C"; value = "close"; }
+              { name = "Super+Shift Q"; value = "exit"; }
 
-          "Super Down" = "focus-view next";
-          "Super Up" = "focus-view previous";
-          "Super+Shift Down" = "swap next";
-          "Super+Shift Up" = "swap previous";
-        };
+              { name = "Super Down"; value = "focus-view next"; }
+              { name = "Super Up"; value = "focus-view previous"; }
+              { name = "Super+Shift Down"; value = "swap next"; }
+              { name = "Super+Shift Up"; value = "swap previous"; }
+            ] ++
+            # Other tag-related keybindings (toggle-focused, set-view, etc.)
+            (keyBindingsForTags { keyPrefix = "Super"; command = "set-focused-tags"; }) ++
+            (keyBindingsForTags { keyPrefix = "Super+Control"; command = "toggle-focused-tags"; }) ++
+            (keyBindingsForTags { keyPrefix = "Super+Shift"; command = "set-view-tags"; }) ++
+            (keyBindingsForTags { keyPrefix = "Super+Shift+Control"; command = "toggle-view-tags"; })
+          );
       };
-
     };
   };
 
