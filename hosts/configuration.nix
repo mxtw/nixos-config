@@ -31,7 +31,10 @@
   };
 
   services = {
-
+    displayManager.sddm = {
+      enable = true;
+      wayland.enable = true;
+    };
 
     openssh = {
       enable = true;
