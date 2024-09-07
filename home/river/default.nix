@@ -12,7 +12,7 @@ in
 {
   wayland.windowManager.river = {
     enable = true;
-    systemd.enable = true;
+    systemd.enable = false;
     extraConfig = ''
       rivertile -view-padding 2 -outer-padding 0 &
     '';
@@ -22,6 +22,9 @@ in
       spawn = [
         "yambar"
       ];
+
+      # TODO: only set this on laptop keyboard
+      keyboard-layout = "-options ctrl:swapcaps -variant colemak_dh us";
 
       map = {
         normal = builtins.listToAttrs
