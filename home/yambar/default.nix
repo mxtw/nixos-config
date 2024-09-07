@@ -8,22 +8,22 @@
         location = "top";
         font = "hack nerd font";
         height = 20;
-      };
 
-      right = [
-        {
-          clock = {
-            time-format = "%H:%M";
-            date-format = "%Y-%m-%d";
-            content = {
-              string = {
-                text = "{date} {time}";
-                foreground = "f38ba8ff";
+        right = [
+          {
+            clock = {
+              time-format = "%H:%M";
+              date-format = "%Y-%m-%d";
+              content = {
+                string = {
+                  text = "{date} {time}";
+                  foreground = "f38ba8ff";
+                };
               };
             };
-          };
-        }
-      ];
+          }
+        ];
+      };
     };
   };
 }
