@@ -1,6 +1,7 @@
-{ config, pkgs, ... }:
+{ inputs, ... }:
 
 {
+
   home.username = "max";
   home.homeDirectory = "/home/max";
 
@@ -9,19 +10,14 @@
   programs.home-manager.enable = true;
 
   imports = [
-    ./river
     ./foot
     ./fuzzel
+    ./nixvim
+    ./river
     ./yambar
   ];
 
   programs.lazygit.enable = true;
-
-  programs.neovim = {
-    enable = true;
-    vimAlias = true;
-    defaultEditor = true;
-  };
 
   programs.librewolf = {
     enable = true;
