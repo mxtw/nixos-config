@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 
 {
 
@@ -10,6 +10,7 @@
   programs.home-manager.enable = true;
 
   imports = [
+    ./git
     ./foot
     ./fuzzel
     ./nixvim
@@ -17,7 +18,11 @@
     ./yambar
   ];
 
-  programs.lazygit.enable = true;
+  gtk = {
+    enable = true;
+    theme.name = "Catppuccin Mocha Lavender";
+    theme.package = pkgs.catppuccin-gtk;
+  };
 
   programs.librewolf = {
     enable = true;
