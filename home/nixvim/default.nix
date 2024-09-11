@@ -2,15 +2,11 @@
 {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
+    ./plugins
   ];
 
   programs.nixvim = {
     enable = true;
-    plugins = {
-      telescope = {
-      	enable = true;
-      };
-    };
 
 
     colorschemes.catppuccin.enable = true;
@@ -18,12 +14,14 @@
 
     globals.mapleader = " ";
 
-    keymaps = [
-	{
-	  action = "<cmd>Telescope git_files<cr>";
-	  key = "<leader><leader>";
-	  options.silent = true;
-	}
-    ];
+    opts.number = true;
+    opts.relativenumber = true;
+    opts.tabstop = 4;
+    opts.softtabstop = 4;
+    opts.expandtab = true;
+    opts.backspace = "2";
+    opts.smartindent = true;
+    opts.shiftwidth = 4;
+    opts.wrap = false;
   };
 }
