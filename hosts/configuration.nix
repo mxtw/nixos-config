@@ -42,9 +42,10 @@
         PermitRootLogin = "prohibit-password";
       };
     };
-
-    seatd.enable = true;
   };
+
+  # needed for river to work
+  hardware.opengl.enable = true;
 
   # needed for gtk
   programs.dconf.enable = true;
