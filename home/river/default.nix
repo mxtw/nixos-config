@@ -26,6 +26,8 @@ in
       # TODO: only set this on laptop keyboard
       keyboard-layout = "-options ctrl:swapcaps -variant colemak_dh us";
 
+      set-repeat = "50 300";
+
       map = {
         normal = builtins.listToAttrs
           (
