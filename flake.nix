@@ -38,6 +38,7 @@
             ./packages/cli/default.nix
             ./packages/fonts/default.nix
             ./packages/terminal/default.nix
+            ./packages/secrets/default.nix
             ./packages/browsers/default.nix
           ];
           specialArgs = {
