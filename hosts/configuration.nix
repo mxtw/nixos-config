@@ -42,7 +42,12 @@
         PermitRootLogin = "prohibit-password";
       };
     };
+
+    seatd.enable = true;
   };
+
+  # needed for gtk
+  programs.dconf.enable = true;
 
   users.users.max = {
     isNormalUser = true;
