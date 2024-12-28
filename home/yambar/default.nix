@@ -81,6 +81,17 @@
 
         right = [
           {
+            battery = {
+              name = "BAT0";
+              content = {
+                string = {
+                  text = "bat {capacity}% ({estimate} rem)";
+                  foreground = "74c7ecff";
+                };
+              };
+            };
+          }
+          {
             clock = {
               time-format = "%H:%M";
               date-format = "%Y-%m-%d";
