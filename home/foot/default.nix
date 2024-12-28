@@ -1,3 +1,4 @@
+{ pkgs, ...}:
 {
   programs.foot = {
     enable = true;
@@ -6,7 +7,7 @@
         font = "Hack Nerd Font:size=18";
         pad = "5x5 center";
         font-size-adjustment = 2;
-        include = "/usr/share/foot/themes/catppuccin-mocha";
+        include = "${pkgs.foot.themes}/share/foot/themes/catppuccin-mocha";
       };
     };
   };
