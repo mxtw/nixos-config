@@ -5,6 +5,10 @@
     shellAliases = {
       ls = "eza";
       ll = "eza -lah";
+      vim = "nvim";
+    };
+    shellAbbrs = {
+      lg = "lazygit";
     };
   };
   programs.zoxide = {
