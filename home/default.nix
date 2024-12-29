@@ -21,8 +21,8 @@
 
   gtk = {
     enable = true;
-    theme.name = "Catppuccin Mocha Lavender";
-    theme.package = pkgs.catppuccin-gtk;
+    theme.name = "Catppuccin-GTK-Dark";
+    theme.package = pkgs.magnetic-catppuccin-gtk;
   };
 
   programs.librewolf = {
