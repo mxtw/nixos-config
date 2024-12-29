@@ -10,11 +10,12 @@
   programs.home-manager.enable = true;
 
   imports = [
-    ./git
     ./foot
     ./fuzzel
+    ./git
     ./nixvim
     ./river
+    ./shell
     ./yambar
   ];
 
