@@ -28,6 +28,12 @@ in
 
       set-repeat = "50 300";
 
+      background-color = "0x1e1e2e";
+      border-color-focused = "0xb4befe";
+      border-color-unfocused = "0x1e1e2ee6";
+      rule-add = "-app-id '*' ssd"; # server side decoration for every app
+
+
       map = {
         normal = builtins.listToAttrs
           (
