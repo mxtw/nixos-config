@@ -5,6 +5,7 @@
   ];
   programs.nixvim = {
     plugins.oil.enable = true;
+    plugins.web-devicons.enable = true;
 
     keymaps = [
       {
