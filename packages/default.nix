@@ -5,6 +5,5 @@
     ./files
     ./fonts
     ./secrets
-    ./terminal
   ];
 }
