@@ -26,6 +26,12 @@ in
       # TODO: only set this on laptop keyboard
       keyboard-layout = "-options ctrl:swapcaps -variant colemak_dh us";
 
+      input."pointer-2-7-*" = {
+        accel-profile = "adaptive";
+        natural-scroll = "enabled";
+        tap = "enabled";
+      };
+
       set-repeat = "50 300";
 
       background-color = "0x1e1e2e";
