@@ -1,6 +1,11 @@
 {
-  programs.nixvim.plugins.lazygit = {
-    enable = true;
+  programs.nixvim.plugins = {
+    lazygit.enable = true;
+
+    gitsigns = {
+      enable = true;
+      settings.signcolumn = true;
+    };
   };
 
   programs.nixvim.keymaps = [
