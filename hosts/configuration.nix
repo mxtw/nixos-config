@@ -64,6 +64,9 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  # TODO: move game related things into own file
+  programs.steam.enable = true;
+
   programs.fish.enable = true;
   system.stateVersion = "24.05"; # Did you read the comment?
 
