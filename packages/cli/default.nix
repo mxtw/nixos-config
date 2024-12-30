@@ -9,6 +9,8 @@
     pkgs.cargo
     pkgs.nodejs_22
     pkgs.tmux
+    pkgs.sesh
+    pkgs.fzf
 
    # unstablePkgs.neovim
   ];
