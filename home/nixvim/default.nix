@@ -23,5 +23,6 @@
     opts.smartindent = true;
     opts.shiftwidth = 4;
     opts.wrap = false;
+    opts.list = true;
   };
 }
