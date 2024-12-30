@@ -47,6 +47,11 @@
   # needed for river to work
   hardware.graphics.enable = true;
 
+  # bluetooth
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
+  services.blueman.enable = true;
+
   # needed for gtk
   programs.dconf.enable = true;
 
