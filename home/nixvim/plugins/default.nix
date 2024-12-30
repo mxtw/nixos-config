@@ -1,6 +1,7 @@
 {
   imports = [
     ./git.nix
+    ./lualine.nix
     ./telescope.nix
     ./treesitter.nix
   ];
