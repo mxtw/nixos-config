@@ -2,6 +2,7 @@
   imports = [
     ./git.nix
     ./telescope.nix
+    ./treesitter.nix
   ];
   programs.nixvim = {
     plugins.oil.enable = true;
