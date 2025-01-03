@@ -13,6 +13,8 @@
     ./foot
     ./fuzzel
     ./git
+    ./mako
+    ./mpv
     ./nixvim
     ./river
     ./shell
