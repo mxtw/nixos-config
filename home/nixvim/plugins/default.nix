@@ -1,5 +1,6 @@
 {
   imports = [
+    ./flash.nix
     ./git.nix
     ./lsp.nix
     ./lualine.nix
