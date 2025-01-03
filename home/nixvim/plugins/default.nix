@@ -1,6 +1,7 @@
 {
   imports = [
     ./git.nix
+    ./lsp.nix
     ./lualine.nix
     ./telescope.nix
     ./treesitter.nix
