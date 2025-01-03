@@ -1,4 +1,12 @@
-{
+{ pkgs, lib, config, ... }:
+
+with lib;
+let cfg = config.modules.fuzzel;
+
+in {
+  options.modules.fuzzel = { enable = mkEnableOption "foot"; };
+
+  config = mkIf cfg.enable {
   programs.fuzzel = {
     enable = true;
     settings = {
@@ -22,4 +30,5 @@
       };
     };
   };
+};
 }

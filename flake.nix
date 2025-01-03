@@ -30,7 +30,7 @@
                 useUserPackages = true;
                 extraSpecialArgs = { inherit inputs; };
                 users.max = { ... }: {
-                  imports = [ ./home ];
+                  imports = [ ./hosts/${hostname}/user.nix ];
                 };
               };
             }
