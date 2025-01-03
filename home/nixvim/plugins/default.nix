@@ -3,6 +3,7 @@
     ./git.nix
     ./lsp.nix
     ./lualine.nix
+    ./misc.nix
     ./telescope.nix
     ./treesitter.nix
   ];

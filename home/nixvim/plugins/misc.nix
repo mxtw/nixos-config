@@ -1,0 +1,10 @@
+{
+  programs.nixvim.plugins = {
+    rainbow-delimiters.enable = true;
+
+    indent-blankline.enable = true;
+    indent-blankline.settings.scope.enabled = false;
+
+    nvim-autopairs.enable = true;
+  };
+}
