@@ -1,5 +1,6 @@
 {
   imports = [
+    ./audio
     ./browsers
     ./cli
     ./files

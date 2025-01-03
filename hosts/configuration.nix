@@ -52,6 +52,14 @@
   hardware.bluetooth.powerOnBoot = true;
   services.blueman.enable = true;
 
+  # audio
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+  };
+
   # needed for gtk
   programs.dconf.enable = true;
 
