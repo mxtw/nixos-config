@@ -23,4 +23,6 @@
     enable = true;
     enableFishIntegration = true;
   };
+
+  programs.ripgrep.enable = true;
 }
