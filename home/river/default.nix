@@ -1,4 +1,9 @@
+{ lib, config, ...}:
+
+with lib;
 let
+  cfg = config.modules.river;
+
   tagValues = [ 4294967296 1 2 4 8 16 32 64 128 256 ];
 
   # Function to generate key bindings for tags
@@ -10,6 +15,12 @@ let
       }) [ 0 1 2 3 4 5 6 7 8 9 ];
 in
 {
+  options.modules.river = {
+    enable = mkEnableOption "river";
+    colemak = mkEnableOption "river";
+  };
+
+  config = mkIf cfg.enable {
   wayland.windowManager.river = {
     enable = true;
     systemd.enable = false;
@@ -23,8 +34,11 @@ in
         "yambar"
       ];
 
-      # TODO: only set this on laptop keyboard
-      keyboard-layout = "-options ctrl:swapcaps -variant colemak_dh us";
+      keyboard-layout = if cfg.colemak 
+        then
+          "-options ctrl:swapcaps -variant colemak_dh us"
+        else
+          "eu";
 
       input."pointer-2-7-*" = {
         accel-profile = "adaptive";
@@ -65,4 +79,5 @@ in
       };
     };
   };
+};
 }
