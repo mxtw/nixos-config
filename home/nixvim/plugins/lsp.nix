@@ -6,9 +6,13 @@
 
       servers = {
         basedpyright.enable = true;
+
         nixd.enable = true;
+        nixd.settings.formatting.command = [ "nixpkgs-fmt" ];
       };
     };
+
+    lsp-format.enable = true;
 
     cmp = {
       enable = true;
