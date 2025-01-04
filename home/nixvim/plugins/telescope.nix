@@ -4,6 +4,7 @@
     enable = true;
     keymaps = {
       "<leader><leader>" = "git_files";
+      "<leader>," = "buffers";
     };
   };
 }
