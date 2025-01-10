@@ -47,6 +47,10 @@
   # needed for river to work
   hardware.graphics.enable = true;
 
+  services.displayManager.ly.enable = true;
+  services.displayManager.defaultSession = "river";
+  programs.river.enable = true;
+
   # bluetooth
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
