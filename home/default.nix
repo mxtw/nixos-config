@@ -19,6 +19,7 @@
     ./nixvim
     ./river
     ./shell
+    ./social
     ./yambar
   ];
 
