@@ -1,5 +1,7 @@
 {
   programs.nixvim = {
+    plugins.render-markdown.enable = true;
+
     plugins.obsidian = {
       enable = true;
 
