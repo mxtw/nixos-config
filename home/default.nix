@@ -1,7 +1,6 @@
 { inputs, pkgs, ... }:
 
 {
-
   home.username = "max";
   home.homeDirectory = "/home/max";
 
@@ -19,6 +18,7 @@
     ./mpv
     ./nixvim
     ./river
+    ./services
     ./shell
     ./social
     ./tmux
@@ -39,14 +39,4 @@
     clean.extraArgs = "--keep-since 4d --keep 3";
     flake = "/home/max/code/nixos-config";
   };
-
-  services.gammastep = {
-    enable = true;
-    temperature.day = 5700;
-    temperature.night = 4000;
-    latitude = 54.3;
-    longitude = 13.1;
-  };
-
-  services.ssh-agent.enable = true;
 }
