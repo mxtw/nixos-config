@@ -5,7 +5,8 @@
 
 {
   imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
+    [
+      (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
   boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" ];
@@ -14,15 +15,49 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/c9175edd-7b95-4f01-aa74-39fdfa994a1e";
+    {
+      device = "/dev/disk/by-uuid/c9175edd-7b95-4f01-aa74-39fdfa994a1e";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/CD98-B284";
+    {
+      device = "/dev/disk/by-uuid/CD98-B284";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
+
+  fileSystems."/media/data" =
+    {
+      #/dev/sda1: UUID="2023f9ee-527c-4b6f-8721-53519d0417f8" UUID_SUB="f09a31f1-e218-4b13-b505-de99d0001072" BLOCK_SIZE="4096" TYPE="btrfs" PARTUUID="b601b82a-32f2-468e-9e1b-0829106483e4"
+      device = "/dev/disk/by-uuid/2023f9ee-527c-4b6f-8721-53519d0417f8";
+      fsType = "btrfs";
+    };
+
+  fileSystems."/home/max/Pictures" = {
+    depends = [ "/media/data" ];
+    device = "/media/data/max/Pictures";
+    fsType = "none";
+    options = [ "bind" ];
+  };
+  fileSystems."/home/max/Downloads" = {
+    depends = [ "/media/data" ];
+    device = "/media/data/max/Downloads";
+    fsType = "none";
+    options = [ "bind" ];
+  };
+  fileSystems."/home/max/Videos" = {
+    depends = [ "/media/data" ];
+    device = "/media/data/max/Videos";
+    fsType = "none";
+    options = [ "bind" ];
+  };
+  fileSystems."/home/max/Music" = {
+    depends = [ "/media/data" ];
+    device = "/media/data/max/Music";
+    fsType = "none";
+    options = [ "bind" ];
+  };
 
   swapDevices = [ ];
 
