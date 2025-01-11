@@ -9,5 +9,11 @@
     pkgs.fzf
     pkgs.killall
     # unstablePkgs.neovim
+
+    pkgs.htop
+    pkgs.btop
+
+    pkgs.xclip
+    pkgs.wl-clipboard
   ];
 }
