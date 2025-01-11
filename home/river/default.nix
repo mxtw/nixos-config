@@ -60,6 +60,11 @@ in
         border-color-unfocused = "0x1e1e2ee6";
         rule-add = "-app-id '*' ssd"; # server side decoration for every app
 
+        map-pointer.normal = [
+          "Super BTN_LEFT move-view"
+          "Super BTN_RIGHT resize-view"
+          "Super BTN_MIDDLE toggle-float"
+        ];
 
         map = {
           normal = builtins.listToAttrs
