@@ -41,4 +41,26 @@
   };
 
   programs.ripgrep.enable = true;
+
+  programs.tealdeer.enable = true;
+  programs.tealdeer.settings.updates.auto_update = true;
+
+  programs.fzf = {
+    enable = true;
+    enableFishIntegration = true;
+    colors = {
+      "bg+" = "#313244";
+      "fg" = "#cdd6f4";
+      "fg+" = "#cdd6f4";
+      "header" = "#f38ba8";
+      "hl" = "#f38ba8";
+      "hl+" = "#f38ba8";
+      "info" = "#cba6f7";
+      "marker" = "#b4befe";
+      "pointer" = "#f5e0dc";
+      "prompt" = "#cba6f7";
+      "selected-bg" = "#45475a";
+      "spinner" = "#f5e0dc";
+    };
+  };
 }
