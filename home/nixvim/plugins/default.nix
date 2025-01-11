@@ -7,6 +7,7 @@
     ./misc.nix
     ./obsidian.nix
     ./telescope.nix
+    ./tmux.nix
     ./treesitter.nix
   ];
   programs.nixvim = {
