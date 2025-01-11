@@ -11,5 +11,7 @@
   environment.systemPackages = [
     pkgs.lutris
     pkgs.heroic
+    pkgs.wine
+    pkgs.wine64
   ];
 }
