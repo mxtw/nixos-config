@@ -1,4 +1,4 @@
-{ inputs, ...}:
+{ inputs, ... }:
 {
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
@@ -7,7 +7,7 @@
 
   programs.nixvim = {
     enable = true;
-
+    defaultEditor = true;
 
     colorschemes.catppuccin.enable = true;
     colorschemes.catppuccin.settings.transparent_background = true;

@@ -6,5 +6,7 @@
     indent-blankline.settings.scope.enabled = false;
 
     nvim-autopairs.enable = true;
+
+    which-key.enable = true;
   };
 }
