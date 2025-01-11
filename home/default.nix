@@ -16,6 +16,7 @@
     ./librewolf
     ./mako
     ./mpv
+    ./music
     ./nixvim
     ./river
     ./services
