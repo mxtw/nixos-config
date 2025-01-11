@@ -5,6 +5,7 @@
     ./lsp.nix
     ./lualine.nix
     ./misc.nix
+    ./obsidian.nix
     ./telescope.nix
     ./treesitter.nix
   ];
