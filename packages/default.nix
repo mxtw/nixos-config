@@ -5,6 +5,7 @@
     ./cli
     ./files
     ./fonts
+    ./games
     ./secrets
   ];
 }
