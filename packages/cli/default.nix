@@ -5,13 +5,13 @@
     pkgs.git
     pkgs.stow
     pkgs.gnumake
-    pkgs.gcc
-    pkgs.cargo
-    pkgs.nodejs_22
+
+    # TODO move to home manager
     pkgs.tmux
     pkgs.sesh
-    pkgs.fzf
 
-   # unstablePkgs.neovim
+    pkgs.fzf
+    pkgs.killall
+    # unstablePkgs.neovim
   ];
 }

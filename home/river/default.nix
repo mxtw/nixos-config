@@ -34,7 +34,7 @@ in
 
         default-layout = "rivercarro";
         spawn = [
-          "yambar"
+          "${config.xdg.configHome}/yambar/launch.sh"
         ];
 
         keyboard-layout =
