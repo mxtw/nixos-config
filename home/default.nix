@@ -13,6 +13,7 @@
     ./foot
     ./fuzzel
     ./git
+    ./kanshi
     ./mako
     ./mpv
     ./nixvim
