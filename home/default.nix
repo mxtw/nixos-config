@@ -14,6 +14,7 @@
     ./fuzzel
     ./git
     ./kanshi
+    ./librewolf
     ./mako
     ./mpv
     ./nixvim
@@ -30,10 +31,6 @@
     theme.package = pkgs.magnetic-catppuccin-gtk;
     iconTheme.name = "Papirus";
     iconTheme.package = pkgs.papirus-icon-theme;
-  };
-
-  programs.librewolf = {
-    enable = true;
   };
 
   programs.nh = {
