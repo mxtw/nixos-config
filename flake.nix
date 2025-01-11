@@ -46,6 +46,7 @@
     in
     {
       nixosConfigurations = {
+        desktop = mkSystem inputs.nixpkgs "x86_64-linux" "desktop";
         nix-vm = mkSystem inputs.nixpkgs "x86_64-linux" "nix-vm";
         nixpad = mkSystem inputs.nixpkgs "x86_64-linux" "nixpad";
       };
