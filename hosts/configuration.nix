@@ -30,19 +30,20 @@
     LC_TIME = "de_DE.UTF-8";
   };
 
-  services = {
-    openssh = {
-      enable = true;
-      ports = [ 22 ];
-      settings = {
-        PasswordAuthentication = true;
-        AllowUsers = null;
-        UseDns = true;
-        X11Forwarding = false;
-        PermitRootLogin = "prohibit-password";
-      };
+  services.openssh = {
+    enable = true;
+    ports = [ 22 ];
+    settings = {
+      PasswordAuthentication = true;
+      AllowUsers = null;
+      UseDns = true;
+      X11Forwarding = false;
+      PermitRootLogin = "prohibit-password";
     };
   };
+
+  security.pam.services.max.enableGnomeKeyring = true;
+  services.gnome.gnome-keyring.enable = true;
 
   # needed for river to work
   hardware.graphics.enable = true;
