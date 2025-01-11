@@ -40,5 +40,13 @@
     flake = "/home/max/code/nixos-config";
   };
 
+  services.gammastep = {
+    enable = true;
+    temperature.day = 5700;
+    temperature.night = 4000;
+    latitude = 54.3;
+    longitude = 13.1;
+  };
+
   services.ssh-agent.enable = true;
 }
