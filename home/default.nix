@@ -20,6 +20,7 @@
     ./river
     ./shell
     ./social
+    ./tmux
     ./yambar
   ];
 
