@@ -56,6 +56,7 @@
   hardware.bluetooth.powerOnBoot = true;
   services.blueman.enable = true;
 
+  security.rtkit.enable = true;
   # audio
   services.pipewire = {
     enable = true;
@@ -66,6 +67,15 @@
 
   # needed for gtk
   programs.dconf.enable = true;
+
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-gnome
+    ];
+  };
 
   users.users.max = {
     isNormalUser = true;
