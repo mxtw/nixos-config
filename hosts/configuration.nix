@@ -51,6 +51,7 @@
 
   services.displayManager.ly.enable = true;
   services.displayManager.defaultSession = "river";
+  services.dbus.enable = true;
   programs.river.enable = true;
 
   # bluetooth
@@ -72,17 +73,23 @@
 
   xdg.portal = {
     enable = true;
-    wlr.enable = true;
+    wlr = {
+      enable = true;
+      settings.screencast = {
+        chooser_type = "simple";
+        chooser_cmd = "${pkgs.slurp}/bin/slurp -f %o -ro";
+      };
+    };
     extraPortals = with pkgs; [
+      xdg-desktop-portal
       xdg-desktop-portal-gtk
-      xdg-desktop-portal-gnome
     ];
   };
 
   users.users.max = {
     isNormalUser = true;
     description = "max";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "pipewire" "audio" "video" ];
     shell = pkgs.fish;
   };
 
