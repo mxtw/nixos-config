@@ -22,6 +22,11 @@ in
 
   config = mkIf cfg.enable {
     home.packages = [ pkgs.rivercarro ];
+    home.sessionVariables = {
+      XDG_CURRENT_DESKTOP = "river";
+      XDG_SESSION_DESKTOP = "river";
+      XDG_SESSION_TYPE = "wayland";
+    };
 
     wayland.windowManager.river = {
       enable = true;

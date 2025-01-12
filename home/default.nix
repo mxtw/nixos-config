@@ -48,5 +48,6 @@
   home.packages = with pkgs; [
     obsidian
     sway-contrib.grimshot
+    slurp
   ];
 }
