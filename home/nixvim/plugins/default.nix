@@ -5,6 +5,7 @@
     ./lsp.nix
     ./lualine.nix
     ./misc.nix
+    ./noice.nix
     ./obsidian.nix
     ./telescope.nix
     ./tmux.nix
