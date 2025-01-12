@@ -14,16 +14,23 @@
 
     globals.mapleader = " ";
 
+    opts.backspace = "2";
+    opts.colorcolumn = "80";
+    opts.concealcursor = "nc";
+    opts.conceallevel = 2;
+    opts.cursorline = true;
+    opts.expandtab = true;
+    opts.list = true;
     opts.number = true;
     opts.relativenumber = true;
-    opts.tabstop = 4;
-    opts.softtabstop = 4;
-    opts.expandtab = true;
-    opts.backspace = "2";
-    opts.smartindent = true;
     opts.shiftwidth = 4;
+    opts.smartindent = true;
+    opts.softtabstop = 4;
+    opts.splitbelow = true;
+    opts.tabstop = 4;
     opts.wrap = false;
-    opts.list = true;
+
+
 
     keymaps = [
       {
