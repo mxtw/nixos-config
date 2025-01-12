@@ -60,6 +60,8 @@ in
         border-color-unfocused = "0x1e1e2ee6";
         rule-add = "-app-id '*' ssd"; # server side decoration for every app
 
+        xcursor-theme = "catppuccin-mocha-dark-cursors 16";
+
         map-pointer.normal = [
           "Super BTN_LEFT move-view"
           "Super BTN_RIGHT resize-view"
