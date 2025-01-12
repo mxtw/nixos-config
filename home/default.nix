@@ -13,6 +13,7 @@
     ./fuzzel
     ./git
     ./kanshi
+    ./kubernetes
     ./librewolf
     ./mako
     ./mpv
