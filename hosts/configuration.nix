@@ -50,8 +50,20 @@
   hardware.graphics.enable = true;
   hardware.graphics.enable32Bit = true;
 
-  services.displayManager.ly.enable = true;
-  services.displayManager.defaultSession = "river";
+  environment.systemPackages = [
+    (pkgs.catppuccin-sddm.override {
+      flavor = "mocha";
+    })
+  ];
+  services.displayManager = {
+    sddm = {
+      enable = true;
+      wayland.enable = true;
+      theme = "catppuccin-mocha";
+      package = pkgs.kdePackages.sddm;
+    };
+    defaultSession = "river";
+  };
   services.dbus.enable = true;
   programs.river.enable = true;
 
@@ -82,8 +94,8 @@
       };
     };
     extraPortals = with pkgs; [
-      xdg-desktop-portal
       xdg-desktop-portal-gtk
+      xdg-desktop-portal
     ];
   };
 
