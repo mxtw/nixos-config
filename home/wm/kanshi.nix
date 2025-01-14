@@ -2,8 +2,6 @@
   services.kanshi = {
     enable = true;
 
-    systemdTarget = "river-session";
-
     settings = [
       {
         profile.name = "dual";
