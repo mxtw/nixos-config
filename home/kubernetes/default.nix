@@ -13,6 +13,8 @@
   home.packages = [
     pkgs.kubectl
     pkgs.kubectx
+    pkgs.kubernetes-helm
+    pkgs.fluxcd
   ];
 
   programs.fish.shellInit = ''
