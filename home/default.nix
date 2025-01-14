@@ -9,22 +9,14 @@
   programs.home-manager.enable = true;
 
   imports = [
-    ./foot
-    ./fuzzel
-    ./git
-    ./kanshi
-    ./kubernetes
-    ./librewolf
-    ./mako
-    ./mpv
-    ./music
+    ./browsers
+    ./cli
+    ./media
     ./nixvim
-    ./river
     ./services
-    ./shell
     ./social
-    ./tmux
-    ./yambar
+    ./terminal
+    ./wm
   ];
 
   gtk = {
