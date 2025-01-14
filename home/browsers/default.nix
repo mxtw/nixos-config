@@ -1,3 +1,6 @@
 {
-  imports = [ ./librewolf.nix ];
+  imports = [
+    ./librewolf.nix
+    ./tor.nix
+  ];
 }
