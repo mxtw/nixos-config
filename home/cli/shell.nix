@@ -1,5 +1,17 @@
 { pkgs, ... }:
+
+let
+  catppuccin-fish = pkgs.fetchFromGitHub {
+    owner = "catppuccin";
+    repo = "fish";
+    rev = "cc8e4d8fffbdaab07b3979131030b234596f18da";
+    sha256 = "udiU2TOh0lYL7K7ylbt+BGlSDgCjMpy75vQ98C1kFcc=";
+  };
+in
 {
+
+  xdg.configFile."fish/themes/Catppuccin Mocha.theme".source = "${catppuccin-fish}/themes/Catppuccin Mocha.theme";
+
   programs.fish = {
     enable = true;
     shellAliases = {
@@ -24,6 +36,9 @@
         src = pkgs.fishPlugins.fzf-fish.src;
       }
     ];
+    interactiveShellInit = ''
+      set -U fish_color_scheme "Catppuccin Mocha"
+    '';
 
   };
 
