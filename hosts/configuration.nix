@@ -8,6 +8,7 @@
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
     };
+    tmp.cleanOnBoot = true;
   };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
