@@ -9,6 +9,8 @@
 
         nixd.enable = true;
         nixd.settings.formatting.command = [ "nixpkgs-fmt" ];
+
+        yamlls.enable = true;
       };
     };
 
