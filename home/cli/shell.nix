@@ -40,11 +40,6 @@
     enableFishIntegration = true;
   };
 
-  programs.ripgrep.enable = true;
-
-  programs.tealdeer.enable = true;
-  programs.tealdeer.settings.updates.auto_update = true;
-
   programs.fzf = {
     enable = true;
     enableFishIntegration = true;
