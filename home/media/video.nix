@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   programs.mpv = {
     enable = true;
@@ -9,4 +10,10 @@
       volume = 100;
     };
   };
+
+  programs.obs-studio.enable = true;
+
+  home.packages = with pkgs; [
+    kdenlive
+  ];
 }
