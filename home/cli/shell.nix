@@ -16,7 +16,7 @@ in
     enable = true;
     shellAliases = {
       ls = "eza";
-      ll = "eza -lah";
+      ll = "eza --git -lah";
       vim = "nvim";
     };
     shellAbbrs = {
