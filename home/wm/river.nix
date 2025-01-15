@@ -40,6 +40,7 @@ in
         default-layout = "rivercarro";
         spawn = [
           "${config.xdg.configHome}/yambar/launch.sh"
+          "kiti"
         ];
 
         keyboard-layout =
