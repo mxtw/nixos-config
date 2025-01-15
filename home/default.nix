@@ -11,6 +11,7 @@
   imports = [
     ./browsers
     ./cli
+    ./dev
     ./media
     ./nixvim
     ./services
