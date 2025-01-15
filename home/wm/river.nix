@@ -46,7 +46,7 @@ in
         keyboard-layout =
           if cfg.colemak
           then
-            "-options ctrl:swapcaps -variant colemak_dh us"
+            "-options caps:ctrl_modifier -variant colemak_dh us"
           else
             "eu";
 
