@@ -42,5 +42,9 @@
     obsidian
     sway-contrib.grimshot
     slurp
+    ffmpeg
+    yt-dlp
+    pandoc
+    imagemagick
   ];
 }
