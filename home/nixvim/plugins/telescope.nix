@@ -12,6 +12,7 @@
         "<leader>cS" = "lsp_workspace_symbols";
         "<leader>hh" = "help_tags";
         "<leader>hm" = "man_pages";
+        "gr" = "lsp_references";
       };
 
       extensions.fzf-native.enable = true;

@@ -4,6 +4,22 @@
       enable = true;
       inlayHints = true;
 
+      keymaps = {
+        lspBuf = {
+          K = "hover";
+          gd = "definition";
+          gD = "declaration";
+          gi = "implementation";
+          go = "type_definition";
+          gs = "signature_help";
+          "<leader>ca" = "code_action";
+          "<leader>cr" = "rename";
+        };
+        diagnostic = {
+          "<leader>cd" = "open_float";
+        };
+      };
+
       servers = {
         basedpyright.enable = true;
 
