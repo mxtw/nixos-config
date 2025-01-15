@@ -38,7 +38,7 @@ in
       }
       {
         plugin = tmuxPlugins.resurrect;
-        extraConfig = "set -g @ressurect-capture-pane-contents 'on'";
+        extraConfig = "set -g @resurrect-capture-pane-contents 'on'";
       }
       {
         plugin = tmuxPlugins.yank;
