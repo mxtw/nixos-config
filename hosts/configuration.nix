@@ -12,6 +12,7 @@
   };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.trusted-users = [ "max" ];
 
   networking.networkmanager.enable = true;
 
