@@ -14,6 +14,7 @@
     ./dev
     ./media
     ./nixvim
+    ./scripts
     ./services
     ./social
     ./terminal
