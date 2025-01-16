@@ -83,6 +83,8 @@ in
                 { name = "Super P"; value = "spawn 'fuzzel -I'"; }
                 { name = "Super E"; value = "spawn thunar"; }
 
+                { name = "Super W"; value = "spawn powermenu"; }
+
                 { name = "Super+Shift S"; value = "spawn 'grimshot copy area'"; }
 
                 { name = "Super+Shift C"; value = "close"; }
