@@ -13,5 +13,7 @@
     pkgs.heroic
     pkgs.wine
     pkgs.wine64
+
+    pkgs.pcsx2
   ];
 }
