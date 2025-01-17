@@ -2,6 +2,7 @@
 {
   home.packages = with pkgs; [
     ncdu
+    unzip
   ];
 
   programs.fastfetch.enable = true;
