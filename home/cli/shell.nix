@@ -73,4 +73,9 @@ in
       "spinner" = "#f5e0dc";
     };
   };
+
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+  };
 }
