@@ -38,6 +38,7 @@ in
     ];
     interactiveShellInit = ''
       set -U fish_color_scheme "Catppuccin Mocha"
+      set -U fish_greeting ""
     '';
     functions = {
       initflake = ''nix flake init --template "https://flakehub.com/f/the-nix-way/dev-templates/*#$argv"'';
