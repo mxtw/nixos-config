@@ -1,11 +1,11 @@
 {
   imports = [
-    ./audio
-    ./browsers
-    ./cli
-    ./files
-    ./fonts
-    ./games
-    ./secrets
+    ./audio.nix
+    ./browsers.nix
+    ./cli.nix
+    ./files.nix
+    ./fonts.nix
+    ./games.nix
+    ./secrets.nix
   ];
 }
