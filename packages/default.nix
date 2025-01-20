@@ -7,5 +7,6 @@
     ./fonts.nix
     ./games.nix
     ./secrets.nix
+    ./virtualization.nix
   ];
 }
