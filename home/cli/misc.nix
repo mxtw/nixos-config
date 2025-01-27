@@ -3,6 +3,7 @@
   home.packages = with pkgs; [
     ncdu
     unzip
+    jq
   ];
 
   programs.fastfetch.enable = true;
