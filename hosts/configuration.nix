@@ -67,6 +67,7 @@
   };
   services.dbus.enable = true;
   programs.river.enable = true;
+  programs.hyprland.enable = true;
 
   # bluetooth
   hardware.bluetooth.enable = true;

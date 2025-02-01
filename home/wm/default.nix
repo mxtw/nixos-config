@@ -1,10 +1,12 @@
 {
   imports = [
     ./fuzzel.nix
-    ./mako.nix
+    ./hyprland.nix
     ./kanshi.nix
     ./kiti.nix
-    ./yambar.nix
+    ./mako.nix
     ./river.nix
+    ./waybar.nix
+    ./yambar.nix
   ];
 }
