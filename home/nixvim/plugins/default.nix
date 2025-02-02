@@ -1,5 +1,6 @@
 {
   imports = [
+    ./ai.nix
     ./flash.nix
     ./git.nix
     ./lsp.nix
