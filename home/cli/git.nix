@@ -10,6 +10,7 @@
 
     extraConfig = {
       gpg.format = "ssh";
+      init.defaultBranch = "main";
     };
 
     difftastic.enable = true;
