@@ -42,6 +42,7 @@
   home.packages = with pkgs; [
     obsidian
     sway-contrib.grimshot
+    wlr-randr
     slurp
     ffmpeg
     yt-dlp
