@@ -31,8 +31,15 @@
       };
     }
     {
-      action = "<cmd>Gitsigns toggle_current_line_blame<CR>";
+      action = "<cmd>Gitsigns blame<CR>";
       key = "<leader>gb";
+      options = {
+        silent = true;
+      };
+    }
+    {
+      action = "<cmd>Gitsigns blame_line<CR>";
+      key = "<leader>gB";
       options = {
         silent = true;
       };
