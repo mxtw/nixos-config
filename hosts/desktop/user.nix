@@ -6,5 +6,15 @@
 
     river.enable = true;
     river.colemak = false;
+
+    yambar = {
+      enable = true;
+      layout = true;
+      pulse = true;
+      cpu = true;
+      mem = true;
+      battery = false;
+      clock = true;
+    };
   };
 }
