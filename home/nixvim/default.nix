@@ -20,6 +20,7 @@
     opts.conceallevel = 2;
     opts.cursorline = true;
     opts.expandtab = true;
+    opts.ignorecase = true;
     opts.list = true;
     opts.number = true;
     opts.relativenumber = true;
