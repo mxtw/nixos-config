@@ -22,11 +22,38 @@
 
       servers = {
         basedpyright.enable = true;
+        bashls.enable = true;
+        clangd.enable = true;
+        dockerls.enable = true;
 
-        nixd.enable = true;
-        nixd.settings.formatting.command = [ "nixpkgs-fmt" ];
+        gopls = {
+          enable = true;
+          settings.gopls.hints = {
+            assignVariableTypes = true;
+            compositeLiteralFields = true;
+            compositeLiteralTypes = true;
+            constantValues = true;
+            functionTypeParameters = true;
+            parameterNames = true;
+            rangeVariableTypes = true;
+          };
+        };
 
+        lua_ls.enable = true;
+        nixd = {
+          enable = true;
+          settings.formatting.command = [ "nixpkgs-fmt" ];
+        };
+
+        rust_analyzer = {
+          enable = true;
+          installCargo = true;
+          installRustc = true;
+        };
+
+        ts_ls.enable = true;
         yamlls.enable = true;
+        zls.enable = true;
       };
     };
 
