@@ -7,6 +7,7 @@
     ./files.nix
     ./fonts.nix
     ./games.nix
+    ./network.nix
     ./secrets.nix
     ./virtualization.nix
   ];

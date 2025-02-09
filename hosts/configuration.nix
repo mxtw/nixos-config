@@ -102,7 +102,15 @@
   users.users.max = {
     isNormalUser = true;
     description = "max";
-    extraGroups = [ "networkmanager" "wheel" "pipewire" "audio" "video" "libvirtd" ];
+    extraGroups = [
+      "audio"
+      "libvirtd"
+      "networkmanager"
+      "pipewire"
+      "video"
+      "wheel"
+      "wireshark"
+    ];
     shell = pkgs.fish;
   };
 
