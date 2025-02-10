@@ -8,6 +8,7 @@
     ./misc.nix
     ./noice.nix
     ./obsidian.nix
+    ./snacks.nix
     ./telescope.nix
     ./tmux.nix
     ./treesitter.nix
