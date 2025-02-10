@@ -21,6 +21,8 @@ in
     };
     shellAbbrs = {
       lg = "lazygit";
+
+      dc = "docker compose";
     };
     plugins = [
       {
