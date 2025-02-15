@@ -86,4 +86,12 @@
     luasnip.enable = true;
     friendly-snippets.enable = true;
   };
+
+  programs.nixvim.keymaps = [
+    {
+      action.__raw = "function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end";
+      key = "<leader>ch";
+      options.desc = "Toggle inlay hints";
+    }
+  ];
 }
