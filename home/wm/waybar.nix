@@ -43,8 +43,11 @@ in
 
           cpu.format = "cpu {usage}%";
           memory.format = "mem {used:.1f}gb";
-          pulseaudio.format = "vol {volume}% {format_source}";
-          pulseaudio.format-source = "mic {volume}%";
+          pulseaudio = {
+            format = "vol {volume}% {format_source}";
+            format-source = "mic {volume}%";
+            on-click = "pavucontrol";
+          };
         };
       };
       style = ./waybar-style.css;
