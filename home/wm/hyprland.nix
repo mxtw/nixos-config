@@ -90,6 +90,10 @@ in
           "$mod, Space, fullscreen, 1"
           "$mod, F, fullscreen, 0"
 
+          "$mod, O, movewindow, mon:+1"
+          "$mod, Period, focusmonitor, +1"
+          "$mod, Comma, focusmonitor, -1"
+
           "$mod, 1, workspace, 1"
           "$mod, 2, workspace, 2"
           "$mod, 3, workspace, 3"
