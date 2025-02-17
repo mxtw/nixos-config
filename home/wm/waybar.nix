@@ -38,12 +38,12 @@ in
           clock = {
             timezone = "Europe/Berlin";
             tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-            format = "{:%H:%M %Y-%m-%d}";
+            format = "{:%Y-%m-%d %H:%M}";
           };
 
           cpu.format = "cpu {usage}%";
           memory.format = "mem {used:.1f}gb";
-          pulseaudio.format = "vol {volume}%";
+          pulseaudio.format = "vol {volume}% {format_source}";
           pulseaudio.format-source = "mic {volume}%";
         };
       };
