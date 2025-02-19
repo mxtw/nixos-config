@@ -79,6 +79,7 @@ in
           "$mod, E, exec, thunar"
           "$mod, W, exec, powermenu"
           "$mod SHIFT, S, exec, grimshot copy area"
+          "$mod CTRL, S, exec, ocr"
           "$mod SHIFT, C, killactive"
           "$mod SHIFT, Q, exit"
 

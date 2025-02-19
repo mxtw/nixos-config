@@ -20,9 +20,17 @@ let
             ;;
     esac
   '';
+
+  ocr = pkgs.writeShellScriptBin "ocr" ''
+    #!/usr/bin/env bash
+    grimshot save area - | tesseract stdin - | wl-copy
+  '';
 in
 {
   home.packages = with pkgs; [
     powermenu
+
+    ocr
+    tesseract
   ];
 }
