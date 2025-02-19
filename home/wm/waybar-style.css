@@ -12,10 +12,10 @@
 }
 
 window#waybar {
-    background: alpha(@base, 0.9)
+    background: alpha(@base, 0.9);
 }
 window#waybar.fullscreen {
-    background: alpha(@surface0, 0.9)
+    background: alpha(@surface0, 0.9);
 }
 
 #workspaces,
@@ -40,6 +40,13 @@ window#waybar.fullscreen {
 
 #window {
     color: @lavender;
+    /*
+    * workaround to make the bar not resize when there are weird characters in
+    * the window title
+    * see also: https://github.com/Alexays/Waybar/issues/2026#issuecomment-1780717766
+    */
+    margin-top: -50px;
+    margin-bottom: -50px
 }
 
 #pulseaudio {
