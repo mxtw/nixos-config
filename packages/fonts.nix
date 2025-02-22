@@ -8,6 +8,6 @@
     noto-fonts-extra
     hack-font
     nerd-fonts.hack
-
+    nerd-fonts.iosevka
   ];
 }
