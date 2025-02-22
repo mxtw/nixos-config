@@ -4,8 +4,8 @@
     border: none;
     border-radius: 0;
     background: transparent;
-    font-family: Hack Nerd Font;
-    font-size: 12px;
+    font-family: Iosevka Nerd Font;
+    font-size: 14px;
     min-height: 0;
     padding: 0;
     margin: 0px;
@@ -15,7 +15,7 @@ window#waybar {
     background: alpha(@base, 0.9);
 }
 window#waybar.fullscreen {
-    background: alpha(@surface0, 0.9);
+    background: alpha(@muted, 0.9);
 }
 
 #workspaces,

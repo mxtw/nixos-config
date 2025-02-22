@@ -11,7 +11,7 @@ in {
       enable = true;
       settings = {
         main = {
-          font = "Hack Nerd Font:size=18";
+          font = "Iosevka Nerd Font:size=15";
           horizontal-pad = 5;
           vertical-pad = 5;
         };
