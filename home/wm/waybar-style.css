@@ -1,4 +1,4 @@
-@import "mocha.css";
+@import "rose-pine.css";
 
 * {
     border: none;
@@ -32,14 +32,14 @@ window#waybar.fullscreen {
 }
 
 #workspaces button {
-    color: @surface2;
+    color: @muted;
 }
 #workspaces button.active {
-    color: @lavender;
+    color: @rose;
 }
 
 #window {
-    color: @lavender;
+    color: @rose;
     /*
     * workaround to make the bar not resize when there are weird characters in
     * the window title
@@ -50,19 +50,19 @@ window#waybar.fullscreen {
 }
 
 #pulseaudio {
-    color: @sapphire;
+    color: @iris;
 }
 
 #cpu {
-    color: @sky;
+    color: @foam;
 }
 
 #memory {
-    color: @teal;
+    color: @pine;
 }
 
 #clock {
-    color: @green;
+    color: @rose;
 }
 
 #tray {

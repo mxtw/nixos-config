@@ -9,11 +9,11 @@ in
   };
 
   config = mkIf cfg.enable {
-    home.file."${config.xdg.configHome}/waybar/mocha.css" = {
+    home.file."${config.xdg.configHome}/waybar/rose-pine.css" = {
       source = builtins.fetchurl
         {
-          url = "https://raw.githubusercontent.com/catppuccin/waybar/ee8ed32b4f63e9c417249c109818dcc05a2e25da/themes/mocha.css";
-          sha256 = "05yx7v4j9k1s1xanlak7yngqfwvxvylwxc2fhjcfha68rjbhbqx6";
+          url = "https://raw.githubusercontent.com/rose-pine/waybar/1b118bd60d1c5778dc8a82b919069eeb8a834604/rose-pine.css";
+          sha256 = "0alrdjdyyajrqs24f51xn1k467vygbxihkr6p64amb0p70xfhxkf";
         };
     };
     programs.waybar = {

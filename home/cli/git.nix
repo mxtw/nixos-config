@@ -22,16 +22,16 @@
       git.paging.externalDiffCommand = "difft --color=always";
 
       gui.theme = {
-        activeBorderColor = [ "#b4befe" "bold" ];
-        inactiveBorderColor = [ "#a6adc8" ];
-        optionsTextColor = [ "#89b4fa" ];
-        selectedLineBgColor = [ "#313244" ];
-        cherryPickedCommitBgColor = [ "#45475a" ];
-        cherryPickedCommitFgColor = [ "#b4befe" ];
-        unstagedChangesColor = [ "#f38ba8" ];
-        defaultFgColor = [ "#cdd6f4" ];
-        searchingActiveBorderColor = [ "#f9e2af" ];
-        authorColors."*" = [ "#b4befe" ];
+        activeBorderColor = [ "#ebbcba" "bold" ];
+        inactiveBorderColor = [ "#908caa" ];
+        optionsTextColor = [ "#9ccfd8" ];
+        selectedLineBgColor = [ "#908caa" ];
+        cherryPickedCommitBgColor = [ "#6e6a86" ];
+        cherryPickedCommitFgColor = [ "#ebbcba" ];
+        unstagedChangesColor = [ "#eb6f92" ];
+        defaultFgColor = [ "#e0def4" ];
+        searchingActiveBorderColor = [ "#f6c177" ];
+        authorColors."*" = [ "#ebbcba" ];
       };
     };
   };

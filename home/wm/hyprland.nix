@@ -47,8 +47,8 @@ in
           gaps_out = 2;
           border_size = 2;
           layout = "master";
-          "col.active_border" = "0xffb4befe";
-          "col.inactive_border" = "0xff1e1e2e";
+          "col.active_border" = "0xffebbcba";
+          "col.inactive_border" = "0xff191724";
         };
 
 
