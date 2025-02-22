@@ -12,6 +12,7 @@ let
           rev = "07f58a69b722b8da2e8c6343b00e0418b8ca0dec";
           sha256 = "sha256-+6jtoUr989Ky2pDlvBuPvTOQG29XYZKuP5fs4oe0DUw=";
         };
+      rtpFilePath = "tmux-fzf-ssh.tmux";
     };
 in
 {
