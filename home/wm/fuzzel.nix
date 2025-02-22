@@ -20,15 +20,15 @@ in {
           radius = 0;
         };
         colors = {
-          background = "1e1e2eda";
-          text = "cdd6f4ff";
-          input = "cdd6f4ff";
-          prompt = "cdd6f4ff";
-          match = "b4befeff";
-          selection = "585b70ff";
-          selection-match = "b4befeff";
-          selection-text = "cdd6f4ff";
-          border = "b4befeff";
+          background = "191724da";
+          text = "e0def4ff";
+          input = "e0def4ff";
+          prompt = "e0def4ff";
+          match = "ebbcbaff";
+          selection = "6e6a86ff";
+          selection-match = "ebbcbaff";
+          selection-text = "e0def4ff";
+          border = "ebbcbaff";
         };
       };
     };

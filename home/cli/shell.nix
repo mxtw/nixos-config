@@ -1,16 +1,16 @@
 { pkgs, ... }:
 
 let
-  catppuccin-fish = pkgs.fetchFromGitHub {
-    owner = "catppuccin";
+  rose-pine-fish = pkgs.fetchFromGitHub {
+    owner = "rose-pine";
     repo = "fish";
-    rev = "cc8e4d8fffbdaab07b3979131030b234596f18da";
-    sha256 = "udiU2TOh0lYL7K7ylbt+BGlSDgCjMpy75vQ98C1kFcc=";
+    rev = "38aab5baabefea1bc7e560ba3fbdb53cb91a6186";
+    sha256 = "bSGGksL/jBNqVV0cHZ8eJ03/8j3HfD9HXpDa8G/Cmi8=";
   };
 in
 {
 
-  xdg.configFile."fish/themes/Catppuccin Mocha.theme".source = "${catppuccin-fish}/themes/Catppuccin Mocha.theme";
+  xdg.configFile."fish/themes/Rosé Pine.theme".source = "${rose-pine-fish}/themes/Rosé Pine.theme";
 
   programs.fish = {
     enable = true;
@@ -39,8 +39,8 @@ in
       }
     ];
     interactiveShellInit = ''
-      set -U fish_color_scheme "Catppuccin Mocha"
       set -U fish_greeting ""
+      fish_config theme choose "Rosé Pine"
     '';
     functions = {
       initflake = ''nix flake init --template "https://flakehub.com/f/the-nix-way/dev-templates/*#$argv"'';
@@ -65,18 +65,16 @@ in
     enable = true;
     enableFishIntegration = true;
     colors = {
-      "bg+" = "#313244";
-      "fg" = "#cdd6f4";
-      "fg+" = "#cdd6f4";
-      "header" = "#f38ba8";
-      "hl" = "#f38ba8";
-      "hl+" = "#f38ba8";
-      "info" = "#cba6f7";
-      "marker" = "#b4befe";
-      "pointer" = "#f5e0dc";
-      "prompt" = "#cba6f7";
-      "selected-bg" = "#45475a";
-      "spinner" = "#f5e0dc";
+      "bg+" = "#26233a";
+      "fg+" = "#e0def4";
+      "header" = "#31748f";
+      "hl+" = "#ebbcba";
+      "hl" = "#ebbcba";
+      "info" = "#9ccfd8";
+      "marker" = "#eb6f92";
+      "pointer" = "#c4a7e7";
+      "prompt" = "#908caa";
+      "spinner" = "#f6c177";
     };
   };
 

@@ -9,8 +9,8 @@
     enable = true;
     defaultEditor = true;
 
-    colorschemes.catppuccin.enable = true;
-    colorschemes.catppuccin.settings.transparent_background = true;
+    colorschemes.rose-pine.enable = true;
+    colorschemes.rose-pine.settings.styles.transparency = true;
 
     globals.mapleader = " ";
 
