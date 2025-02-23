@@ -23,12 +23,12 @@
 
   gtk = {
     enable = true;
-    theme.name = "rose-pine";
-    theme.package = pkgs.rose-pine-gtk-theme;
-    iconTheme.name = "rose-pine";
-    iconTheme.package = pkgs.rose-pine-icon-theme;
-    cursorTheme.name = "rose-pine";
-    cursorTheme.package = pkgs.rose-pine-cursor;
+    theme.name = "Catppuccin-GTK-Dark";
+    theme.package = pkgs.magnetic-catppuccin-gtk;
+    iconTheme.name = "Papirus";
+    iconTheme.package = pkgs.papirus-icon-theme;
+    cursorTheme.name = "catppuccin-mocha-dark-cursors";
+    cursorTheme.package = pkgs.catppuccin-cursors.mochaDark;
     cursorTheme.size = 16;
   };
 
