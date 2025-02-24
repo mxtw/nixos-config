@@ -21,11 +21,11 @@ in
           "4,monitor:DP-1"
           "5,monitor:DP-1"
 
-          "6,monitor:HDMI-A-1"
-          "7,monitor:HDMI-A-1"
-          "8,monitor:HDMI-A-1"
-          "9,monitor:HDMI-A-1"
-          "10,monitor:HDMI-A-1"
+          "6,monitor:DP-2"
+          "7,monitor:DP-2"
+          "8,monitor:DP-2"
+          "9,monitor:DP-2"
+          "10,monitor:DP-2"
         ];
 
         input = {

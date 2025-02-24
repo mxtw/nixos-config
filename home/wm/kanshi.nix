@@ -9,12 +9,12 @@
           {
             criteria = "DP-1";
             position = "0,0";
-            mode = "1920x1080@144Hz";
+            mode = "2560x1440@170Hz";
           }
           {
-            criteria = "HDMI-A-1";
-            position = "1920,0";
-            mode = "1920x1080@60Hz";
+            criteria = "DP-2";
+            position = "2560,0";
+            mode = "1920x1080@144Hz";
           }
         ];
       }
