@@ -6,20 +6,28 @@ let
   });
 in
 {
-  programs.steam.enable = true;
-  programs.steam.extraCompatPackages = [
-    pkgs.proton-ge-bin
-  ];
-  programs.steam.remotePlay.openFirewall = true;
+  programs.steam = {
+    enable = true;
+    extraCompatPackages = [
+      pkgs.proton-ge-bin
+    ];
+    remotePlay.openFirewall = true;
+    gamescopeSession.enable = true;
+  };
+  programs.gamescope = {
+    enable = true;
+    capSysNice = false;
+  };
 
   # maybe not in systempackages?
-  environment.systemPackages = [
-    pkgs.lutris
-    pkgs.heroic
-    pkgs.wine
-    pkgs.wine64
+  environment.systemPackages = with pkgs; [
+    lutris
+    heroic
+    wine
+    wine64
+    xivlauncher
 
-    pkgs.pcsx2
+    pcsx2
   ];
 
   imports = [
