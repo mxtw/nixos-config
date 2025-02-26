@@ -13,7 +13,7 @@
           }
           {
             criteria = "DP-2";
-            position = "2560,0";
+            position = "2560,360";
             mode = "1920x1080@144Hz";
           }
         ];
