@@ -15,7 +15,7 @@ window#waybar {
     background: alpha(@base, 0.9);
 }
 window#waybar.fullscreen {
-    background: alpha(@muted, 0.9);
+    background: alpha(@surface0, 0.9);
 }
 
 #workspaces,
