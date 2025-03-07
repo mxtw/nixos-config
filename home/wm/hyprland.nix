@@ -15,7 +15,7 @@ in
 
       settings = {
         monitor = [
-          "DP-1, highrr, auto, 1, bitdepth, 10, vrr, 2"
+          "DP-1, 2560x1440@170, auto, 1, bitdepth, 10, vrr, 2"
           "DP-2, highrr, auto-right, 1"
         ];
 

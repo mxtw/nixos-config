@@ -9,7 +9,7 @@
           {
             criteria = "DP-1";
             position = "0,0";
-            mode = "2560x1440@180Hz";
+            mode = "2560x1440@170Hz";
           }
           {
             criteria = "DP-2";
