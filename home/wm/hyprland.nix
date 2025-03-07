@@ -14,6 +14,11 @@ in
       xwayland.enable = true;
 
       settings = {
+        monitor = [
+          "DP-1, highrr, auto, 1, bitdepth, 10, vrr, 2"
+          "DP-2, highrr, auto-right, 1"
+        ];
+
         workspace = [
           "1,monitor:DP-1"
           "2,monitor:DP-1"
