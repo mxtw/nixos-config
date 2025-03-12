@@ -87,6 +87,8 @@
 
     luasnip.enable = true;
     friendly-snippets.enable = true;
+
+    crates.enable = true;
   };
 
   programs.nixvim.keymaps = [
