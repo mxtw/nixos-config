@@ -71,6 +71,15 @@
         };
       }
       {
+        action = "<cmd>ObsidianLinkNew<CR>";
+        key = "<leader>nn";
+        mode = [ "v" ];
+        options = {
+          silent = true;
+          desc = "Create New Note from selection";
+        };
+      }
+      {
         action = "<cmd>ObsidianTemplate<CR>";
         key = "<leader>nc";
         options = {
@@ -87,14 +96,6 @@
         };
       }
       {
-        action = "<cmd>e ~/notes/index.md<CR>";
-        key = "<leader>na";
-        options = {
-          silent = true;
-          desc = "Open Index";
-        };
-      }
-      {
         action = "<cmd>ObsidianBacklinks<CR>";
         key = "<leader>nb";
         options = {
@@ -104,26 +105,18 @@
       }
       {
         action = "<cmd>ObsidianToday<CR>";
+        key = "<leader>nT";
+        options = {
+          silent = true;
+          desc = "Open Todays Note";
+        };
+      }
+      {
+        action = "<cmd>ObsidianTags<CR>";
         key = "<leader>nt";
         options = {
           silent = true;
-          desc = "Open Today's Note";
-        };
-      }
-      {
-        action = "<cmd>ObsidianTomorrow<CR>";
-        key = "<leader>nm";
-        options = {
-          silent = true;
-          desc = "Open Tomorrow's Note";
-        };
-      }
-      {
-        action = "<cmd>ObsidianYesterday<CR>";
-        key = "<leader>ny";
-        options = {
-          silent = true;
-          desc = "Open Yesterday's Note";
+          desc = "Show Tags";
         };
       }
     ];
