@@ -54,6 +54,8 @@
         ts_ls.enable = true;
         yamlls.enable = true;
         zls.enable = true;
+
+        marksman.enable = true;
       };
     };
 
