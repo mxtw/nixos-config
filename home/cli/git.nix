@@ -8,9 +8,11 @@
     signing.key = "/home/max/.ssh/id_ed25519.pub";
     signing.signByDefault = true;
 
+
     extraConfig = {
       gpg.format = "ssh";
       init.defaultBranch = "main";
+      pull.rebase = true;
     };
 
     difftastic.enable = true;
@@ -20,6 +22,7 @@
     enable = true;
     settings = {
       git.paging.externalDiffCommand = "difft --color=always";
+
 
       gui.theme = {
         activeBorderColor = [ "#b4befe" "bold" ];
