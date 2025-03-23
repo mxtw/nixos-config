@@ -14,6 +14,8 @@
     extraConfig = ''
       import catppuccin
       catppuccin.setup(c, "mocha", True)
+
+      config.bind('td', 'config-cycle colors.webpage.darkmode.enabled true false')
     '';
 
     settings = {
