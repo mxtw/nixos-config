@@ -20,6 +20,7 @@
     wine
     wine64
     xivlauncher
+    prismlauncher
 
     pcsx2
   ];
