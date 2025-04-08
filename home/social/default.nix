@@ -7,5 +7,8 @@
     })
 
     weechat
+
+    chatterino2
+    streamlink
   ];
 }
