@@ -22,6 +22,9 @@
           };
           templates.subdir = "templates";
 
+          picker.name = "snacks.pick";
+          completion.blink = true;
+
           notes_subdir = "notes";
           new_notes_location = "notes_subdir";
           note_id_func.__raw = ''
