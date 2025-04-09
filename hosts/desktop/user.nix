@@ -4,14 +4,14 @@
   config.modules = {
     fuzzel.enable = true;
 
-    hyprland.enable = true;
-    waybar.enable = true;
+    hyprland.enable = false;
+    waybar.enable = false;
 
-    river.enable = false;
+    river.enable = true;
     river.colemak = false;
 
     yambar = {
-      enable = false;
+      enable = true;
       layout = true;
       pulse = true;
       cpu = true;
