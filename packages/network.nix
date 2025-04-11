@@ -5,6 +5,8 @@
     dig
     tcpdump
     whois
+
+    protonvpn-gui
   ];
 
   programs.wireshark = {
