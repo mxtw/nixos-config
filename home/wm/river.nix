@@ -21,7 +21,7 @@ in
   };
 
   config = mkIf cfg.enable {
-    home.packages = [ pkgs.rivercarro ];
+    home.packages = [ pkgs.rivercarro pkgs.brightnessctl ];
     home.sessionVariables = {
       XDG_CURRENT_DESKTOP = "river";
       XDG_SESSION_DESKTOP = "river";
@@ -115,6 +115,32 @@ in
 
                 { name = "Super Space"; value = "send-layout-cmd rivercarro 'main-location-cycle left,monocle'"; }
                 { name = "Super F"; value = "toggle-fullscreen"; }
+
+                {
+                  name = "None XF86AudioMute";
+                  value = "spawn 'pactl set-sink-mute @DEFAULT_SINK@ toggle'";
+                }
+                {
+                  name = "None XF86AudioMicMute";
+                  value = "spawn 'pactl set-source-mute @DEFAULT_SOURCE@ toggle'";
+                }
+                {
+                  name = "None XF86AudioLowerVolume";
+                  value = "spawn 'pactl set-sink-volume @DEFAULT_SINK@ -5%'";
+                }
+                {
+                  name = "None XF86AudioRaiseVolume";
+                  value = "spawn 'pactl set-sink-volume @DEFAULT_SINK@ +5%'";
+                }
+
+                {
+                  name = "None XF86MonBrightnessDown";
+                  value = "spawn 'brightnessctl set 10%-'";
+                }
+                {
+                  name = "None XF86MonBrightnessUp";
+                  value = "spawn 'brightnessctl set +10%'";
+                }
               ] ++
               # Other tag-related keybindings (toggle-focused, set-view, etc.)
               (keyBindingsForTags {
