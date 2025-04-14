@@ -16,7 +16,9 @@
     }
 
     {
-      action.__raw = "function() Snacks.picker.smart() end";
+      action.__raw = ''function() Snacks.picker.smart({
+        multi = {"buffers", "recent", "files", "git_files"} 
+      }) end'';
       key = "<leader><leader>";
       options.desc = "fuzzy find files";
     }
@@ -67,3 +69,4 @@
     }
   ];
 }
+
