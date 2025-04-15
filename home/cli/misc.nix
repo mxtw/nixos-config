@@ -17,6 +17,7 @@ in
     unzip
     jq
     zipload
+    fd
   ];
 
   programs.fastfetch.enable = true;
