@@ -22,6 +22,7 @@
 
       servers = {
         basedpyright.enable = true;
+        ruff.enable = true;
         bashls.enable = true;
         clangd.enable = true;
         dockerls.enable = true;
@@ -101,4 +102,8 @@
       options.desc = "Toggle inlay hints";
     }
   ];
+
+  programs.nixvim.diagnostics = {
+    virtual_text = true;
+  };
 }
