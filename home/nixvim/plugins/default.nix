@@ -3,7 +3,6 @@
     ./ai.nix
     ./flash.nix
     ./git.nix
-    ./kubectl.nix
     ./lsp.nix
     ./lualine.nix
     ./misc.nix
