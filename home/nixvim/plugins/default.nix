@@ -8,22 +8,12 @@
     ./misc.nix
     ./noice.nix
     ./obsidian.nix
+    ./oil.nix
     ./snacks.nix
     ./tmux.nix
     ./treesitter.nix
   ];
   programs.nixvim = {
-    plugins.oil.enable = true;
     plugins.web-devicons.enable = true;
-
-    keymaps = [
-      {
-        action = "<cmd>Oil<CR>";
-        key = "<leader>-";
-        options = {
-          silent = true;
-        };
-      }
-    ];
   };
 }
