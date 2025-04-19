@@ -10,11 +10,11 @@
     };
   };
 
-  home.packages = [
-    pkgs.kubectl
-    pkgs.kubectx
-    pkgs.kubernetes-helm
-    pkgs.fluxcd
+  home.packages = with pkgs; [
+    kubectl
+    krew
+    kubernetes-helm
+    fluxcd
   ];
 
   programs.fish.shellInit = ''
@@ -22,6 +22,8 @@
     for c in $HOME/.kube/conf.d/*
         set -gx KUBECONFIG $KUBECONFIG:$c
     end
+
+    set -gx PATH $PATH $HOME/.krew/bin
   '';
 
   programs.fish.shellAbbrs = {
