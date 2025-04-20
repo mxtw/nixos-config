@@ -70,9 +70,12 @@
       settings = {
         sources.default = [ "lsp" "path" "snippets" "buffer" ];
         signature.enabled = true;
-        completion.list.selection = {
-          auto_insert = true;
-          preselect = false;
+        completion = {
+          ghost_text.enabled = true;
+          list.selection = {
+            auto_insert = true;
+            preselect = false;
+          };
         };
 
         keymap = {
