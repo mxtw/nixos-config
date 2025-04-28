@@ -106,7 +106,7 @@
     }
   ];
 
-  programs.nixvim.diagnostics = {
+  programs.nixvim.diagnostic.config = {
     virtual_text = true;
   };
 }
