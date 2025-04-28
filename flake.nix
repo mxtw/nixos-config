@@ -14,6 +14,15 @@
       lib = nixpkgs.lib;
       system = "x86_64-linux";
 
+      # see https://github.com/jackdbd/nix-config/blob/451f47e3c5040c3e5fb6cf07b328bec0655b1ccd/flake.nix#L56-L74 
+      # for inspiration
+      allowed-unfree-packages = [
+        "steam"
+        "steam-unwrapped"
+        "spotify"
+        "obsidian"
+      ];
+
       mkSystem = pkgs: system: hostname:
         pkgs.lib.nixosSystem {
           system = system;
@@ -37,7 +46,7 @@
             ./packages
           ];
           specialArgs = {
-            inherit inputs;
+            inherit allowed-unfree-packages inputs;
           };
         };
 

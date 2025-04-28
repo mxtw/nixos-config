@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ allowed-unfree-packages, config, pkgs, lib, ... }:
 
 {
   boot = {
@@ -135,7 +135,8 @@
     openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICOZx2ejqskuEDw9ZagBJ/srl0kZHki5VwYa2oxM/+Yi max" ];
   };
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfree = false;
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) allowed-unfree-packages;
 
   programs.fish.enable = true;
   system.stateVersion = "24.05"; # Did you read the comment?
