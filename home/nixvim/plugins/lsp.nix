@@ -60,6 +60,8 @@
         zls.enable = true;
 
         marksman.enable = true;
+
+        kotlin_language_server.enable = true;
       };
     };
 
@@ -106,7 +108,7 @@
     }
   ];
 
-  programs.nixvim.diagnostic.config = {
+  programs.nixvim.diagnostic.settings = {
     virtual_text = true;
   };
 }
