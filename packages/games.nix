@@ -21,6 +21,7 @@
     wine64
     xivlauncher
     prismlauncher
+    bolt-launcher
 
     pcsx2
   ];
