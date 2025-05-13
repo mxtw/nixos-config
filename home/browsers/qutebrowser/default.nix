@@ -27,6 +27,7 @@ in
       colors.webpage.darkmode.enabled = true;
       auto_save.session = true;
       completion.shrink = true;
+      hints.chars = "arstgmneio";
       content.blocking.adblock.lists = [
         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/annoyances-cookies.txt"
         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/annoyances.txt"
