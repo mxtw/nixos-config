@@ -2,7 +2,7 @@
 {
   imports = [
     ./librewolf.nix
-    ./qutebrowser.nix
+    ./qutebrowser
   ];
 
   home.sessionVariables.BROWSER = "librewolf";
