@@ -46,6 +46,13 @@ in
         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/resource-abuse.txt"
         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/unbreak.txt"
       ];
+
+      tabs.show = "multiple";
+      tabs.show_switching_delay = 1500;
+      tabs.position = "left";
+      tabs.width = "8%";
+
+      statusbar.show = "in-mode";
     };
 
     keyBindings = {
@@ -56,7 +63,9 @@ in
         "<Shift+Right>" = "forward";
 
         "<Space>td" = "config-cycle colors.webpage.darkmode.enabled true false";
-        "<Space>om" = "spawn mpv {url}";
+        "<Space>tt" = "config-cycle tabs.show multiple switching";
+        "<Space>m" = "spawn umpv {hint-url}";
+        "<Space>M" = "hint links spawn umpv {hint-url}";
         "<Space>p" = "spawn --userscript qute-keepassxc --key 7A61DCB093726134010AE4ED0A7CE8DCD12B903C";
       };
 
