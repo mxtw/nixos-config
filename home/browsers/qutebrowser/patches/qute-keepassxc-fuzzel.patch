@@ -1,0 +1,18 @@
+diff --git a/misc/userscripts/qute-keepassxc b/misc/userscripts/qute-keepassxc
+index d5970cfed..748908c4f 100755
+--- a/misc/userscripts/qute-keepassxc
++++ b/misc/userscripts/qute-keepassxc
+@@ -300,9 +300,7 @@ def select_account(creds):
+         if len(creds) == 1:
+             return creds[0]
+         idx = subprocess.check_output(
+-                ['rofi', '-dmenu', '-format', 'i', '-matching', 'fuzzy',
+-                '-p', 'Search',
+-                '-mesg', '<b>qute-keepassxc</b>: select an account, please!'],
++                ['fuzzel', '--dmenu', '--index'],
+                 input=b"\n".join(c['login'].encode('utf-8') for c in creds)
+         )
+         idx = int(idx)
+-- 
+2.49.0
+
