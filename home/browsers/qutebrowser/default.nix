@@ -28,6 +28,9 @@ in
       auto_save.session = true;
       completion.shrink = true;
       hints.chars = "arstgmneio";
+
+      content.blocking.enabled = true;
+      content.blocking.method = "auto";
       content.blocking.adblock.lists = [
         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/annoyances-cookies.txt"
         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/annoyances.txt"
@@ -46,10 +49,12 @@ in
         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/resource-abuse.txt"
         "https://github.com/uBlockOrigin/uAssets/raw/master/filters/unbreak.txt"
       ];
+      content.cookies.accept = "no-3rdparty";
+      content.webrtc_ip_handling_policy = "default-public-interface-only";
 
       tabs.show = "multiple";
       tabs.show_switching_delay = 1500;
-      tabs.position = "left";
+      tabs.position = "top";
       tabs.width = "8%";
 
       statusbar.show = "in-mode";
@@ -63,8 +68,9 @@ in
         "<Shift+Right>" = "forward";
 
         "<Space>td" = "config-cycle colors.webpage.darkmode.enabled true false";
-        "<Space>tt" = "config-cycle tabs.show multiple switching";
-        "<Space>m" = "spawn umpv {hint-url}";
+        "<Space>tts" = "config-cycle tabs.show multiple switching";
+        "<Space>ttp" = "config-cycle tabs.position top left";
+        "<Space>m" = "spawn umpv {url}";
         "<Space>M" = "hint links spawn umpv {hint-url}";
         "<Space>p" = "spawn --userscript qute-keepassxc --key 7A61DCB093726134010AE4ED0A7CE8DCD12B903C";
       };
