@@ -8,6 +8,11 @@
       keep-open = true;
       fullscreen = true;
       volume = 100;
+      ytdl-format = "bestvideo+bestaudio";
+      ytdl-raw-options-append = [
+        "cookies-from-browser=chromium:~/.local/share/qutebrowser"
+        "mark-watched="
+      ];
     };
   };
 
