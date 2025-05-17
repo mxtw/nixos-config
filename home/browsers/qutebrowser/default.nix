@@ -25,6 +25,7 @@ in
     settings = {
       colors.webpage.preferred_color_scheme = "dark";
       colors.webpage.darkmode.enabled = true;
+      colors.webpage.darkmode.policy.images = "never";
       auto_save.session = true;
       completion.shrink = true;
       hints.chars = "arstgmneio";
@@ -67,6 +68,8 @@ in
         "<Shift+Left>" = "back";
         "<Shift+Right>" = "forward";
 
+        "T" = "cmd-set-text -s :tab-select";
+
         "<Space>td" = "config-cycle colors.webpage.darkmode.enabled true false";
         "<Space>tts" = "config-cycle tabs.show multiple switching";
         "<Space>ttp" = "config-cycle tabs.position top left";
@@ -87,6 +90,5 @@ in
         "<Shift+Right>" = "scroll down";
       };
     };
-
   };
 }
