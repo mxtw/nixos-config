@@ -13,6 +13,7 @@
         "cookies-from-browser=chromium:~/.local/share/qutebrowser"
         "mark-watched="
       ];
+      demuxer-max-bytes = "1GiB";
     };
   };
 
