@@ -5,6 +5,8 @@
     ./plugins
   ];
 
+  home.sessionVariables.MANPAGER = "nvim +Man!";
+
   programs.nixvim = {
     enable = true;
     defaultEditor = true;
