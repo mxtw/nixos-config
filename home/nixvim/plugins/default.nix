@@ -1,5 +1,6 @@
 {
   imports = [
+    ./dadbod.nix
     ./flash.nix
     ./git.nix
     ./lsp.nix
