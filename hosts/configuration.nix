@@ -14,6 +14,7 @@
   nix.settings.trusted-users = [ "max" ];
 
   networking.networkmanager.enable = true;
+  networking.firewall.checkReversePath = false;
 
   time.timeZone = "Europe/Berlin";
 
