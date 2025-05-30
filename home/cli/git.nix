@@ -8,7 +8,6 @@
     signing.key = "/home/max/.ssh/id_ed25519.pub";
     signing.signByDefault = true;
 
-
     extraConfig = {
       gpg.format = "ssh";
       init.defaultBranch = "main";
@@ -40,4 +39,5 @@
   };
 
   programs.gh.enable = true;
+  programs.gh-dash.enable = true;
 }
