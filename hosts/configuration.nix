@@ -130,6 +130,7 @@
       "video"
       "wheel"
       "wireshark"
+      "dialout"
     ];
     shell = pkgs.fish;
 
