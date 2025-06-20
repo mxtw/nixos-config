@@ -22,6 +22,7 @@
     xivlauncher
     prismlauncher
     bolt-launcher
+    gnome-mahjongg
 
     pcsx2
   ];
