@@ -23,6 +23,7 @@ in
       lg = "lazygit";
 
       dc = "docker compose";
+      cx = "chmod +x";
     };
     plugins = [
       {
