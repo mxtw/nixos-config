@@ -10,7 +10,7 @@
         include = "${pkgs.foot.themes}/share/foot/themes/catppuccin-mocha";
       };
       colors.alpha = 0.9;
-      cursor.color = "1e1e2e cdd6f4";
+      colors.cursor = "1e1e2e cdd6f4";
       cursor.unfocused-style = "hollow";
     };
   };
