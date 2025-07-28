@@ -25,6 +25,7 @@
           picker.name = "snacks.pick";
           completion.blink = true;
 
+          legacy_commands = false;
           notes_subdir = "notes";
           new_notes_location = "notes_subdir";
           note_id_func.__raw = ''
@@ -50,7 +51,7 @@
     };
     keymaps = [
       {
-        action = "<cmd>ObsidianQuickSwitch<CR>";
+        action = "<cmd>Obsidian quick_switch<CR>";
         key = "<leader>nf";
         options = {
           silent = true;
@@ -58,7 +59,7 @@
         };
       }
       {
-        action = "<cmd>ObsidianSearch<CR>";
+        action = "<cmd>Obsidian search<CR>";
         key = "<leader>ns";
         options = {
           silent = true;
@@ -66,7 +67,7 @@
         };
       }
       {
-        action = "<cmd>ObsidianNew<CR>";
+        action = "<cmd>Obsidian new<CR>";
         key = "<leader>nn";
         options = {
           silent = true;
@@ -74,7 +75,7 @@
         };
       }
       {
-        action = "<cmd>ObsidianLinkNew<CR>";
+        action = "<cmd>Obsidian link_new<CR>";
         key = "<leader>nn";
         mode = [ "v" ];
         options = {
@@ -83,7 +84,7 @@
         };
       }
       {
-        action = "<cmd>ObsidianTemplate<CR>";
+        action = "<cmd>Obsidian template<CR>";
         key = "<leader>nc";
         options = {
           silent = true;
@@ -91,7 +92,7 @@
         };
       }
       {
-        action = "<cmd>ObsidianOpen<CR>";
+        action = "<cmd>Obsidian open<CR>";
         key = "<leader>no";
         options = {
           silent = true;
@@ -99,7 +100,7 @@
         };
       }
       {
-        action = "<cmd>ObsidianBacklinks<CR>";
+        action = "<cmd>Obsidian backlinks<CR>";
         key = "<leader>nb";
         options = {
           silent = true;
@@ -107,7 +108,7 @@
         };
       }
       {
-        action = "<cmd>ObsidianToday<CR>";
+        action = "<cmd>Obsidian today<CR>";
         key = "<leader>nT";
         options = {
           silent = true;
@@ -115,7 +116,7 @@
         };
       }
       {
-        action = "<cmd>ObsidianTags<CR>";
+        action = "<cmd>Obsidian tags<CR>";
         key = "<leader>nt";
         options = {
           silent = true;
