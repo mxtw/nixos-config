@@ -33,6 +33,11 @@
       options.desc = "grep";
     }
     {
+      action.__raw = "function() Snacks.picker.undo() end";
+      key = "<leader>bu";
+      options.desc = "undo history";
+    }
+    {
       action.__raw = "function() Snacks.picker.recent() end";
       key = "<leader>fr";
       options.desc = "recent Files";
