@@ -7,9 +7,11 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixvim.url = "github:nix-community/nixvim";
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
+    lanzaboote.url = "github:nix-community/lanzaboote/v0.4.2";
+    lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, home-manager, nixvim, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nixvim, lanzaboote, ... }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -31,6 +33,7 @@
             ./hosts/configuration.nix
             (./. + "/hosts/${hostname}/hardware-configuration.nix")
 
+            lanzaboote.nixosModules.lanzaboote
             home-manager.nixosModules.home-manager
             {
               home-manager = {
