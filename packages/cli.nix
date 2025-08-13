@@ -15,5 +15,8 @@
 
     pkgs.xclip
     pkgs.wl-clipboard
+
+    # for secure boot
+    pkgs.sbctl
   ];
 }

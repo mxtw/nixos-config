@@ -3,8 +3,12 @@
 {
   boot = {
     loader = {
-      systemd-boot.enable = true;
+      systemd-boot.enable = false;
       efi.canTouchEfiVariables = true;
+    };
+    lanzaboote = {
+      enable = true;
+      pkiBundle = "/var/lib/sbctl";
     };
     tmp.cleanOnBoot = true;
     kernelPackages = pkgs.linuxPackages_latest;
