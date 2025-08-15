@@ -9,9 +9,11 @@
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
     lanzaboote.url = "github:nix-community/lanzaboote/v0.4.2";
     lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
+    zen-browser.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, home-manager, nixvim, lanzaboote, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nixvim, lanzaboote, zen-browser, ... }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
