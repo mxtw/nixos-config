@@ -61,7 +61,8 @@
 
         marksman.enable = true;
 
-        kotlin_language_server.enable = true;
+        ocamllsp.enable = true;
+        elixirls.enable = true;
       };
     };
 
