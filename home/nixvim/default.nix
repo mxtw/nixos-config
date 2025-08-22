@@ -11,9 +11,12 @@
     enable = true;
     defaultEditor = true;
 
-    colorschemes.catppuccin.enable = true;
-    colorschemes.catppuccin.settings.transparent_background = true;
-
+    colorschemes.catppuccin = {
+      enable = true;
+      settings.transparent_background = true;
+      settings.float.transparent = true;
+    };
+    
     globals.mapleader = " ";
 
     opts.backspace = "2";
