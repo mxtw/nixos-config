@@ -14,28 +14,45 @@
 window#waybar {
     background: alpha(@base, 0.9);
 }
+
 window#waybar.fullscreen {
     background: alpha(@surface0, 0.9);
 }
 
-#workspaces,
+tooltip {
+    background: alpha(@base, 0.9);
+}
+
+#tags,
 #window,
 #pulseaudio,
 #cpu,
 #memory,
 #clock,
 #language,
+#layout,
 #tray {
     background: transparent;
-    padding: 0 2px;
     margin: 0 2px;
+    padding: 0 2px;
 }
 
-#workspaces button {
+#tags button {
+    min-width: 0;
+    padding: 0 6px;
     color: @surface2;
+    margin-top: 2px;
+    border-bottom: 2px solid transparent;
 }
-#workspaces button.active {
+
+#tags button.focused {
     color: @lavender;
+    border-bottom: 2px solid @lavender;
+}
+
+#tags button.urgent {
+    color: @yellow;
+    border-bottom: 2px solid @yellow;
 }
 
 #window {
@@ -47,6 +64,10 @@ window#waybar.fullscreen {
     */
     margin-top: -50px;
     margin-bottom: -50px
+}
+
+#layout {
+    color: @lavender;
 }
 
 #pulseaudio {
