@@ -25,12 +25,12 @@ in
           position = "top";
           height = 20;
 
-          modules-left = [ "hyprland/workspaces" ];
-          modules-center = [ "hyprland/window" ];
-          modules-right = [ "pulseaudio" "cpu" "memory" "clock" "tray" ];
+          modules-left = [ "river/tags" ];
+          modules-center = [ "river/window" ];
+          modules-right = [ "river/layout" "pulseaudio" "cpu" "memory" "clock" "tray" ];
 
-          "hyprland/workspaces".all-outputs = false;
-          "hyprland/window".separate-outputs = true;
+          "river/tags".hide-vacant = true;
+          "river/window".separate-outputs = true;
           tray.spacing = 10;
           tray.show-passive-items = true;
           tray.icon-size = 12;

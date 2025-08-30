@@ -39,7 +39,7 @@ in
 
         default-layout = "rivercarro";
         spawn = [
-          "${config.xdg.configHome}/yambar/launch.sh"
+          # "${config.xdg.configHome}/yambar/launch.sh"
           "kiti"
         ];
 

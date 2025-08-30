@@ -5,13 +5,13 @@
     fuzzel.enable = true;
 
     hyprland.enable = false;
-    waybar.enable = false;
+    waybar.enable = true;
 
     river.enable = true;
     river.colemak = false;
 
     yambar = {
-      enable = true;
+      enable = false;
       layout = true;
       pulse = true;
       cpu = true;
