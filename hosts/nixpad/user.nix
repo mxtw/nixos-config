@@ -6,9 +6,10 @@
 
     river.enable = true;
     river.colemak = true;
+    waybar.enable = true;
 
     yambar = {
-      enable = true;
+      enable = false;
       layout = true;
       pulse = true;
       cpu = true;
