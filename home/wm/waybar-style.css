@@ -29,6 +29,7 @@ tooltip {
 #pulseaudio,
 #cpu,
 #memory,
+#battery,
 #clock,
 #language,
 #layout,
@@ -88,6 +89,10 @@ tooltip {
 
 #clock {
     color: @green;
+}
+
+#battery {
+    color: @yellow;
 }
 
 #tray {
