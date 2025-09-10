@@ -42,6 +42,8 @@ in
             tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
             format = "{:%Y-%m-%d %H:%M}";
           };
+          battery.format = "bat {capacity}%";
+          battery.format-charging = "chr {capacity}%";
 
           cpu.format = "cpu {usage}%";
           memory.format = "mem {used:.1f}gb";
