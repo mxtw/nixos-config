@@ -11,7 +11,9 @@
     input {
         keyboard {
             xkb {
-                layout "eu"
+                layout "eu,us"
+                options ",caps:ctrl_modifier"
+                variant ",colemak_dh"
             }
             repeat-rate 50
             repeat-delay 300
@@ -114,6 +116,8 @@
         Mod+Space { maximize-column; }
         Mod+F { expand-column-to-available-width; }
         Mod+C { center-visible-columns; }
+
+        Mod+Shift+Space { switch-layout "next"; }
 
         Mod+Period { focus-monitor-next; }
         Mod+Comma { focus-monitor-previous; }
