@@ -74,6 +74,7 @@
   services.dbus.enable = true;
   programs.river.enable = true;
   programs.hyprland.enable = true;
+  programs.niri.enable = true;
 
   # bluetooth
   hardware.bluetooth.enable = true;
