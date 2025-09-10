@@ -1,0 +1,128 @@
+{ pkgs, config, ... }:
+{
+  home.packages = [
+    pkgs.xwayland-satellite
+  ];
+
+  home.file."${config.xdg.configHome}/niri/config.kdl".text = ''
+    prefer-no-csd
+    spawn-at-startup "kiti"
+
+    input {
+        keyboard {
+            xkb {
+                layout "eu"
+            }
+            repeat-rate 50
+            repeat-delay 300
+        }
+        mouse {
+            accel-profile "flat"
+        }
+        touchpad {
+            tap
+            natural-scroll
+            disabled-on-external-mouse
+        }
+    }
+
+    output "eDP-1" {
+        scale 1.0
+    }
+
+    output "DP-1" {
+        scale 1.0
+        mode "2560x1440@170"
+        position x=0 y=0
+        focus-at-startup
+    }
+    output "DP-2" {
+        scale 1.0
+        mode "1920x1080@144.001"
+        position x=2560 y=360
+    }
+
+    layout {
+        gaps 2
+        always-center-single-column
+
+        focus-ring {
+            off
+        }
+        border {
+            width 2
+            active-color "#b4befe"
+            urgent-color "#f9e2af"
+            inactive-color "#1e1e2e"
+        }
+    }
+
+    cursor {
+        xcursor-theme "catppuccin-mocha-dark-cursors"
+        xcursor-size 16
+    }
+
+    overview {
+        backdrop-color "#1e1e2e"
+    }
+
+    binds {
+        Mod+Shift+Slash { show-hotkey-overlay; }
+
+        Mod+Return hotkey-overlay-title="Open Terminal" { spawn "foot"; }
+        Mod+Shift+Return hotkey-overlay-title="Open Browser" { spawn "librewolf"; }
+        Mod+E hotkey-overlay-title="Open Filemanager" { spawn "thunar"; }
+        Mod+P hotkey-overlay-title="Open Launcher" { spawn "fuzzel"; }
+        Mod+Shift+S { spawn-sh "grimshot copy area"; }
+
+        Mod+W repeat=false { toggle-overview; }
+        Mod+Shift+C repeat=false { close-window; }
+        Mod+Shift+Q repeat=false { quit; }
+
+        Mod+Left { focus-column-left; }
+        Mod+Right { focus-column-right; }
+        Mod+Down { focus-window-down; }
+        Mod+Up { focus-window-up; }
+
+        Mod+Ctrl+Left { move-column-left; }
+        Mod+Ctrl+Right { move-column-right; }
+        Mod+Ctrl+Down { move-window-down; }
+        Mod+Ctrl+Up { move-window-up; }
+
+        Mod+Shift+Left { set-window-width "-10%"; }
+        Mod+Shift+Right { set-window-width "+10%"; }
+
+        Mod+1 { focus-workspace 1; }
+        Mod+2 { focus-workspace 2; }
+        Mod+3 { focus-workspace 3; }
+        Mod+4 { focus-workspace 4; }
+        Mod+5 { focus-workspace 5; }
+        Mod+6 { focus-workspace 6; }
+        Mod+7 { focus-workspace 7; }
+        Mod+8 { focus-workspace 8; }
+        Mod+9 { focus-workspace 9; }
+        Mod+Shift+1 { move-column-to-workspace 1; }
+        Mod+Shift+2 { move-column-to-workspace 2; }
+        Mod+Shift+3 { move-column-to-workspace 3; }
+        Mod+Shift+4 { move-column-to-workspace 4; }
+        Mod+Shift+5 { move-column-to-workspace 5; }
+        Mod+Shift+6 { move-column-to-workspace 6; }
+        Mod+Shift+7 { move-column-to-workspace 7; }
+        Mod+Shift+8 { move-column-to-workspace 8; }
+        Mod+Shift+9 { move-column-to-workspace 9; }
+
+        Mod+Space { maximize-column; }
+        Mod+F { expand-column-to-available-width; }
+        Mod+C { center-visible-columns; }
+
+        Mod+Period { focus-monitor-next; }
+        Mod+Comma { focus-monitor-previous; }
+        Mod+O { move-column-to-monitor-next; }
+        Mod+Shift+O { move-workspace-to-monitor-next; }
+
+        Mod+MouseMiddle { toggle-window-floating; }
+        Mod+WheelScrollRight cooldown-ms=100 { focus-column-right; }
+        Mod+WheelScrollLeft  cooldown-ms=100 { focus-column-left; }
+    }
+  '';
+}

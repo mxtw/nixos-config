@@ -26,12 +26,13 @@ in
           position = "top";
           height = 20;
 
-          modules-left = [ "river/tags" ];
-          modules-center = [ "river/window" ];
-          modules-right = [ "river/layout" "pulseaudio" "cpu" "memory" "clock" "tray" ];
+          modules-left = [ "river/tags" "niri/workspaces" ];
+          modules-center = [ "river/window" "niri/window" ];
+          modules-right = [ "river/layout" "pulseaudio" "cpu" "memory" "battery" "clock" "tray" ];
 
           "river/tags".hide-vacant = true;
           "river/window".separate-outputs = true;
+          "niri/window".separate-outputs = true;
           tray.spacing = 10;
           tray.show-passive-items = true;
           tray.icon-size = 12;

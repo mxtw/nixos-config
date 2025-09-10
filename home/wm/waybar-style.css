@@ -24,6 +24,7 @@ tooltip {
 }
 
 #tags,
+#workspaces,
 #window,
 #pulseaudio,
 #cpu,
@@ -37,7 +38,8 @@ tooltip {
     padding: 0 2px;
 }
 
-#tags button {
+#tags button,
+#workspaces button {
     min-width: 0;
     padding: 0 6px;
     color: @surface2;
@@ -45,12 +47,14 @@ tooltip {
     border-bottom: 2px solid transparent;
 }
 
-#tags button.focused {
+#tags button.focused,
+#workspaces button.focused {
     color: @lavender;
     border-bottom: 2px solid @lavender;
 }
 
-#tags button.urgent {
+#tags button.urgent,
+#workspaces button.urgent {
     color: @yellow;
     border-bottom: 2px solid @yellow;
 }
