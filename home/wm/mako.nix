@@ -3,9 +3,9 @@
     enable = true;
     settings = {
       font = "Hack Nerd Font 10";
-      textColor = "#b4befeff";
-      borderColor = "#b4befeff";
-      backgroundColor = "#1e1e2ee6";
+      text-color = "#b4befeff";
+      border-color = "#b4befeff";
+      background-color = "#1e1e2ee6";
     };
   };
 }
