@@ -11,9 +11,11 @@
     lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     zen-browser.inputs.nixpkgs.follows = "nixpkgs";
+    wooz.url = "github:negrel/wooz";
+    wooz.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, home-manager, nixvim, lanzaboote, zen-browser, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nixvim, lanzaboote, zen-browser, wooz, ... }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
