@@ -57,6 +57,13 @@
             urgent-color "#f9e2af"
             inactive-color "#1e1e2e"
         }
+        tab-indicator {
+            place-within-column
+            width 4
+            gap 0
+            position "top"
+            length total-proportion=1.0
+        }
     }
 
     cursor {
@@ -75,7 +82,8 @@
         Mod+Shift+Return hotkey-overlay-title="Open Browser" { spawn "librewolf"; }
         Mod+E hotkey-overlay-title="Open Filemanager" { spawn "thunar"; }
         Mod+P hotkey-overlay-title="Open Launcher" { spawn "fuzzel"; }
-        Mod+Shift+S { spawn-sh "grimshot copy area"; }
+        Mod+Shift+S hotkey-overlay-title="Take Screenshot" { spawn-sh "grimshot copy area"; }
+        Mod+Z hotkey-overlay-title="Zoom" { spawn "wooz"; }
 
         Mod+W repeat=false { toggle-overview; }
         Mod+Shift+C repeat=false { close-window; }
@@ -93,6 +101,13 @@
 
         Mod+Shift+Left { set-window-width "-10%"; }
         Mod+Shift+Right { set-window-width "+10%"; }
+        Mod+Shift+Down { set-window-height "-10%"; }
+        Mod+Shift+Up { set-window-height "+10%"; }
+
+        Mod+Shift+K { consume-or-expel-window-left; }
+        Mod+Shift+H { consume-or-expel-window-right; }
+        Mod+T { toggle-column-tabbed-display; }
+        Mod+R { switch-preset-column-width; }
 
         Mod+1 { focus-workspace 1; }
         Mod+2 { focus-workspace 2; }
@@ -113,6 +128,11 @@
         Mod+Shift+8 { move-column-to-workspace 8; }
         Mod+Shift+9 { move-column-to-workspace 9; }
 
+        Mod+Shift+P { focus-workspace-up; }
+        Mod+Shift+N { focus-workspace-down; }
+        Mod+Ctrl+P { move-column-to-workspace-up; }
+        Mod+Ctrl+N { move-column-to-workspace-down; }
+
         Mod+Space { maximize-column; }
         Mod+F { expand-column-to-available-width; }
         Mod+C { center-visible-columns; }
@@ -123,6 +143,8 @@
         Mod+Comma { focus-monitor-previous; }
         Mod+O { move-column-to-monitor-next; }
         Mod+Shift+O { move-workspace-to-monitor-next; }
+        Mod+Tab { switch-focus-between-floating-and-tiling; }
+        Mod+V { toggle-window-floating; }
 
         Mod+MouseMiddle { toggle-window-floating; }
         Mod+WheelScrollRight cooldown-ms=100 { focus-column-right; }
