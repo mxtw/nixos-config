@@ -81,7 +81,7 @@
         Mod+Return hotkey-overlay-title="Open Terminal" { spawn "foot"; }
         Mod+Shift+Return hotkey-overlay-title="Open Browser" { spawn "librewolf"; }
         Mod+E hotkey-overlay-title="Open Filemanager" { spawn "thunar"; }
-        Mod+P hotkey-overlay-title="Open Launcher" { spawn "fuzzel"; }
+        Mod+D hotkey-overlay-title="Open Launcher" { spawn "fuzzel"; }
         Mod+Shift+S hotkey-overlay-title="Take Screenshot" { spawn-sh "grimshot copy area"; }
         Mod+Z hotkey-overlay-title="Zoom" { spawn "wooz"; }
 
@@ -128,13 +128,16 @@
         Mod+Shift+8 { move-column-to-workspace 8; }
         Mod+Shift+9 { move-column-to-workspace 9; }
 
-        Mod+Shift+P { focus-workspace-up; }
-        Mod+Shift+N { focus-workspace-down; }
-        Mod+Ctrl+P { move-column-to-workspace-up; }
-        Mod+Ctrl+N { move-column-to-workspace-down; }
+        Mod+P { focus-workspace-up; }
+        Mod+N { focus-workspace-down; }
+        Mod+Shift+P { move-column-to-workspace-up; }
+        Mod+Shift+N { move-column-to-workspace-down; }
+        Mod+Ctrl+P { move-workspace-up; }
+        Mod+Ctrl+N { move-workspace-down; }
 
-        Mod+Space { maximize-column; }
-        Mod+F { expand-column-to-available-width; }
+        Mod+Space { expand-column-to-available-width; }
+        Mod+Shift+F { maximize-column; }
+        Mod+F { fullscreen-window; }
         Mod+C { center-visible-columns; }
 
         Mod+Shift+Space { switch-layout "next"; }
