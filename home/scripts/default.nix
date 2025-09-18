@@ -5,6 +5,7 @@ let
     suspend
     poweroff
     reboot
+    quit
     EOF
     )
 
@@ -17,6 +18,9 @@ let
             ;;
         reboot)
             systemctl reboot
+            ;;
+        quit)
+            niri msg action quit
             ;;
     esac
   '';
