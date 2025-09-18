@@ -80,6 +80,7 @@
 
         Mod+Return hotkey-overlay-title="Open Terminal" { spawn "foot"; }
         Mod+Shift+Return hotkey-overlay-title="Open Browser" { spawn "librewolf"; }
+        Mod+Ctrl+Return hotkey-overlay-title="Open Browser (Private Window)" { spawn-sh "librewolf --private-window"; }
         Mod+E hotkey-overlay-title="Open Filemanager" { spawn "thunar"; }
         Mod+P hotkey-overlay-title="Open Launcher" { spawn "fuzzel"; }
         Mod+Shift+S hotkey-overlay-title="Take Screenshot" { spawn-sh "grimshot copy area"; }
@@ -87,7 +88,7 @@
 
         Mod+W repeat=false { toggle-overview; }
         Mod+Shift+C repeat=false { close-window; }
-        Mod+Shift+Q repeat=false { quit; }
+        Mod+Shift+Q repeat=false hotkey-overlay-title="Open Powermenu" { spawn "powermenu"; }
 
         Mod+Left { focus-column-left; }
         Mod+Right { focus-column-right; }
