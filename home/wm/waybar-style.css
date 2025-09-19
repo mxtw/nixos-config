@@ -95,6 +95,21 @@ tooltip {
     color: @yellow;
 }
 
+#battery.critical {
+    color: @base;
+    background: @red;
+}
+
+#battery.warning {
+    color: @base;
+    background: @yellow;
+}
+
+#battery.charging {
+    color: @base;
+    background: @green;
+}
+
 #tray {
     color: @base;
 }
