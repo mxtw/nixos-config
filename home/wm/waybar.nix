@@ -57,7 +57,9 @@ in
           memory.format = "mem {used:.1f}gb";
           pulseaudio = {
             format = "vol {volume}% {format_source}";
+            format-muted = "mut {volume}% {format_source}";
             format-source = "mic {volume}%";
+            format-source-muted = "mut {volume}%";
             on-click = "pavucontrol";
           };
         };
