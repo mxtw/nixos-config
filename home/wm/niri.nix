@@ -26,6 +26,10 @@
             natural-scroll
             disabled-on-external-mouse
         }
+        trackpoint {
+            accel-profile "adaptive"
+            accel-speed -0.5
+        }
     }
 
     output "eDP-1" {
@@ -153,6 +157,13 @@
         Mod+MouseMiddle { toggle-window-floating; }
         Mod+WheelScrollRight cooldown-ms=100 { focus-column-right; }
         Mod+WheelScrollLeft  cooldown-ms=100 { focus-column-left; }
+
+        XF86AudioMute { spawn-sh "pamixer --toggle-mute"; }
+        XF86AudioMicMute { spawn-sh "pamixer --toggle-mute --default-source"; }
+        XF86AudioLowerVolume { spawn-sh "pamixer --decrease 5"; }
+        XF86AudioRaiseVolume { spawn-sh "pamixer --increase 5"; }
+        XF86MonBrightnessDown { spawn-sh "brightnessctl set 10%-"; }
+        XF86MonBrightnessUp { spawn-sh "brightnessctl set +10%"; }
     }
   '';
 }
