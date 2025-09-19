@@ -79,6 +79,10 @@ tooltip {
     color: @sapphire;
 }
 
+#pulseaudio.source-muted {
+    color: @overlay0;
+}
+
 #cpu {
     color: @sky;
 }
