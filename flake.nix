@@ -36,6 +36,7 @@
             { networking.hostName = hostname; }
             ./hosts/configuration.nix
             (./. + "/hosts/${hostname}/hardware-configuration.nix")
+            ./hosts/${hostname}/packages.nix
 
             lanzaboote.nixosModules.lanzaboote
             home-manager.nixosModules.home-manager
@@ -50,7 +51,6 @@
               };
             }
 
-            ./packages
           ];
           specialArgs = {
             inherit allowed-unfree-packages inputs;
