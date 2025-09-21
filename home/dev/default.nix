@@ -12,5 +12,7 @@
     rustc
 
     go
+
+    devenv
   ];
 }
