@@ -93,6 +93,7 @@
         Mod+W repeat=false { toggle-overview; }
         Mod+Shift+C repeat=false { close-window; }
         Mod+Shift+Q repeat=false hotkey-overlay-title="Open Powermenu" { spawn "powermenu"; }
+        Mod+L { spawn "hyprlock"; }
 
         Mod+Left { focus-column-left; }
         Mod+Right { focus-column-right; }

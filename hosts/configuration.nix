@@ -50,6 +50,7 @@
   };
 
   security.pam.services.max.enableGnomeKeyring = true;
+  security.pam.services.hyprlock = { };
   services.gnome.gnome-keyring.enable = true;
 
   # needed for river to work
