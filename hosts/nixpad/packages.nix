@@ -10,4 +10,18 @@
     ../../packages/secrets.nix
     ../../packages/virtualization.nix
   ];
+
+  services.auto-cpufreq = {
+    enable = true;
+    settings = {
+      battery = {
+        governor = "powersave";
+        turbo = "never";
+      };
+      charger = {
+        governor = "performance";
+        turbo = "auto";
+      };
+    };
+  };
 }
