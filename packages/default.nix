@@ -10,6 +10,7 @@
     ./input.nix
     ./network.nix
     ./secrets.nix
+    ./services.nix
     ./virtualization.nix
   ];
 }

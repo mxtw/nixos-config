@@ -9,6 +9,7 @@
     enable = true;
     temperature.day = 5700;
     temperature.night = 4000;
+    provider = "geoclue2";
   };
 
   services.nextcloud-client = {

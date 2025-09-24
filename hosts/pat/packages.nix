@@ -8,6 +8,7 @@
     ../../packages/input.nix
     ../../packages/network.nix
     ../../packages/secrets.nix
+    ../../packages/services.nix
     ../../packages/virtualization.nix
   ];
 
