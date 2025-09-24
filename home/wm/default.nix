@@ -1,7 +1,6 @@
 {
   imports = [
     ./fuzzel.nix
-    ./hyprland.nix
     ./hyprlock.nix
     ./kanshi.nix
     ./kiti.nix

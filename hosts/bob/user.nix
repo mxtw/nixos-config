@@ -4,7 +4,6 @@
   config.modules = {
     fuzzel.enable = true;
 
-    hyprland.enable = false;
     waybar.enable = true;
 
     river.enable = true;

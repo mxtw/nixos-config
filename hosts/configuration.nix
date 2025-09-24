@@ -74,7 +74,6 @@
   };
   services.dbus.enable = true;
   programs.river-classic.enable = true;
-  programs.hyprland.enable = true;
   programs.niri.enable = true;
 
   # bluetooth
@@ -120,7 +119,6 @@
       };
     };
     extraPortals = with pkgs; [
-      xdg-desktop-portal-hyprland
       xdg-desktop-portal-gtk
       xdg-desktop-portal
     ];
