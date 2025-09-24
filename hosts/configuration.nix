@@ -70,7 +70,7 @@
       theme = "catppuccin-mocha-lavender";
       package = pkgs.kdePackages.sddm;
     };
-    defaultSession = "river";
+    defaultSession = "niri";
   };
   services.dbus.enable = true;
   programs.river-classic.enable = true;
