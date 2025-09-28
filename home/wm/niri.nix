@@ -159,6 +159,8 @@
         Mod+MouseMiddle { toggle-window-floating; }
         Mod+WheelScrollRight cooldown-ms=100 { focus-column-right; }
         Mod+WheelScrollLeft  cooldown-ms=100 { focus-column-left; }
+        Mod+WheelScrollUp  cooldown-ms=100 { focus-workspace-up; }
+        Mod+WheelScrollDown  cooldown-ms=100 { focus-workspace-down; }
 
         XF86AudioMute { spawn-sh "pamixer --toggle-mute"; }
         XF86AudioMicMute { spawn-sh "pamixer --toggle-mute --default-source"; }
