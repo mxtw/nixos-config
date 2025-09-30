@@ -27,8 +27,7 @@
             disabled-on-external-mouse
         }
         trackpoint {
-            accel-profile "adaptive"
-            accel-speed -0.5
+            accel-profile "flat"
         }
     }
 
