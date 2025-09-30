@@ -62,6 +62,7 @@
       nixosConfigurations = {
         bob = mkSystem inputs.nixpkgs "x86_64-linux" "bob";
         pat = mkSystem inputs.nixpkgs "x86_64-linux" "pat";
+        squid = mkSystem inputs.nixpkgs "x86_64-linux" "squid";
       };
     };
 }
