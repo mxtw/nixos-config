@@ -31,10 +31,6 @@ in
         src = pkgs.fishPlugins.bang-bang.src;
       }
       {
-        name = "tide";
-        src = pkgs.fishPlugins.tide.src;
-      }
-      {
         name = "fzf-fish";
         src = pkgs.fishPlugins.fzf-fish.src;
       }
@@ -89,5 +85,16 @@ in
   programs.nix-index = {
     enable = true;
     enableFishIntegration = true;
+  };
+
+  programs.starship = {
+    enable = true;
+    enableFishIntegration = true;
+
+    settings = {
+      directory.fish_style_pwd_dir_length = 1;
+      directory.truncate_to_repo = false;
+      git_metrics.disabled = false;
+    };
   };
 }
