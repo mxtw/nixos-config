@@ -5,11 +5,12 @@
     nextcloud-client
   ];
 
-  services.gammastep = {
+  services.wlsunset = {
     enable = true;
     temperature.day = 5700;
     temperature.night = 4000;
-    provider = "geoclue2";
+    latitude = 51.1;
+    longitude = 10.4;
   };
 
   services.nextcloud-client = {
