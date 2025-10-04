@@ -95,6 +95,11 @@ in
       directory.fish_style_pwd_dir_length = 1;
       directory.truncate_to_repo = false;
       git_metrics.disabled = false;
+      git_status = {
+        ahead = "⇡\${count}";
+        diverged = "⇕⇡\${ahead_count}⇣\${behind_count}";
+        behind = "⇣\${count}";
+      };
     };
   };
 }
