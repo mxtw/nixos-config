@@ -1,4 +1,12 @@
-@import "mocha.css";
+@define-color bg #282828;
+@define-color gray #928374;
+@define-color red #fb4934;
+@define-color green #b8bb26;
+@define-color yellow #fabd2f;
+@define-color blue #83a598;
+@define-color purple #d3879b;
+@define-color aqua #8ec07c;
+@define-color fg #ebdbb2;
 
 * {
     border: none;
@@ -12,15 +20,11 @@
 }
 
 window#waybar {
-    background: alpha(@base, 0.9);
-}
-
-window#waybar.fullscreen {
-    background: alpha(@surface0, 0.9);
+    background: alpha(@bg, 0.9);
 }
 
 tooltip {
-    background: alpha(@base, 0.9);
+    background: alpha(@bg, 0.9);
 }
 
 #tags,
@@ -43,14 +47,14 @@ tooltip {
 #workspaces button {
     min-width: 0;
     padding: 0 6px;
-    color: @surface2;
+    color: @gray;
     margin-top: 2px;
     border-bottom: 2px solid transparent;
 }
 
 #tags button.focused,
 #workspaces button.focused {
-    color: @lavender;
+    color: @green;
     border-bottom: 2px solid @lavender;
 }
 
@@ -61,7 +65,7 @@ tooltip {
 }
 
 #window {
-    color: @lavender;
+    color: @fg;
     /*
     * workaround to make the bar not resize when there are weird characters in
     * the window title
@@ -72,48 +76,48 @@ tooltip {
 }
 
 #layout {
-    color: @lavender;
-}
-
-#pulseaudio {
-    color: @sapphire;
-}
-
-#pulseaudio.source-muted {
-    color: @overlay0;
-}
-
-#cpu {
-    color: @sky;
-}
-
-#memory {
-    color: @teal;
-}
-
-#clock {
     color: @green;
 }
 
-#battery {
+#pulseaudio {
     color: @yellow;
 }
 
+#pulseaudio.source-muted {
+    color: @gray;
+}
+
+#cpu {
+    color: @blue;
+}
+
+#memory {
+    color: @purple;
+}
+
+#clock {
+    color: @aqua;
+}
+
+#battery {
+    color: @red;
+}
+
 #battery.critical {
-    color: @base;
+    color: @bg;
     background: @red;
 }
 
 #battery.warning {
-    color: @base;
+    color: @bg;
     background: @yellow;
 }
 
 #battery.charging {
-    color: @base;
+    color: @bg;
     background: @green;
 }
 
 #tray {
-    color: @base;
+    color: @bg;
 }

@@ -56,9 +56,9 @@
         }
         border {
             width 2
-            active-color "#b4befe"
-            urgent-color "#f9e2af"
-            inactive-color "#1e1e2e"
+            active-color "#b8bb26"
+            urgent-color "#fabd2f"
+            inactive-color "#282828"
         }
         tab-indicator {
             place-within-column
@@ -75,7 +75,7 @@
     }
 
     overview {
-        backdrop-color "#1e1e2e"
+        backdrop-color "#282828"
     }
 
     binds {

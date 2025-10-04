@@ -11,10 +11,9 @@
     enable = true;
     defaultEditor = true;
 
-    colorschemes.catppuccin = {
+    colorschemes.gruvbox = {
       enable = true;
-      settings.transparent_background = true;
-      settings.float.transparent = true;
+      settings.transparent_mode = true;
     };
 
     globals.mapleader = " ";

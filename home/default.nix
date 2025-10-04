@@ -23,8 +23,8 @@
 
   gtk = {
     enable = true;
-    theme.name = "Catppuccin-GTK-Dark";
-    theme.package = pkgs.magnetic-catppuccin-gtk;
+    theme.name = "Gruvbox-GTK-Dark";
+    theme.package = pkgs.gruvbox-gtk-theme;
     iconTheme.name = "Papirus";
     iconTheme.package = pkgs.papirus-icon-theme;
     cursorTheme.name = "catppuccin-mocha-dark-cursors";
