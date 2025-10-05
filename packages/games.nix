@@ -25,5 +25,6 @@
     gnome-mahjongg
 
     pcsx2
+    rpcs3
   ];
 }
