@@ -18,6 +18,7 @@ in
     jq
     zipload
     fd
+    hcloud
   ];
 
   programs.fastfetch.enable = true;
