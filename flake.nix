@@ -65,6 +65,13 @@
         bob = mkSystem inputs.nixpkgs "x86_64-linux" "bob";
         pat = mkSystem inputs.nixpkgs "x86_64-linux" "pat";
         squid = mkSystem inputs.nixpkgs "x86_64-linux" "squid";
+        dutch = inputs.nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./hosts/dutch/configuration.nix
+            ./hosts/dutch/hardware-configuration.nix
+          ];
+        };
       };
     };
 }

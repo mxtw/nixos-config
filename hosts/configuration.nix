@@ -19,6 +19,9 @@
 
   networking.networkmanager.enable = true;
   networking.firewall.checkReversePath = false;
+  networking.hosts = {
+    "192.168.122.227" = [ "dutch" "rss.dutch" ];
+  };
 
   time.timeZone = "Europe/Berlin";
 
