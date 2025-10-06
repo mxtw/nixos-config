@@ -87,7 +87,6 @@
         Mod+E hotkey-overlay-title="Open Filemanager" { spawn "thunar"; }
         Mod+P hotkey-overlay-title="Open Launcher" { spawn "fuzzel"; }
         Mod+Shift+S hotkey-overlay-title="Take Screenshot" { spawn-sh "grimshot copy area"; }
-        Mod+Z hotkey-overlay-title="Zoom" { spawn "wooz"; }
         Mod+Shift+T hotkey-overlay-title="Show Time" { spawn "time-notify"; }
 
         Mod+W repeat=false { toggle-overview; }
