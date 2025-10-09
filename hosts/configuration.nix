@@ -122,6 +122,11 @@
       xdg-desktop-portal-gtk
       xdg-desktop-portal
     ];
+    config = {
+      niri = {
+        default = [ "gtk" ];
+      };
+    };
   };
 
   users.users.max = {
