@@ -5,7 +5,8 @@
 
 {
   imports =
-    [ (modulesPath + "/profiles/qemu-guest.nix")
+    [
+      (modulesPath + "/profiles/qemu-guest.nix")
     ];
 
   boot.initrd.availableKernelModules = [ "ahci" "xhci_pci" "virtio_pci" "virtio_scsi" "sd_mod" "sr_mod" ];
@@ -14,9 +15,20 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/3ba23ea1-c0ce-450e-9ecf-9079f1ca9598";
+    {
+      device = "/dev/disk/by-uuid/3ba23ea1-c0ce-450e-9ecf-9079f1ca9598";
       fsType = "ext4";
     };
+
+  fileSystems."/data" = {
+    device = "//u423656-sub2.your-storagebox.de/u423656-sub2";
+    fsType = "cifs";
+    options =
+      let
+        automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
+      in
+      [ "${automount_opts},credentials=/run/secrets/smb-credentials" ];
+  };
 
   swapDevices = [ ];
 
