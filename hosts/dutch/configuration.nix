@@ -23,8 +23,9 @@
   };
 
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wget
+    vim
+    lnav
+    htop
   ];
 
   networking.firewall.allowedTCPPorts = [ 80 443 ];
