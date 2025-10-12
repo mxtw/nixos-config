@@ -4,7 +4,6 @@
     ./firefox
     ./librewolf.nix
     ./qutebrowser
-    ./zen
   ];
 
   home.sessionVariables.BROWSER = "firefox";

@@ -13,13 +13,11 @@
 
     lanzaboote.url = "github:nix-community/lanzaboote/v0.4.2";
     lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
-    zen-browser.url = "github:0xc000022070/zen-browser-flake";
-    zen-browser.inputs.nixpkgs.follows = "nixpkgs";
     firefox-addons.url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
     firefox-addons.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, home-manager, nixvim, lanzaboote, zen-browser, firefox-addons, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nixvim, lanzaboote, firefox-addons, ... }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
