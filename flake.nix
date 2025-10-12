@@ -15,9 +15,11 @@
     lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     zen-browser.inputs.nixpkgs.follows = "nixpkgs";
+    nur.url = "github:nix-community/NUR";
+    nur.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, home-manager, nixvim, lanzaboote, zen-browser, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nixvim, lanzaboote, zen-browser, nur, ... }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -40,6 +42,7 @@
             (./. + "/hosts/${hostname}/hardware-configuration.nix")
             ./hosts/${hostname}/packages.nix
 
+            nur.modules.nixos.default
             lanzaboote.nixosModules.lanzaboote
             home-manager.nixosModules.home-manager
             {
