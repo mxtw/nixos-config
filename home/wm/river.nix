@@ -79,7 +79,7 @@ in
             (
               [
                 { name = "Super Return"; value = "spawn foot"; }
-                { name = "Super+Shift Return"; value = "spawn librewolf"; }
+                { name = "Super+Shift Return"; value = "spawn firefox"; }
                 { name = "Super P"; value = "spawn 'fuzzel -I'"; }
                 { name = "Super E"; value = "spawn thunar"; }
 

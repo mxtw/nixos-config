@@ -82,8 +82,8 @@
         Mod+Shift+Slash { show-hotkey-overlay; }
 
         Mod+Return hotkey-overlay-title="Open Terminal" { spawn "foot"; }
-        Mod+Shift+Return hotkey-overlay-title="Open Browser" { spawn "librewolf"; }
-        Mod+Ctrl+Return hotkey-overlay-title="Open Browser (Private Window)" { spawn-sh "librewolf --private-window"; }
+        Mod+Shift+Return hotkey-overlay-title="Open Browser" { spawn "firefox"; }
+        Mod+Ctrl+Return hotkey-overlay-title="Open Browser (Private Window)" { spawn-sh "firefox --private-window"; }
         Mod+E hotkey-overlay-title="Open Filemanager" { spawn "thunar"; }
         Mod+P hotkey-overlay-title="Open Launcher" { spawn "fuzzel"; }
         Mod+Shift+S hotkey-overlay-title="Take Screenshot" { spawn-sh "grimshot copy area"; }
