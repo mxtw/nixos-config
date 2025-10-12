@@ -2,7 +2,6 @@
 
 {
   environment.systemPackages = [
-    pkgs.keepassxc
     pkgs.age
     pkgs.sops
     pkgs.gnupg
