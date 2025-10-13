@@ -1,4 +1,5 @@
 {
+  sops.secrets."zipline.env" = { };
   services.zipline = {
     enable = true;
     settings.DATASOURCE_TYPE = "local";

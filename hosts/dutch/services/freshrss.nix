@@ -1,4 +1,5 @@
 {
+  sops.secrets.freshrss = { };
   services.freshrss = {
     enable = true;
     defaultUser = "max";

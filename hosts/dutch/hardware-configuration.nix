@@ -20,6 +20,7 @@
       fsType = "ext4";
     };
 
+  sops.secrets.smb-credentials = { };
   fileSystems."/data" = {
     device = "//u423656-sub2.your-storagebox.de/u423656-sub2";
     fsType = "cifs";

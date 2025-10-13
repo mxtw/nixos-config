@@ -15,9 +15,11 @@
     lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
     firefox-addons.url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
     firefox-addons.inputs.nixpkgs.follows = "nixpkgs";
+    sops-nix.url = "github:Mic92/sops-nix";
+    sops-nix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, home-manager, nixvim, lanzaboote, firefox-addons, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, nixvim, lanzaboote, firefox-addons, sops-nix, ... }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -41,6 +43,7 @@
             ./hosts/${hostname}/packages.nix
 
             lanzaboote.nixosModules.lanzaboote
+            sops-nix.nixosModules.sops
             home-manager.nixosModules.home-manager
             {
               home-manager = {
@@ -68,6 +71,7 @@
         dutch = inputs.nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
+            sops-nix.nixosModules.sops
             ./hosts/dutch/configuration.nix
             ./hosts/dutch/hardware-configuration.nix
           ];

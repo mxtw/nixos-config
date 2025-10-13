@@ -1,0 +1,9 @@
+keys:
+  - &max age1xp0sfs0cfrpr3ymufaz4hxu95c0r5nmy4ufuef22uw7v9mvtf4cszj3lmp
+  - &server_dutch age1jpxp0vjmq3r28z32475kls8dt4nh2m7ee3ysvnvuzexglug4sgyq0zhya9
+creation_rules:
+  - path_regex: hosts/dutch/[^/]+\.(yaml|json|env|ini)$
+    key_groups:
+      - age:
+          - *max
+          - *server_dutch
