@@ -1,5 +1,6 @@
 {
   imports = [
+    ./cgit.nix
     ./freshrss.nix
     ./linkding.nix
     ./ssh.nix
