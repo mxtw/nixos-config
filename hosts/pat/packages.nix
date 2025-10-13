@@ -1,7 +1,6 @@
 {
   imports = [
     ../../packages/audio.nix
-    ../../packages/browsers.nix
     ../../packages/cli.nix
     ../../packages/files.nix
     ../../packages/fonts.nix
