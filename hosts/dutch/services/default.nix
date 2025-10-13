@@ -6,5 +6,7 @@
     ./zipline.nix
   ];
 
-  services.caddy.enable = true;
+  services.nginx.enable = true;
+  security.acme.acceptTerms = true;
+  security.acme.defaults.email = "letsencrypt@macks.cloud";
 }

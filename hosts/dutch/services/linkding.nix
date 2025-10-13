@@ -94,7 +94,10 @@
     wantedBy = [ "multi-user.target" ];
   };
 
-  services.caddy.virtualHosts."linkding.macks.cloud".extraConfig = ''
-    reverse_proxy http://localhost:9090
-  '';
+  services.nginx.virtualHosts."linkding.macks.cloud" = {
+    forceSSL = true;
+    enableACME = true;
+    locations."/".proxyPass = "http://localhost:9090";
+  };
 }
+

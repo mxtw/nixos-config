@@ -7,9 +7,9 @@
     environmentFiles = [ "/run/secrets/zipline.env" ];
   };
 
-  services.caddy.virtualHosts = {
-    "files.macks.cloud".extraConfig = ''
-      reverse_proxy http://localhost:3000
-    '';
+  services.nginx.virtualHosts."files.macks.cloud" = {
+    forceSSL = true;
+    enableACME = true;
+    locations."/".proxyPass = "http://localhost:3000";
   };
 }
