@@ -5,6 +5,10 @@
       enable = true;
       scanPath = "/data/git";
       package = pkgs.cgit-pink;
+      settings = {
+        root-title = "git.macks.cloud";
+        root-desc = "welcome to some of my small projects";
+      };
     };
   };
   services.nginx.virtualHosts."git.macks.cloud".forceSSL = true;
