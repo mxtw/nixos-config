@@ -5,6 +5,14 @@
       enable = true;
       scanPath = "/data/git";
       package = pkgs.cgit-pink;
+      settings = {
+        root-title = "git.macks.cloud";
+        root-desc = "welcome to some of my small projects";
+        readme = ":README.md";
+        about-filter = "${pkgs.cgit-pink}/lib/cgit/filters/about-formatting.sh";
+        source-filter = "${pkgs.cgit-pink}/lib/cgit/filters/syntax-highlighting.py";
+        enable-git-config = true;
+      };
     };
   };
   services.nginx.virtualHosts."git.macks.cloud".forceSSL = true;
