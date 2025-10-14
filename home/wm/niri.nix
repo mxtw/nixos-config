@@ -96,11 +96,15 @@
 
         Mod+Left { focus-column-left; }
         Mod+Right { focus-column-right; }
+        Mod+F { focus-column-right; }
+        Mod+B { focus-column-left; }
         Mod+Down { focus-window-down; }
         Mod+Up { focus-window-up; }
 
         Mod+Ctrl+Left { move-column-left; }
         Mod+Ctrl+Right { move-column-right; }
+        Mod+Ctrl+F { move-column-right; }
+        Mod+Ctrl+B { move-column-left; }
         Mod+Ctrl+Down { move-window-down; }
         Mod+Ctrl+Up { move-window-up; }
 
@@ -141,8 +145,7 @@
         Mod+Ctrl+D { move-workspace-down; }
 
         Mod+Space { maximize-column; }
-        Mod+Shift+Space { expand-column-to-available-width; }
-        Mod+F { fullscreen-window; }
+        Mod+Shift+Space { fullscreen-window; }
         Mod+C { center-visible-columns; }
 
         Mod+Shift+L hotkey-overlay-title="Switch Keyboard Layout" { switch-layout "next"; }
