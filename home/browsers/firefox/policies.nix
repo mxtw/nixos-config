@@ -47,5 +47,11 @@
       MoreFromMozilla = false;
       FirefoxLabs = false;
     };
+    TranslateEnabled = false;
+    SearchEngines = {
+      PreventInstalls = true;
+      Remove = [ "Google" "Bing" "Ecosia" "Perplexity" "Wikipedia (en)" ];
+    };
+    SearchSuggestEnabled = false;
   };
 }
