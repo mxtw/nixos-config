@@ -6,11 +6,7 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixvim.url = "github:nix-community/nixvim";
-
-    # comment this as a workaround for a broken build for now
-    # see https://discourse.nixos.org/t/error-atopile-cannot-be-found-in-pkgs/70461/3
-    #nixvim.inputs.nixpkgs.follows = "nixpkgs";
-
+    nixvim.inputs.nixpkgs.follows = "nixpkgs";
     lanzaboote.url = "github:nix-community/lanzaboote/v0.4.2";
     lanzaboote.inputs.nixpkgs.follows = "nixpkgs";
     firefox-addons.url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
