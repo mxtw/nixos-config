@@ -1,9 +1,10 @@
+{ config, ... }:
 {
   sops.secrets.freshrss = { };
   services.freshrss = {
     enable = true;
     defaultUser = "max";
-    passwordFile = "/run/secrets/freshrss";
+    passwordFile = config.sops.secrets.freshrss.path;
     webserver = "nginx";
     virtualHost = "rss.macks.cloud";
     baseUrl = "https://rss.macks.cloud";
