@@ -55,13 +55,8 @@
         ts_ls.enable = true;
         cssls.enable = true;
         html.enable = true;
-
         yamlls.enable = true;
-        zls.enable = true;
-
         marksman.enable = true;
-
-        ocamllsp.enable = true;
         elixirls.enable = true;
       };
     };

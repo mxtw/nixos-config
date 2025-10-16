@@ -1,6 +1,5 @@
 {
   imports = [
-    ./ai.nix
     ./audio.nix
     ./cli.nix
     ./files.nix

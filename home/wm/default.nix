@@ -8,6 +8,5 @@
     ./niri.nix
     ./river.nix
     ./waybar.nix
-    ./yambar.nix
   ];
 }

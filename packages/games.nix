@@ -6,7 +6,6 @@
       pkgs.proton-ge-bin
     ];
     remotePlay.openFirewall = true;
-    gamescopeSession.enable = true;
   };
   programs.gamescope = {
     enable = true;

@@ -5,7 +5,6 @@
     dig
     tcpdump
     whois
-    bandwhich
 
     protonvpn-gui
   ];
