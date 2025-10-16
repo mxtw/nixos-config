@@ -30,6 +30,9 @@
       "127.0.0.1:9090:9090/tcp"
     ];
     log-driver = "journald";
+    environment = {
+      LD_CSRF_TRUSTED_ORIGINS = "https://linkding.macks.cloud";
+    };
     extraOptions = [
       "--network-alias=linkding"
       "--network=linkding_default"
