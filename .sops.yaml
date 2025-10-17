@@ -3,9 +3,13 @@ keys:
   - &host_dutch age1jpxp0vjmq3r28z32475kls8dt4nh2m7ee3ysvnvuzexglug4sgyq0zhya9
   - &host_bob age1kq42v4uxfjh2cf3xv86494t3r8htj72laefh8lfv6fndp2n8xutswx2f4t
 creation_rules:
+  - path_regex: hosts/dutch/[^/]+\.(yaml|json|env|ini)$
+    key_groups:
+      - age:
+          - *max
+          - *host_dutch
   - path_regex: secrets.yaml
     key_groups:
       - age:
           - *max
           - *host_bob
-          - *host_dutch
