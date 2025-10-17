@@ -6,6 +6,7 @@
       scanPath = "/data/git";
       package = pkgs.cgit-pink;
       settings = {
+        section-from-path = 1;
         root-title = "git.macks.cloud";
         root-desc = "welcome to some of my small projects";
         readme = ":README.md";
