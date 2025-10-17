@@ -6,6 +6,7 @@
     ./linkding.nix
     ./ssh.nix
     ./zipline.nix
+    ./task.nix
   ];
 
   sops.secrets."cloudflare.env" = { };
