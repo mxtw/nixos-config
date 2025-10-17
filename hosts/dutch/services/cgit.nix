@@ -17,7 +17,7 @@
     };
   };
   services.nginx.virtualHosts."git.macks.cloud".forceSSL = true;
-  services.nginx.virtualHosts."git.macks.cloud".enableACME = true;
+  services.nginx.virtualHosts."git.macks.cloud".useACMEHost = "macks.cloud";
 
   users = {
     users.git = {

@@ -10,5 +10,5 @@
     baseUrl = "https://rss.macks.cloud";
   };
   services.nginx.virtualHosts."rss.macks.cloud".forceSSL = true;
-  services.nginx.virtualHosts."rss.macks.cloud".enableACME = true;
+  services.nginx.virtualHosts."rss.macks.cloud".useACMEHost = "macks.cloud";
 }

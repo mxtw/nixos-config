@@ -10,7 +10,7 @@
 
   services.nginx.virtualHosts."files.macks.cloud" = {
     forceSSL = true;
-    enableACME = true;
+    useACMEHost = "macks.cloud";
     locations."/".proxyPass = "http://localhost:3000";
   };
 }
