@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ inputs, pkgs, config, ... }:
 
 {
   home.username = "max";
@@ -9,6 +9,7 @@
   programs.home-manager.enable = true;
 
   imports = [
+    inputs.sops-nix.homeManagerModules.sops
     ./browsers
     ./cli
     ./dev
@@ -21,6 +22,9 @@
     ./terminal
     ./wm
   ];
+
+  sops.age.keyFile = "${config.xdg.configHome}/sops/age/keys.txt";
+  sops.defaultSopsFile = ../secrets.yaml;
 
   gtk = {
     enable = true;
