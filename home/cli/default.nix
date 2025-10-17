@@ -6,5 +6,6 @@
     ./misc.nix
     ./shell.nix
     ./tmux.nix
+    ./todo.nix
   ];
 }
