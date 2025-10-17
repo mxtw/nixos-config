@@ -25,6 +25,11 @@
   sops.defaultSopsFile = ./secrets.yaml;
   sops.age.sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
 
+  programs.nh = {
+    enable = true;
+    clean.enable = true;
+  };
+
   environment.systemPackages = with pkgs;[
     vim
     lnav
