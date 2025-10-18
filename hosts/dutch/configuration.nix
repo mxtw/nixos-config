@@ -37,7 +37,7 @@
     git
   ];
 
-  networking.firewall.allowedTCPPorts = [ 80 443 ];
+  networking.firewall.allowedTCPPorts = [ 80 443 6697 ];
 
   system.stateVersion = "25.05"; # Did you read the comment?
 }
