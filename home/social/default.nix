@@ -55,6 +55,7 @@
         move_down = "alt+down";
         move_left = "alt+left";
         move_right = "alt+right";
+        cycle_next_unread_buffer = "alt+a";
       };
     };
     themes.mocha = {
