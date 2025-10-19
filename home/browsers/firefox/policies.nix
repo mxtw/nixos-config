@@ -53,5 +53,6 @@
       Remove = [ "Google" "Bing" "Ecosia" "Perplexity" "Wikipedia (en)" ];
     };
     SearchSuggestEnabled = false;
+    PictureInPicture.Enabled = false;
   };
 }

@@ -55,10 +55,12 @@
         '';
         "browser.tabs.inTitlebar" = 0;
         "browser.ml.chat.enabled" = false;
+        "browser.ml.enable" = false;
         "sidebar.verticalTabs" = true;
         "sidebar.verticalTabs.dragToPinPromo.dismissed" = true;
         "apps.normandy.enabled" = false;
         "extensions.autoDisableScopes" = 0;
+        "extensions.allowPrivateBrowsingByDefault" = true;
         "privacy.resistFingerprinting" = true;
         "privacy.resistFingerprinting.testGranularityMask" = 4;
         "privacy.resistFingerprinting.exemptedDomains" = "monkeytype.com, netflix.com, paypal.com, *.paypal.com, *.netflix.com";
