@@ -102,4 +102,13 @@
       buffer.server_messages.default = "#f9e2af";
     };
   };
+
+  programs.senpai = {
+    enable = true;
+    config = {
+      nickname = "mxtw";
+      password-cmd = [ "cat" config.sops.secrets.soju-password.path ];
+      address = "ircs://irc.macks.cloud:6697";
+    };
+  };
 }
