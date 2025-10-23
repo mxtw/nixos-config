@@ -6,6 +6,10 @@
     autoReload = true;
     extraConfig = ''
       refresh-on-startup "yes"
+      confirm-mark-feed-read "no"
+      show-read-feeds "no"
+      show-read-articles "no"
+      cleanup-on-quit "yes"
 
       freshrss-flag-star "s"
       freshrss-min-items 100
