@@ -29,22 +29,11 @@ in
     extraConfig = (builtins.readFile ./tmux.conf);
     plugins = with pkgs; [
       {
-        plugin = tmuxPlugins.extrakto;
-        extraConfig = "set -g @extrakto_popup_size '40%'";
-      }
-      {
-        plugin = tmuxPlugins.continuum;
-        extraConfig = "set -g @continuum-save-interval '5'";
-      }
-      {
-        plugin = tmuxPlugins.resurrect;
-        extraConfig = "set -g @resurrect-capture-pane-contents 'on'";
-      }
-      {
         plugin = tmuxPlugins.yank;
         extraConfig = "set -g @yank_action 'copy-pipe'";
       }
       tmuxPlugins.better-mouse-mode
+      tmuxPlugins.jump
       tmux-fzf-ssh
     ];
   };
