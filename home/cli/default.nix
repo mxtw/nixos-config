@@ -5,6 +5,7 @@
     ./kubernetes.nix
     ./misc.nix
     ./news.nix
+    ./nix.nix
     ./shell.nix
     ./tmux.nix
     ./todo.nix

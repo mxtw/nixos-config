@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 let
   zipload = pkgs.buildGoModule {
     src = pkgs.fetchFromGitHub {

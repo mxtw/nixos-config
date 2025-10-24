@@ -37,13 +37,6 @@
     cursorTheme.size = 16;
   };
 
-  programs.nh = {
-    enable = true;
-    clean.enable = true;
-    clean.extraArgs = "--keep-since 4d --keep 3";
-    flake = "/home/max/code/nixos-config";
-  };
-
   home.packages = with pkgs; [
     obsidian
     sway-contrib.grimshot
