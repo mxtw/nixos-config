@@ -12,7 +12,7 @@
       settings = {
         "browser.search.region" = "DE";
         "browser.search.isUS" = false;
-        "browser.compactomode.show" = true;
+        "browser.compactmode.show" = true;
         "browser.uidensity" = 1;
         "browser.uiCustomization.state" = ''
           {
