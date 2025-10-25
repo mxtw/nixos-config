@@ -9,6 +9,7 @@
       linkding-extension
       sponsorblock
       ublock-origin
+      web-archives
 
       # this is outdated, find an alternative, see https://github.com/samuelmaddock/metastream/issues/456
       (inputs.firefox-addons.lib.${pkgs.system}.buildFirefoxXpiAddon rec {
