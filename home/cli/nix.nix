@@ -21,6 +21,7 @@
       set print_command "nix-search-tv print"
       set preview_command "nix-search-tv preview {}"
       set result (nix-search-tv print | fzf --preview "$preview_command" \
+                                --preview-window=up \
                                 --scheme history \
                                 --header '^a all ^n nixos ^p nixpkgs ^m home-manager ^v nixvim'\
                                 --prompt "all: " \
