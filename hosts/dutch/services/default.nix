@@ -21,9 +21,16 @@
     };
     certs = {
       "macks.cloud" = {
-        domain = "*.macks.cloud";
+        domain = "macks.cloud";
+        extraDomainNames = [ "*.macks.cloud" ];
         group = config.services.nginx.group;
       };
     };
+  };
+  services.nginx.virtualHosts."macks.cloud" = {
+    forceSSL = true;
+    default = true;
+    useACMEHost = "macks.cloud";
+    locations."/".root = "/var/www/macks.cloud";
   };
 }
