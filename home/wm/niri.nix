@@ -72,6 +72,7 @@
     cursor {
         xcursor-theme "catppuccin-mocha-dark-cursors"
         xcursor-size 16
+        hide-after-inactive-ms 5000
     }
 
     overview {
