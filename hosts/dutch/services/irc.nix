@@ -21,11 +21,17 @@ in
       postRun = "systemctl reload soju.service";
     };
   };
+  # TODO: enable file uploads
   services.soju = {
     enable = true;
-    listen = [ ":6697" ];
+    listen = [ ":6697" "http://localhost:6698" ];
     hostName = "irc.macks.cloud";
     tlsCertificate = "${sslCertDir}/cert.pem";
     tlsCertificateKey = "${sslCertDir}/key.pem";
+  };
+  services.nginx.virtualHosts."irc.macks.cloud" = {
+    forceSSL = true;
+    useACMEHost = "macks.cloud";
+    locations."/".proxyPass = "http://127.0.0.1:6698";
   };
 }
