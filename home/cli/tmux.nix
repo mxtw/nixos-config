@@ -16,9 +16,6 @@ let
     };
 in
 {
-  home.packages = with pkgs; [
-    sesh
-  ];
   programs.tmux = {
     enable = true;
     keyMode = "vi";
@@ -31,6 +28,10 @@ in
       {
         plugin = tmuxPlugins.yank;
         extraConfig = "set -g @yank_action 'copy-pipe'";
+      }
+      {
+        plugin = tmuxPlugins.session-wizard;
+        extraConfig = "set -g @session-wizard 'm'";
       }
       tmuxPlugins.better-mouse-mode
       tmuxPlugins.jump
