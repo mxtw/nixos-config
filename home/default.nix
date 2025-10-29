@@ -13,6 +13,7 @@
     ./browsers
     ./cli
     ./dev
+    ./mail
     ./media
     ./nixvim
     ./scripts
