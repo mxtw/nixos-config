@@ -20,7 +20,9 @@ in
 
   # maybe not in systempackages?
   environment.systemPackages = with pkgs; [
-    lutris
+    (lutris.override {
+      extraLibraries = pkgs: [ libadwaita gtk4 ];
+    })
     heroic
     wine
     wine64
