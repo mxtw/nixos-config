@@ -4,8 +4,7 @@
   fonts.packages = with pkgs; [
     dejavu_fonts
     noto-fonts
-    noto-fonts-emoji
-    noto-fonts-extra
+    noto-fonts-color-emoji
     hack-font
     nerd-fonts.hack
 
