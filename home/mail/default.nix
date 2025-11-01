@@ -17,6 +17,7 @@ in
 
   accounts.email = {
     maildirBasePath = ".mail";
+    certificatesFile = "${config.xdg.configHome}/protonmail/bridge-v3/cert.pem";
     accounts = {
       max = {
         primary = true;
