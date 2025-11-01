@@ -15,34 +15,48 @@ in
   home.packages = [ pkgs.protonmail-bridge ];
   services.protonmail-bridge.enable = true;
 
-  accounts.email.accounts = {
-    max = {
-      primary = true;
-      enable = true;
-      realName = "max";
-      userName = "max@macks.cloud";
-      address = "max@macks.cloud";
-      # this is not great...
-      passwordCommand = "cat ${config.xdg.configHome}/protonmail/bridge-v3/.password";
-      smtp = {
-        host = "127.0.0.1";
-        port = 1025;
-        tls.enable = true;
-        tls.useStartTls = true;
+  accounts.email = {
+    maildirBasePath = ".mail";
+    accounts = {
+      max = {
+        primary = true;
+        enable = true;
+        realName = "max";
+        userName = "max@macks.cloud";
+        address = "max@macks.cloud";
+        maildir.path = "max";
+        # this is not great...
+        passwordCommand = "cat ${config.xdg.configHome}/protonmail/bridge-v3/.password";
+        smtp = {
+          host = "127.0.0.1";
+          port = 1025;
+          tls.enable = true;
+          tls.useStartTls = true;
+        };
+        imap = {
+          host = "127.0.0.1";
+          port = 1143;
+          tls.enable = true;
+          tls.useStartTls = true;
+        };
+        aerc.enable = true;
+        msmtp.enable = true;
+        mbsync = {
+          enable = true;
+          create = "maildir";
+          expunge = "both";
+        };
       };
-      imap = {
-        host = "127.0.0.1";
-        port = 1143;
-        tls.enable = true;
-        tls.useStartTls = true;
-      };
-      aerc.enable = true;
     };
   };
+  programs.mbsync.enable = true;
+  services.mbsync.enable = true;
+  programs.msmtp.enable = true;
 
   xdg.configFile."aerc/stylesets/catppuccin-mocha".source = "${catppuccin-aerc}/dist/catppuccin-mocha";
   programs.aerc = {
     enable = true;
+    extraAccounts.max.source = "maildir://~/.mail/max";
     extraConfig = {
       general.unsafe-accounts-conf = true;
       ui = {
