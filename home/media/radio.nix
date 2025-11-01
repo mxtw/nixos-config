@@ -15,9 +15,7 @@ in
 {
   home.packages = with pkgs;
     [
-      # build is broken as of 2025-10-16
-      # TODO: enable again
-      # sdrpp-slim
+      sdrpp-slim
       chirp
     ];
 }
