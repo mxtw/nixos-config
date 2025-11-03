@@ -42,16 +42,25 @@ in
         };
         aerc.enable = true;
         msmtp.enable = true;
+        folders.inbox = "Inbox";
         mbsync = {
           enable = true;
           create = "maildir";
           expunge = "both";
+          patterns = [ "*" "!All Mail" "!Labels/*" ];
+        };
+        imapnotify = {
+          enable = true;
+          boxes = [ "Inbox" "Folders/forwarded" ];
+          onNotify = "${pkgs.isync}/bin/mbsync max";
         };
       };
     };
   };
   programs.mbsync.enable = true;
   services.mbsync.enable = true;
+  services.imapnotify.enable = true;
+  services.imapnotify.path = [ pkgs.coreutils-full ]; # needed in passwordCmd
   programs.msmtp.enable = true;
 
   xdg.configFile."aerc/stylesets/catppuccin-mocha".source = "${catppuccin-aerc}/dist/catppuccin-mocha";
