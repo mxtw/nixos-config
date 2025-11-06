@@ -79,6 +79,7 @@ in
       filters = {
         "text/html" = "${pkgs.aerc}/libexec/aerc/filters/html -o display_link_number=true | ${pkgs.aerc}/libexec/aerc/filters/colorize";
         "text/plain" = "${pkgs.aerc}/libexec/aerc/filters/colorize";
+        "message/rfc822" = "${pkgs.aerc}/libexec/aerc/filters/colorize";
         # home-manager sorts those alphabetically so this breaks :/
         # "text/*" = ''${pkgs.bat}/bin/bat -fP --file-name="$AERC_FILENAME" --style=plain'';
         "application/pdf" = "${pkgs.zathura}/bin/zathura -";
