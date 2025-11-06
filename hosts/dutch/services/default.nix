@@ -6,6 +6,7 @@
     ./games
     ./irc.nix
     ./linkding.nix
+    ./matrix.nix
     ./ssh.nix
     ./task.nix
     ./zipline.nix
