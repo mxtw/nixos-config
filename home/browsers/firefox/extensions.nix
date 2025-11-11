@@ -2,7 +2,7 @@
 {
   programs.firefox.profiles.max.extensions = {
     force = true;
-    packages = with inputs.firefox-addons.packages.${pkgs.system}; [
+    packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
       darkreader
       firefox-color
       keepassxc-browser
@@ -12,7 +12,7 @@
       web-archives
 
       # this is outdated, find an alternative, see https://github.com/samuelmaddock/metastream/issues/456
-      (inputs.firefox-addons.lib.${pkgs.system}.buildFirefoxXpiAddon rec {
+      (inputs.firefox-addons.lib.${pkgs.stdenv.hostPlatform.system}.buildFirefoxXpiAddon rec {
         pname = "metastream_remote";
         version = "0.6.0";
         url = "https://addons.mozilla.org/firefox/downloads/file/3613248/metastream_remote-${version}.xpi";

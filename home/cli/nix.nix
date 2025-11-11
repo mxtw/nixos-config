@@ -13,7 +13,7 @@
       settings = {
         indexes = [ "nixos" "nixpkgs" "home-manager" ];
         experimental.options_file = {
-          nixvim = inputs.nixvim.packages.${pkgs.system}.options-json + "/share/doc/nixos/options.json";
+          nixvim = inputs.nixvim.packages.${pkgs.stdenv.hostPlatform.system}.options-json + "/share/doc/nixos/options.json";
         };
       };
     };
