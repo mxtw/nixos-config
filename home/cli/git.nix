@@ -22,9 +22,11 @@
   programs.lazygit = {
     enable = true;
     settings = {
-      git.paging.externalDiffCommand = "difft --color=always";
-
-
+      git.pagers = [
+        {
+          externalDiffCommand = "difft --color=always";
+        }
+      ];
       gui.theme = {
         activeBorderColor = [ "#b4befe" "bold" ];
         inactiveBorderColor = [ "#a6adc8" ];
