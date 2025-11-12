@@ -129,6 +129,7 @@
     };
   };
 
+  users.motdFile = ./${config.networking.hostName}/motd.txt;
   users.users.max = {
     isNormalUser = true;
     description = "max";

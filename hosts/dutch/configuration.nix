@@ -14,6 +14,7 @@
 
   networking.hostName = "dutch"; # Define your hostname.
   time.timeZone = "Europe/Berlin";
+  users.motdFile = ./motd.txt;
   users.users.max = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
