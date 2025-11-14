@@ -3,7 +3,7 @@
   services.cgit = {
     "git.macks.cloud" = {
       enable = true;
-      scanPath = "/data/git";
+      scanPath = "/data/git/public";
       package = pkgs.cgit-pink;
       settings = {
         section-from-path = 1;
