@@ -34,15 +34,22 @@ let
     #!/usr/bin/env bash
     notify-send -t 5000 "$(date +%H:%M:%S)" "$(date +'%a, %x')"
   '';
+
+  pass-fuzzel = pkgs.writeShellScriptBin "pass-fuzzel" ''
+    selection=$(find "$HOME"/.password-store -type f -name '*.gpg' -printf '%P\n' | sed 's/.gpg$//g' | sort | fuzzel --dmenu)
+
+    if [ -n "$selection" ]; then
+        pass show -c "$selection"
+    fi
+  '';
 in
 {
-  home.packages = with pkgs; [
+  home.packages = with pkgs;[
     powermenu
-
     ocr
     tesseract
-
     libnotify
     time-notify
+    pass-fuzzel
   ];
 }

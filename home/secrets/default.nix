@@ -17,7 +17,7 @@
   services.gpg-agent = {
     enable = true;
     pinentry.package = pkgs.pinentry-all;
-    pinentry.program = "pinentry-curses";
+    pinentry.program = "pinentry-qt";
     enableFishIntegration = true;
   };
   programs.password-store = {
