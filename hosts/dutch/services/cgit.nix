@@ -27,8 +27,9 @@
       createHome = true;
       shell = "${pkgs.git}/bin/git-shell";
       openssh.authorizedKeys.keys = [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICOZx2ejqskuEDw9ZagBJ/srl0kZHki5VwYa2oxM/+Yi"
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ96dj94d7joqGSLX4NPiFFk9rsXrw4lUlP5LnyU5ZZT"
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICOZx2ejqskuEDw9ZagBJ/srl0kZHki5VwYa2oxM/+Yi max"
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ96dj94d7joqGSLX4NPiFFk9rsXrw4lUlP5LnyU5ZZT max@work"
+        "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCESfnqQwqEAFnelTHlzaMDzYZqQdYKvvp9+mvzz6pWf5SeiiGQD2sAtYr/j49NRCQ9mGqEoClk+i/hWatLMejI= max@phone"
       ];
     };
     groups.git = { };
