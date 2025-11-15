@@ -11,6 +11,9 @@
       show-read-articles "no"
       cleanup-on-quit "yes"
 
+      bind o everywhere set browser "cha" ; open-in-browser -- "Open in chawan"
+      bind O everywhere set browser "firefox" ; open-in-browser -- "Open in firefox"
+
       freshrss-flag-star "s"
       freshrss-min-items 100
       include "${config.sops.secrets.newsboat-config.path}"
