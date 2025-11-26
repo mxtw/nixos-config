@@ -36,7 +36,7 @@ let
   '';
 
   pass-fuzzel = pkgs.writeShellScriptBin "pass-fuzzel" ''
-    selection=$(find "$HOME"/.password-store -type f -name '*.gpg' -printf '%P\n' | sed 's/.gpg$//g' | sort | fuzzel --dmenu)
+    selection=$(find "$HOME"/.password-store -type f -name '*.gpg' -printf '%P\n' | sed 's/.gpg$//g' | sort | fuzzel --width 60 --dmenu)
 
     if [ -n "$selection" ]; then
         pass show -c "$selection"
