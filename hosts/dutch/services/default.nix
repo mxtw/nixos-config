@@ -3,7 +3,6 @@
   imports = [
     ./cgit.nix
     ./freshrss.nix
-    ./games
     ./irc.nix
     ./linkding.nix
     ./matrix.nix
