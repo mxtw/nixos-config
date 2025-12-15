@@ -11,7 +11,7 @@
       pkiBundle = "/var/lib/sbctl";
     };
     tmp.cleanOnBoot = true;
-    kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.linuxPackages_zen;
   };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
