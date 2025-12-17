@@ -32,6 +32,7 @@ in
     bolt-launcher
     gnome-mahjongg
     tome-fixed
+    tetrio-desktop
 
     pcsx2
     rpcs3
