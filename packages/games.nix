@@ -1,10 +1,4 @@
 { pkgs, ... }:
-let
-  tome-fixed = pkgs.tome4.overrideAttrs (oldAttrs: {
-    env.NIX_CFLAGS_COMPILE = oldAttrs.env.NIX_CFLAGS_COMPILE + " -Wno-error=incompatible-pointer-types -Wno-error=implicit-function-declaration";
-    buildInputs = oldAttrs.buildInputs ++ [ pkgs.xorg.libX11 ];
-  });
-in
 {
   programs.steam = {
     enable = true;
@@ -31,7 +25,7 @@ in
     prismlauncher
     bolt-launcher
     gnome-mahjongg
-    tome-fixed
+    tome4
     tetrio-desktop
 
     pcsx2
