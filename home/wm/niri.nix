@@ -89,7 +89,6 @@
         Mod+P hotkey-overlay-title="Open Launcher" { spawn "fuzzel"; }
         Mod+Shift+P hotkey-overlay-title="Open Password Manager" { spawn "pass-fuzzel"; }
         Mod+Shift+S hotkey-overlay-title="Take Screenshot" { spawn-sh "grimshot copy area"; }
-        Mod+Shift+T hotkey-overlay-title="Show Time" { spawn "time-notify"; }
 
         Mod+W repeat=false { toggle-overview; }
         Mod+Shift+C repeat=false { close-window; }

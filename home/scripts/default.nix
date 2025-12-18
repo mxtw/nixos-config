@@ -30,11 +30,6 @@ let
     grimshot save area - | tesseract stdin - | wl-copy
   '';
 
-  time-notify = pkgs.writeShellScriptBin "time-notify" ''
-    #!/usr/bin/env bash
-    notify-send -t 5000 "$(date +%H:%M:%S)" "$(date +'%a, %x')"
-  '';
-
   pass-fuzzel = pkgs.writeShellScriptBin "pass-fuzzel" ''
     selection=$(find "$HOME"/.password-store -type f -name '*.gpg' -printf '%P\n' | sed 's/.gpg$//g' | sort | fuzzel --width 60 --dmenu)
 
@@ -49,7 +44,6 @@ in
     ocr
     tesseract
     libnotify
-    time-notify
     pass-fuzzel
   ];
 }

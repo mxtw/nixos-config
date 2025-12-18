@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
   imports = [
-    ./halloy.nix
     ./iamb.nix
     ./senpai.nix
   ];

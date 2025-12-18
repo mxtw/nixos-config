@@ -2,7 +2,6 @@
 {
   imports = [
     ./firefox
-    ./librewolf.nix
     ./qutebrowser
   ];
 
