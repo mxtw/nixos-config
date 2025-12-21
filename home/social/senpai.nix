@@ -21,7 +21,7 @@ in
       password-cmd = [ "cat" config.sops.secrets.soju-password.path ];
       address = "ircs://irc.macks.cloud:6697";
       typings = false;
-      colors.nicks = "base";
+      colors.nicks = "extended";
       colors.unread = "#b4befe";
       shortcuts = {
         "Alt+n" = "buffer-next-unread";
