@@ -124,7 +124,7 @@
     ];
     config = {
       niri = {
-        default = [ "gtk" ];
+        default = [ "gnome;gtk" ];
       };
     };
   };
