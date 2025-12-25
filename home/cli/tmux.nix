@@ -23,7 +23,7 @@ in
     baseIndex = 1;
     escapeTime = 0;
     terminal = "foot";
-    extraConfig = (builtins.readFile ./tmux.conf);
+    extraConfig = (builtins.readFile ../configs/tmux.conf);
     plugins = with pkgs; [
       {
         plugin = tmuxPlugins.yank;

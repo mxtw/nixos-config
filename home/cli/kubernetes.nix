@@ -6,7 +6,7 @@
       ui.skin = "catppuccin-mocha-transparent";
     };
     skins = {
-      catppuccin-mocha-transparent = ./k9s-theme.yaml;
+      catppuccin-mocha-transparent = ../configs/k9s-theme.yaml;
     };
   };
 

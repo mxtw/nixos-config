@@ -64,7 +64,7 @@ in
           };
         };
       };
-      style = ./waybar-style.css;
+      style = ../configs/waybar-style.css;
     };
   };
 }
