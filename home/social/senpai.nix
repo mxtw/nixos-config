@@ -5,8 +5,8 @@ let
     src = pkgs.fetchFromSourcehut {
       owner = "~delthas";
       repo = "senpai";
-      rev = "8a399a916e2b1277dd792df446a0dde37d0d3c17";
-      sha256 = "sha256-7vCNX5vTbZAmlpRROeeG53+L+xd4AizyQqXd2LSa1xM=";
+      rev = "c19e012fd4322817867ac8f89916401a7a1c31cb";
+      sha256 = "sha256-xp+AorpVXlZ+WhoqZ8Cf7H5JYUtvM7k0STaEGBjOouI=";
     };
     vendorHash = "sha256-9IHUi7cCE/bfHAKezJYeAFPQaidWjSAYZqfEtbyV0hE=";
   };
