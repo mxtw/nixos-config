@@ -28,6 +28,9 @@ in
     hostName = "irc.macks.cloud";
     tlsCertificate = "${sslCertDir}/cert.pem";
     tlsCertificateKey = "${sslCertDir}/key.pem";
+    extraConfig = ''
+      file-upload fs ./upload
+    '';
   };
   services.nginx.virtualHosts."irc.macks.cloud" = {
     forceSSL = true;
