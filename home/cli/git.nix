@@ -11,6 +11,7 @@
       gpg.format = "ssh";
       init.defaultBranch = "main";
       pull.rebase = true;
+      pull.autostash = true;
     };
   };
 
