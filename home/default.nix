@@ -48,4 +48,5 @@
     pandoc
     imagemagick
   ];
+  programs.emacs.enable = true;
 }
