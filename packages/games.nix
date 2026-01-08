@@ -25,7 +25,6 @@
     prismlauncher
     bolt-launcher
     gnome-mahjongg
-    tome4
     tetrio-desktop
 
     pcsx2
