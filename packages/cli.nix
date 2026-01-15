@@ -12,4 +12,6 @@
     # for secure boot
     pkgs.sbctl
   ];
+
+  programs.mosh.enable = true;
 }
