@@ -26,6 +26,7 @@
     bolt-launcher
     gnome-mahjongg
     tetrio-desktop
+    wowup-cf
 
     pcsx2
     rpcs3

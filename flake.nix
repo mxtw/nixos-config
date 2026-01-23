@@ -28,6 +28,7 @@
         "steam"
         "steam-unwrapped"
         "tetrio-desktop"
+        "wowup-cf"
       ];
 
       mkSystem = pkgs: system: hostname:
