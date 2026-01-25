@@ -12,4 +12,8 @@
       cups-browsed
     ];
   };
+  programs.localsend = {
+    enable = true;
+    openFirewall = true;
+  };
 }
