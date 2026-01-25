@@ -4,14 +4,15 @@
     "git.macks.cloud" = {
       enable = true;
       scanPath = "/data/git/public";
-      package = pkgs.cgit-pink;
+      package = pkgs.cgit;
+      gitHttpBackend.checkExportOkFiles = false;
       settings = {
         section-from-path = 1;
         root-title = "git.macks.cloud";
         root-desc = "welcome to some of my small projects";
         readme = ":README.md";
-        about-filter = "${pkgs.cgit-pink}/lib/cgit/filters/about-formatting.sh";
-        source-filter = "${pkgs.cgit-pink}/lib/cgit/filters/syntax-highlighting.py";
+        about-filter = "${pkgs.cgit}/lib/cgit/filters/about-formatting.sh";
+        source-filter = "${pkgs.cgit}/lib/cgit/filters/syntax-highlighting.py";
         enable-git-config = true;
       };
     };
