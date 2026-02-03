@@ -1,4 +1,11 @@
 { pkgs, ... }:
+let
+  # temporary workaround to make the build work again, see
+  # https://github.com/NixOS/nixpkgs/issues/483540#issuecomment-3839811537
+  kdenlive-ffmpeg7 = pkgs.kdePackages.kdenlive.override {
+    ffmpeg-full = pkgs.ffmpeg_7-full;
+  };
+in
 {
   programs.mpv = {
     enable = true;
@@ -25,7 +32,7 @@
     ];
   };
 
-  home.packages = with pkgs; [
-    kdePackages.kdenlive
+  home.packages = [
+    kdenlive-ffmpeg7
   ];
 }
