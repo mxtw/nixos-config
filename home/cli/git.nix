@@ -14,9 +14,24 @@
     };
   };
 
+  programs.jujutsu = {
+    enable = true;
+    settings = {
+      ui.show-cryptographic-signatures = true;
+      user.email = "max@macks.cloud";
+      user.name = "max";
+      signing = {
+        key = "/home/max/.ssh/id_ed25519.pub";
+        backend = "ssh";
+        behavior = "own";
+      };
+    };
+  };
+
   programs.difftastic = {
     enable = true;
     git.enable = true;
+    jujutsu.enable = true;
   };
 
   programs.lazygit = {
