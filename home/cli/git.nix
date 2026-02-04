@@ -2,12 +2,11 @@
   programs.git = {
     enable = true;
 
+    signing.key = "/home/max/.ssh/id_ed25519.pub";
+    signing.signByDefault = true;
     settings = {
       user.email = "max@macks.cloud";
       user.name = "max";
-
-      signing.key = "/home/max/.ssh/id_ed25519.pub";
-      signing.signByDefault = true;
       gpg.format = "ssh";
       init.defaultBranch = "main";
       pull.rebase = true;
