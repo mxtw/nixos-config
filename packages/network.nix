@@ -7,6 +7,7 @@
     whois
 
     protonvpn-gui
+    wakeonlan
   ];
 
   programs.wireshark = {
