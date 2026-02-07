@@ -18,6 +18,7 @@
     enable = true;
     settings = {
       ui.show-cryptographic-signatures = true;
+      ui.default-command = [ "log" "-n=10" "--reversed" ];
       user.email = "max@macks.cloud";
       user.name = "max";
       signing = {
