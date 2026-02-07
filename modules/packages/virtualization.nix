@@ -1,0 +1,20 @@
+{
+  flake.modules.nixos.virtualization = { pkgs, ... }: {
+    virtualisation = {
+      podman = {
+        enable = true;
+        autoPrune.enable = true;
+        autoPrune.dates = "weekly";
+
+        dockerCompat = true;
+        dockerSocket.enable = true;
+      };
+
+      libvirtd.enable = true;
+    };
+    programs.virt-manager.enable = true;
+    environment.systemPackages = with pkgs; [
+      docker-compose
+    ];
+  };
+}

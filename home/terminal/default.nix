@@ -1,3 +1,0 @@
-{
-  imports = [ ./foot.nix ];
-}

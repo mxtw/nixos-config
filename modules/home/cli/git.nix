@@ -1,0 +1,64 @@
+{
+  flake.modules.homeManager.git = {
+    programs.git = {
+      enable = true;
+
+      signing.key = "/home/max/.ssh/id_ed25519.pub";
+      signing.signByDefault = true;
+      settings = {
+        user.email = "max@macks.cloud";
+        user.name = "max";
+        gpg.format = "ssh";
+        init.defaultBranch = "main";
+        pull.rebase = true;
+        pull.autostash = true;
+      };
+    };
+
+    programs.jujutsu = {
+      enable = true;
+      settings = {
+        ui.show-cryptographic-signatures = true;
+        ui.default-command = [ "log" "-n=10" "--reversed" ];
+        user.email = "max@macks.cloud";
+        user.name = "max";
+        signing = {
+          key = "/home/max/.ssh/id_ed25519.pub";
+          backend = "ssh";
+          behavior = "own";
+        };
+      };
+    };
+
+    programs.difftastic = {
+      enable = true;
+      git.enable = true;
+      jujutsu.enable = true;
+    };
+
+    programs.lazygit = {
+      enable = true;
+      settings = {
+        git.pagers = [
+          {
+            externalDiffCommand = "difft --color=always";
+          }
+        ];
+        gui.theme = {
+          activeBorderColor = [ "#b4befe" "bold" ];
+          inactiveBorderColor = [ "#a6adc8" ];
+          optionsTextColor = [ "#89b4fa" ];
+          selectedLineBgColor = [ "#313244" ];
+          cherryPickedCommitBgColor = [ "#45475a" ];
+          cherryPickedCommitFgColor = [ "#b4befe" ];
+          unstagedChangesColor = [ "#f38ba8" ];
+          defaultFgColor = [ "#cdd6f4" ];
+          searchingActiveBorderColor = [ "#f9e2af" ];
+          authorColors."*" = [ "#b4befe" ];
+        };
+      };
+    };
+
+    programs.gh.enable = true;
+  };
+}

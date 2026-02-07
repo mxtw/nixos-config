@@ -13,67 +13,10 @@
     firefox-addons.inputs.nixpkgs.follows = "nixpkgs";
     sops-nix.url = "github:Mic92/sops-nix";
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
+
+    flake-parts.url = "github:hercules-ci/flake-parts";
+    import-tree.url = "github:vic/import-tree";
   };
 
-  outputs = { self, nixpkgs, home-manager, nixvim, lanzaboote, firefox-addons, sops-nix, ... }@inputs:
-    let
-      lib = nixpkgs.lib;
-      system = "x86_64-linux";
-
-      # see https://github.com/jackdbd/nix-config/blob/451f47e3c5040c3e5fb6cf07b328bec0655b1ccd/flake.nix#L56-L74 
-      # for inspiration
-      allowed-unfree-packages = [
-        "obsidian"
-        "spotify"
-        "steam"
-        "steam-unwrapped"
-        "tetrio-desktop"
-        "wowup-cf"
-      ];
-
-      mkSystem = pkgs: system: hostname:
-        pkgs.lib.nixosSystem {
-          system = system;
-          modules = [
-            { networking.hostName = hostname; }
-            ./hosts/configuration.nix
-            (./. + "/hosts/${hostname}/hardware-configuration.nix")
-            ./hosts/${hostname}/packages.nix
-
-            lanzaboote.nixosModules.lanzaboote
-            sops-nix.nixosModules.sops
-            home-manager.nixosModules.home-manager
-            {
-              home-manager = {
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                extraSpecialArgs = { inherit inputs; };
-                users.max = { ... }: {
-                  imports = [ ./hosts/${hostname}/user.nix ];
-                };
-              };
-            }
-
-          ];
-          specialArgs = {
-            inherit allowed-unfree-packages inputs;
-          };
-        };
-
-    in
-    {
-      nixosConfigurations = {
-        bob = mkSystem inputs.nixpkgs "x86_64-linux" "bob";
-        pat = mkSystem inputs.nixpkgs "x86_64-linux" "pat";
-        squid = mkSystem inputs.nixpkgs "x86_64-linux" "squid";
-        dutch = inputs.nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          modules = [
-            sops-nix.nixosModules.sops
-            ./hosts/dutch/configuration.nix
-            ./hosts/dutch/hardware-configuration.nix
-          ];
-        };
-      };
-    };
+  outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
 }
