@@ -15,6 +15,7 @@
       cli
       files
       fonts
+      games
       network
       secrets
       services
