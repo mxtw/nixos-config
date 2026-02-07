@@ -1,17 +1,8 @@
 {
   flake.modules.homeManager.services = { pkgs, ... }: {
-
     home.packages = with pkgs; [
       nextcloud-client
     ];
-
-    services.wlsunset = {
-      enable = true;
-      temperature.day = 5700;
-      temperature.night = 4000;
-      latitude = 51.1;
-      longitude = 10.4;
-    };
 
     services.nextcloud-client = {
       enable = true;

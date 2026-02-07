@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.shell = { pkgs, ... }:
+  flake.modules.homeManager.shell = { pkgs, config, ... }:
     let
       catppuccin-fish = pkgs.fetchFromGitHub {
         owner = "catppuccin";
@@ -7,9 +7,14 @@
         rev = "cc8e4d8fffbdaab07b3979131030b234596f18da";
         sha256 = "udiU2TOh0lYL7K7ylbt+BGlSDgCjMpy75vQ98C1kFcc=";
       };
+      catppuccin-bat = pkgs.fetchFromGitHub {
+        owner = "catppuccin";
+        repo = "bat";
+        rev = "699f60fc8ec434574ca7451b444b880430319941";
+        hash = "sha256-6fWoCH90IGumAMc4buLRWL0N61op+AuMNN9CAR9/OdI=";
+      };
     in
     {
-
       xdg.configFile."fish/themes/Catppuccin Mocha.theme".source = "${catppuccin-fish}/themes/Catppuccin Mocha.theme";
 
       programs.fish = {
@@ -84,6 +89,57 @@
       programs.direnv = {
         enable = true;
         nix-direnv.enable = true;
+      };
+
+      programs.bat = {
+        enable = true;
+        themes = {
+          catppuccin = {
+            src = catppuccin-bat;
+            file = "themes/Catppuccin Mocha.tmTheme";
+          };
+        };
+        config.theme = "catppuccin";
+      };
+
+      sops.secrets.taskwarrior-config = { };
+      programs.taskwarrior = {
+        enable = true;
+        package = pkgs.taskwarrior3;
+        config = {
+          sync.server.client_id = "125f47cf-db71-4da5-8371-70ea7f6c9768";
+          sync.server.url = "https://task.macks.cloud";
+        };
+        # extraconfig includes encryption secret
+        extraConfig = ''
+          include ${config.sops.secrets.taskwarrior-config.path}
+        '';
+      };
+
+      services.taskwarrior-sync = {
+        enable = true;
+        package = pkgs.taskwarrior3;
+      };
+
+      home.packages = with pkgs; [
+        ncdu
+        unzip
+        jq
+        fd
+        hcloud
+      ];
+
+      programs.fastfetch.enable = true;
+
+      programs.ripgrep.enable = true;
+
+      programs.tealdeer.enable = true;
+      programs.tealdeer.settings.updates.auto_update = true;
+
+      programs.btop = {
+        enable = true;
+        settings.theme_background = false;
+        settings.color_theme = "TTY";
       };
     };
 }

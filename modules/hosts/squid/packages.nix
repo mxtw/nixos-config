@@ -26,41 +26,20 @@
         useUserPackages = true;
         extraSpecialArgs = { inherit inputs; };
         users.max.imports = with self.modules.homeManager; [
-          bat
           browsers
           dev
-          firefox
-          fuzzel
-          git
+          foot
           home
-          hyprlock
-          kanshi
-          kiti
-          kubernetes
           mail
-          mako
-          misc
-          music
-          news
+          media
           niri
-          nix
-          pdf
-          pictures
-          qutebrowser
-          radio
-          river
-          scripts
           secrets
           senpai
           services
           shell
           social
-          terminal
           tmux
-          todo
-          video
           vim
-          waybar
         ];
       };
     }];

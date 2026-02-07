@@ -1,5 +1,12 @@
 {
-  flake.modules.homeManager.secrets = { pkgs, config, ... }: {
+  flake.modules.homeManager.secrets = { inputs, pkgs, config, ... }: {
+    imports = [
+      inputs.sops-nix.homeManagerModules.sops
+    ];
+
+    sops.age.keyFile = "${config.xdg.configHome}/sops/age/keys.txt";
+    sops.defaultSopsFile = ../../secrets.yaml;
+
     programs.keepassxc = {
       enable = true;
       settings = {

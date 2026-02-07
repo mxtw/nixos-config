@@ -35,6 +35,8 @@
 
       home.packages = [
         kdenlive-ffmpeg7
+        pkgs.ffmpeg
+        pkgs.yt-dlp
       ];
     };
 }

@@ -5,6 +5,10 @@
     home.packages = with pkgs; [
       krita
       kdePackages.kolourpaint
+      pandoc
+      imagemagick
+      sway-contrib.grimshot
+      slurp
     ];
   };
 }
