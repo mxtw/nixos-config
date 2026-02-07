@@ -51,7 +51,6 @@
           pictures
           qutebrowser
           radio
-          river
           scripts
           secrets
           senpai

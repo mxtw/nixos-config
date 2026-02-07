@@ -52,7 +52,6 @@
     security.pam.services.hyprlock = { };
     services.gnome.gnome-keyring.enable = true;
 
-    # needed for river to work
     hardware.graphics.enable = true;
     hardware.graphics.enable32Bit = true;
 
@@ -72,7 +71,6 @@
       defaultSession = "niri";
     };
     services.dbus.enable = true;
-    programs.river-classic.enable = true;
     programs.niri.enable = true;
 
     # bluetooth
