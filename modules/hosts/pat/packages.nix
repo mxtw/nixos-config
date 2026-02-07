@@ -5,19 +5,24 @@
     ];
   };
   flake.modules.nixos.hostPat = { ... }: {
+    networking.hostName = "pat";
+
     imports = with self.modules.nixos; [
       inputs.sops-nix.nixosModules.sops
       inputs.lanzaboote.nixosModules.lanzaboote
       inputs.home-manager.nixosModules.home-manager
 
-      common
       audio
+      auto-cpufreq
+      common
+      graphics
+      printing
+
       cli
       files
       fonts
-      network
+      games
       secrets
-      services
       virtualization
     ] ++
     [{
@@ -43,20 +48,5 @@
         ];
       };
     }];
-
-    networking.hostName = "pat";
-    services.auto-cpufreq = {
-      enable = true;
-      settings = {
-        battery = {
-          governor = "powersave";
-          turbo = "never";
-        };
-        charger = {
-          governor = "performance";
-          turbo = "auto";
-        };
-      };
-    };
   };
 }

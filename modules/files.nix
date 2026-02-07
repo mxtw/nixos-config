@@ -14,5 +14,10 @@
 
     services.gvfs.enable = true;
     services.tumbler.enable = true;
+
+    programs.localsend = {
+      enable = true;
+      openFirewall = true;
+    };
   };
 }

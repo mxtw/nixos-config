@@ -5,20 +5,24 @@
     ];
   };
   flake.modules.nixos.hostSquid = { ... }: {
+    networking.hostName = "squid";
+
     imports = with self.modules.nixos; [
       inputs.sops-nix.nixosModules.sops
       inputs.lanzaboote.nixosModules.lanzaboote
       inputs.home-manager.nixosModules.home-manager
 
-      common
       audio
+      auto-cpufreq
+      common
+      graphics
+      printing
+
       cli
       files
       fonts
       games
-      network
       secrets
-      services
       virtualization
     ] ++
     [{
@@ -44,20 +48,5 @@
         ];
       };
     }];
-
-    networking.hostName = "squid";
-    services.auto-cpufreq = {
-      enable = true;
-      settings = {
-        battery = {
-          governor = "powersave";
-          turbo = "never";
-        };
-        charger = {
-          governor = "performance";
-          turbo = "auto";
-        };
-      };
-    };
   };
 }

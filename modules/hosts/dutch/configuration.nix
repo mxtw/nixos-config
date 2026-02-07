@@ -15,6 +15,8 @@
       nginx
       taskchampion
       zipline
+
+      ssh
     ];
 
     boot.loader.grub.enable = true;
@@ -33,18 +35,6 @@
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICOZx2ejqskuEDw9ZagBJ/srl0kZHki5VwYa2oxM/+Yi"
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ96dj94d7joqGSLX4NPiFFk9rsXrw4lUlP5LnyU5ZZT"
       ];
-    };
-    services.openssh = {
-      enable = true;
-      ports = [ 22 ];
-      settings = {
-        PasswordAuthentication = false;
-        KbdInteractiveAuthentication = false;
-        AllowUsers = null;
-        UseDns = true;
-        X11Forwarding = false;
-        PermitRootLogin = "prohibit-password";
-      };
     };
 
     sops.defaultSopsFile = ./secrets.yaml;

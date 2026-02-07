@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.services = { pkgs, ... }: {
+  flake.modules.nixos.printing = { pkgs, ... }: {
     services.avahi = {
       enable = true;
       nssmdns4 = true;
@@ -11,10 +11,6 @@
         cups-filters
         cups-browsed
       ];
-    };
-    programs.localsend = {
-      enable = true;
-      openFirewall = true;
     };
   };
 }

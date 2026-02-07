@@ -5,23 +5,29 @@
     ];
   };
   flake.modules.nixos.hostBob = { ... }: {
+    networking = {
+      hostName = "bob";
+      interfaces.enp14s0.wakeOnLan.enable = true;
+      firewall.allowedUDPPorts = [ 9 ];
+    };
+
     imports = with self.modules.nixos; [
       inputs.sops-nix.nixosModules.sops
       inputs.lanzaboote.nixosModules.lanzaboote
       inputs.home-manager.nixosModules.home-manager
 
-      common
       audio
+      auto-cpufreq
+      common
+      graphics
+      printing
+
       cli
       files
       fonts
       games
-      input
-      network
       secrets
-      services
       virtualization
-
     ] ++
     [{
       home-manager = {
@@ -46,11 +52,5 @@
         ];
       };
     }];
-
-    networking = {
-      hostName = "bob";
-      interfaces.enp14s0.wakeOnLan.enable = true;
-      firewall.allowedUDPPorts = [ 9 ];
-    };
   };
 }

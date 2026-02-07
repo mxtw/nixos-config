@@ -16,5 +16,6 @@
     environment.systemPackages = with pkgs; [
       docker-compose
     ];
+    users.users.max.extraGroups = [ "libvirtd" ];
   };
 }
