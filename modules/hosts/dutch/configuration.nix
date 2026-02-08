@@ -17,6 +17,7 @@
       zipline
 
       ssh
+      user
     ];
 
     boot.loader.grub.enable = true;
@@ -27,15 +28,6 @@
 
     networking.hostName = "dutch"; # Define your hostname.
     time.timeZone = "Europe/Berlin";
-    users.motdFile = ./motd.txt;
-    users.users.max = {
-      isNormalUser = true;
-      extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-      openssh.authorizedKeys.keys = [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICOZx2ejqskuEDw9ZagBJ/srl0kZHki5VwYa2oxM/+Yi"
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ96dj94d7joqGSLX4NPiFFk9rsXrw4lUlP5LnyU5ZZT"
-      ];
-    };
 
     sops.defaultSopsFile = ./secrets.yaml;
     sops.age.sshKeyPaths = [ "/etc/ssh/ssh_host_ed25519_key" ];
@@ -51,8 +43,6 @@
       htop
       git
     ];
-
-    networking.firewall.allowedTCPPorts = [ 80 443 6697 ];
 
     system.stateVersion = "25.05"; # Did you read the comment?
   };
