@@ -15,6 +15,7 @@
       nginx
       taskchampion
       zipline
+      teamspeak-server
 
       ssh
       user

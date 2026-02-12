@@ -5,6 +5,7 @@
         vesktop
         chatterino2
         streamlink
+        teamspeak6-client
       ];
     };
 }
