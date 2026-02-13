@@ -31,6 +31,7 @@
       };
       volumes = [
         "teamspeak-data:/var/tsserver:rw"
+        "/data/tsserver/files:/var/tsserver/files:rw"
       ];
       ports = [
         "9987:9987/udp"
