@@ -30,23 +30,40 @@
           dc = "docker compose";
           cx = "chmod +x";
         };
-        plugins = [
+        plugins = with pkgs.fishPlugins; [
           {
             name = "bang-bang";
-            src = pkgs.fishPlugins.bang-bang.src;
+            src = bang-bang.src;
           }
           {
-            name = "tide";
-            src = pkgs.fishPlugins.tide.src;
+            name = "pure";
+            src = pure.src;
+          }
+          {
+            name = "async-prompt";
+            src = async-prompt.src;
           }
           {
             name = "fzf-fish";
-            src = pkgs.fishPlugins.fzf-fish.src;
+            src = fzf-fish.src;
           }
         ];
         interactiveShellInit = ''
           set -U fish_color_scheme "Catppuccin Mocha"
           set -U fish_greeting ""
+
+          # pure prompt config
+          set -g async_prompt_functions _pure_prompt_git _pure_prompt_k8s
+
+          set -U pure_enable_single_line_prompt false
+          set -U pure_check_for_new_release false
+          set -U pure_enable_container_detection false
+          set -U pure_enable_git true
+          set -U pure_show_numbered_git_indicator true
+          set -U pure_enable_k8s true
+          set -U pure_enable_nixdevshell true
+          set -U pure_enable_virtualenv true
+          set -U pure_show_exit_status true
         '';
         functions = {
           initflake = ''nix flake init --template "https://flakehub.com/f/the-nix-way/dev-templates/*#$argv"'';
