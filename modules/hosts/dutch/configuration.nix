@@ -17,7 +17,6 @@
       taskchampion
       teamspeak-server
       uptime
-      zipline
 
       ssh
       user
