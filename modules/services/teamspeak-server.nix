@@ -26,6 +26,7 @@
         "TSSERVER_DEFAULT_PORT" = "9987";
         "TSSERVER_FILE_TRANSFER_IP" = "0.0.0.0";
         "TSSERVER_FILE_TRANSFER_PORT" = "30033";
+        "TSSERVER_QUERY_SSH_ENABLED" = "true";
         "TSSERVER_LICENSE_ACCEPTED" = "accept";
         "TSSERVER_VOICE_IP" = "0.0.0.0";
       };
@@ -35,6 +36,7 @@
       ports = [
         "9987:9987/udp"
         "30033:30033/tcp"
+        "127.0.0.1:10022:10022/tcp" # ssh query
       ];
       log-driver = "journald";
       extraOptions = [

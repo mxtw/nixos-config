@@ -14,8 +14,9 @@
       linkding
       nginx
       taskchampion
-      zipline
       teamspeak-server
+      uptime
+      zipline
 
       ssh
       user
