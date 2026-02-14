@@ -13,6 +13,7 @@
       irc
       linkding
       nginx
+      ntfy
       taskchampion
       teamspeak-server
       uptime
