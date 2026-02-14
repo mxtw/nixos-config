@@ -31,6 +31,10 @@
             "Alt+u" = "scroll-previous-highlight";
             "Control+r" = "search-editor";
           };
+          pane-widths = {
+            channels = -16;
+            members = -16;
+          };
         };
       };
     };
