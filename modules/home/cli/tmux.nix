@@ -15,6 +15,10 @@
             };
           rtpFilePath = "tmux-fzf-ssh.tmux";
         };
+      # see https://github.com/NixOS/nixpkgs/pull/484230#issuecomment-3879409094
+      session-wizard-fixed = pkgs.tmuxPlugins.session-wizard.overrideAttrs (previousAttrs: {
+        buildInputs = (previousAttrs.buildInputs or [ ]) ++ [ pkgs.bashNonInteractive ];
+      });
     in
     {
       programs.tmux = {
@@ -31,7 +35,7 @@
             extraConfig = "set -g @yank_action 'copy-pipe'";
           }
           {
-            plugin = tmuxPlugins.session-wizard;
+            plugin = session-wizard-fixed;
             extraConfig = "set -g @session-wizard 'm'";
           }
           tmuxPlugins.better-mouse-mode
