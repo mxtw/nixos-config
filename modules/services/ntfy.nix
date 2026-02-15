@@ -8,6 +8,8 @@ in
       settings = {
         listen-http = ":${port}";
         base-url = "https://ntfy.macks.cloud";
+        auth-default-access = "deny-all";
+        auth-file = "/var/lib/ntfy-sh/user.db";
       };
     };
     services.nginx.virtualHosts."ntfy.macks.cloud" = {
