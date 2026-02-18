@@ -17,6 +17,7 @@
       taskchampion
       teamspeak-server
       uptime
+      prosody
 
       ssh
       user
