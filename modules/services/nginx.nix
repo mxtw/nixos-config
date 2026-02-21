@@ -1,7 +1,6 @@
 {
   flake.modules.nixos.nginx = { config, ... }: {
     sops.secrets."cloudflare.env" = { };
-    services.nginx.enable = true;
     security.acme = {
       acceptTerms = true;
       defaults = {
@@ -17,17 +16,21 @@
         };
       };
     };
-    services.nginx.virtualHosts = {
-      "macks.cloud" = {
-        forceSSL = true;
-        default = true;
-        useACMEHost = "macks.cloud";
-        locations."/".root = "/var/www/macks.cloud";
-      };
-      "files.macks.cloud" = {
-        forceSSL = true;
-        useACMEHost = "macks.cloud";
-        locations."/".root = "/var/www/files";
+    services.nginx = {
+      enable = true;
+      recommendedProxySettings = true;
+      virtualHosts = {
+        "macks.cloud" = {
+          forceSSL = true;
+          default = true;
+          useACMEHost = "macks.cloud";
+          locations."/".root = "/var/www/macks.cloud";
+        };
+        "files.macks.cloud" = {
+          forceSSL = true;
+          useACMEHost = "macks.cloud";
+          locations."/".root = "/var/www/files";
+        };
       };
     };
     networking.firewall.allowedTCPPorts = [ 80 443 ];

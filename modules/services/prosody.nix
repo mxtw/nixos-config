@@ -13,7 +13,7 @@
         enable = true;
         admins = [ "admin@${domainName}" ];
         s2sSecureAuth = true;
-        virtualHosts."mcloud" = {
+        virtualHosts."${domainName}" = {
           ssl = {
             cert = "${sslCertDir}/fullchain.pem";
             key = "${sslCertDir}/key.pem";
@@ -21,13 +21,15 @@
           domain = "${domainName}";
           enabled = true;
         };
-        muc = [
-          {
-            domain = "muc.${domainName}";
-            restrictRoomCreation = false;
-          }
-        ];
-        xmppComplianceSuite = false; # TODO: implement entire suite
+        muc = [{
+          domain = "muc.${domainName}";
+          restrictRoomCreation = false;
+        }];
+        httpFileShare = {
+          domain = "upload.${domainName}";
+          http_external_url = "https://upload.${domainName}";
+          http_file_share_access = [ domainName ];
+        };
         extraConfig = ''
           storage = "sql"
           sql = {
@@ -38,7 +40,13 @@
       };
       networking.firewall.allowedTCPPorts = [
         5222
-        5223
+        5269
       ];
+
+      services.nginx.virtualHosts."upload.macks.cloud" = {
+        forceSSL = true;
+        useACMEHost = domainName;
+        locations."/".proxyPass = "http://localhost:5280";
+      };
     };
 }
