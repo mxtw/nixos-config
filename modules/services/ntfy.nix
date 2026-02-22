@@ -15,7 +15,10 @@ in
     services.nginx.virtualHosts."ntfy.macks.cloud" = {
       forceSSL = true;
       useACMEHost = "macks.cloud";
-      locations."/".proxyPass = "http://localhost:${port}";
+      locations."/" = {
+        proxyPass = "http://localhost:${port}";
+        proxyWebsockets = true;
+      };
     };
   };
 }
