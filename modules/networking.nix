@@ -7,6 +7,8 @@
     hardware.bluetooth.powerOnBoot = true;
     services.blueman.enable = true;
 
+    services.resolved.enable = true;
+
     environment.systemPackages = with pkgs; [
       nmap
       dig
