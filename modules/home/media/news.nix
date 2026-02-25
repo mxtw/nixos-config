@@ -1,5 +1,11 @@
 {
-  flake.modules.homeManager.news = { config, ... }:
+  flake.modules.homeManager.news = { inputs, pkgs, config, ... }:
+    let
+      eilmeldung-pkgs = import pkgs.path {
+        system = pkgs.stdenv.hostPlatform.system;
+        overlays = [ inputs.eilmeldung.overlays.default ];
+      };
+    in
     {
       sops.secrets.newsboat-config = { };
       programs.newsboat = {
@@ -40,5 +46,25 @@
         '';
       };
       programs.fish.shellAbbrs.nb = "newsboat";
+
+      imports = [ inputs.eilmeldung.homeManager.default ];
+      sops.secrets.freshrss-secret = { };
+      programs.eilmeldung = {
+        enable = true;
+        package = eilmeldung-pkgs.eilmeldung;
+        settings = {
+          article_scope = "unread";
+          feed_list_scope = "unread";
+          startup_commands = [ "sync" ];
+          after_sync_commands = [ "collapse all" "expandcategories unread" ];
+          login_setup = {
+            login_type = "direct_password";
+            provider = "freshrss";
+            user = "max";
+            url = "https://rss.macks.cloud/api/greader.php/";
+            password = "cmd:cat ${config.sops.secrets.freshrss-secret.path}";
+          };
+        };
+      };
     };
 }
