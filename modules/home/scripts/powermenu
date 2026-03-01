@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+CHOICE=$(cat <<EOF | fuzzel --dmenu
+suspend
+poweroff
+reboot
+quit
+EOF
+)
+
+case $CHOICE in
+    suspend)
+        systemctl suspend
+        ;;
+    poweroff)
+        systemctl poweroff
+        ;;
+    reboot)
+        systemctl reboot
+        ;;
+    quit)
+        niri msg action quit
+        ;;
+esac

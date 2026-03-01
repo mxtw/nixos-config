@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+grimshot save area - | tesseract stdin - | wl-copy
