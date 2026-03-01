@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+random_string() {
+    tr -dc A-Za-z0-9 < /dev/urandom | head -c 16
+}
+
+remote_path="/var/www/files"
+remote_url="https://files.macks.cloud"
+
+local_file=$1
+extension=${local_file##*.}
+
+remote_file="$(random_string).$extension"
+
+rsync --compress \
+    --verbose \
+    --human-readable \
+    --partial \
+    --progress \
+    "$local_file" "dutch:$remote_path/$remote_file"
+
+echo "$remote_url/$remote_file"
