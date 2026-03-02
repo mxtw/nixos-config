@@ -18,7 +18,10 @@
     };
     services.nginx = {
       enable = true;
+      recommendedBrotliSettings = true;
+      recommendedGzipSettings = true;
       recommendedProxySettings = true;
+      recommendedTlsSettings = true;
       virtualHosts = {
         "macks.cloud" = {
           forceSSL = true;
