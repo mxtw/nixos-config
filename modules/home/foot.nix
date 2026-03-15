@@ -9,8 +9,8 @@
           font-size-adjustment = 2;
           include = "${pkgs.foot.themes}/share/foot/themes/catppuccin-mocha";
         };
-        colors.alpha = 0.95;
-        colors.cursor = "1e1e2e cdd6f4";
+        colors-dark.alpha = 0.95;
+        colors-dark.cursor = "1e1e2e cdd6f4";
         cursor.unfocused-style = "hollow";
       };
     };
