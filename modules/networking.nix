@@ -15,7 +15,7 @@
       tcpdump
       whois
 
-      protonvpn-gui
+      proton-vpn-cli
       wakeonlan
     ];
 
