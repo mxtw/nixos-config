@@ -9,6 +9,7 @@
       inputs.sops-nix.nixosModules.sops
 
       cgit
+      git-mirror
       freshrss
       irc
       linkding
