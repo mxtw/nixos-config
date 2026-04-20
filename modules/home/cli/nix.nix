@@ -1,6 +1,7 @@
 {
   flake.modules.homeManager.nix = { pkgs, inputs, ... }:
     {
+      home.packages = [ pkgs.appimage-run ];
       programs = {
         nh = {
           enable = true;
