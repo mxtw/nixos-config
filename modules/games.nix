@@ -18,6 +18,9 @@
       (lutris.override {
         extraLibraries = pkgs: [ libadwaita gtk4 ];
       })
+      (bottles.override {
+        removeWarningPopup = true;
+      })
       heroic
       wine
       wine64
