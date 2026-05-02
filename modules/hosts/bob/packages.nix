@@ -21,6 +21,7 @@
       common
       graphics
       printing
+      input
 
       cli
       files
