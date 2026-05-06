@@ -3,6 +3,7 @@
     nixpkgs.config.allowUnfree = false;
     nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
       "obsidian"
+      "rpcs3"
       "spotify"
       "steam"
       "steam-unwrapped"
