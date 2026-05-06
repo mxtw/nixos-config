@@ -29,6 +29,7 @@
       games
       secrets
       virtualization
+      overlays
     ] ++
     [{
       home-manager = {
