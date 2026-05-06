@@ -70,6 +70,8 @@
     hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
     hardware.amdgpu.opencl.enable = true;
-    nixpkgs.config.rocmSupport = true;
+
+    # TODO: temporarily disabled due to some build failures
+    nixpkgs.config.rocmSupport = false;
   };
 }
