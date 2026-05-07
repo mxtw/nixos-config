@@ -15,7 +15,7 @@
                 serviceConfig = {
                   Type = "oneshot";
                   ExecStart = ''
-                    ${pkgs.bash}/bin/bash -c "${pkgs.git}/bin/git clone --bare ${url} ${targetDir} || (cd ${targetDir} && ${pkgs.git}/bin/git fetch -a)"
+                    ${pkgs.bash}/bin/bash -c "${pkgs.git}/bin/git clone --mirror ${url} ${targetDir} || (cd ${targetDir} && ${pkgs.git}/bin/git remote update)"
                   '';
                 };
               };
