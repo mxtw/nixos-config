@@ -19,6 +19,7 @@
       teamspeak-server
       uptime
       prosody
+      fail2ban
 
       ssh
       user
