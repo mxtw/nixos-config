@@ -29,11 +29,6 @@
           useACMEHost = "macks.cloud";
           locations."/".root = "/var/www/macks.cloud";
         };
-        "files.macks.cloud" = {
-          forceSSL = true;
-          useACMEHost = "macks.cloud";
-          locations."/".root = "/var/www/files";
-        };
       };
     };
     networking.firewall.allowedTCPPorts = [ 80 443 ];

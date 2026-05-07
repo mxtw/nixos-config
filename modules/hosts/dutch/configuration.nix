@@ -20,6 +20,7 @@
       uptime
       prosody
       fail2ban
+      copyparty
 
       ssh
       user
