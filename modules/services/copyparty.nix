@@ -14,6 +14,9 @@
           i = "unix:770:${socket}";
           rm-sck = true;
           rproxy = 1;
+          usernames = true;
+          name = "files";
+          name-url = "https://files.macks.cloud/";
         };
         accounts.max.passwordFile = config.sops.secrets.copyparty_max.path;
         volumes = {
@@ -27,6 +30,31 @@
           "/private" = {
             path = "/data/files/private";
             access.A = [ "max" ];
+          };
+          "/ss" = {
+            path = "/data/files/ss";
+            access = {
+              A = [ "max" ];
+              g = "*";
+            };
+            flags = {
+              rand = true;
+              nrand = 8;
+            };
+          };
+          "/tmp" = {
+            path = "/data/files/tmp";
+            access = {
+              A = [ "max" ];
+              g = "*";
+            };
+            flags = {
+              rand = true;
+              nrand = 8;
+              fk = 8;
+              pk = true;
+              lifetime = 86400;
+            };
           };
         };
       };
