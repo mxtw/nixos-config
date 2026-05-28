@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.gtk = { pkgs, ... }: {
+  flake.modules.homeManager.gtk = { pkgs, config, ... }: {
     gtk = {
       enable = true;
       theme.name = "Catppuccin-GTK-Dark";
@@ -9,6 +9,7 @@
       cursorTheme.name = "catppuccin-mocha-dark-cursors";
       cursorTheme.package = pkgs.catppuccin-cursors.mochaDark;
       cursorTheme.size = 16;
+      gtk4.theme = config.gtk.theme;
     };
   };
 }
