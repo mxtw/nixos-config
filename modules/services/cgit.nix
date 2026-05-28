@@ -20,6 +20,10 @@
     services.nginx.virtualHosts."git.macks.cloud".forceSSL = true;
     services.nginx.virtualHosts."git.macks.cloud".useACMEHost = "macks.cloud";
 
+    # enable git here to allow setting a global config for safe directories
+    programs.git.enable = true;
+    programs.git.config.safe.directory = "/data/git/*";
+
     users = {
       users.git = {
         isSystemUser = true;
