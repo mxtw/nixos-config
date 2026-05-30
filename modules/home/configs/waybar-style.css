@@ -1,4 +1,13 @@
-@import "mocha.css";
+@define-color bg #282828;
+@define-color gray #928374;
+@define-color fg #ebdbb2;
+@define-color yellow #fabd2f;
+@define-color red #fb4934;
+@define-color green #b8bb26;
+@define-color blue #83a598;
+@define-color purple #d3869b;
+@define-color aqua #8ec07c;
+
 
 * {
     border: none;
@@ -12,15 +21,11 @@
 }
 
 window#waybar {
-    background: alpha(@base, 0.9);
-}
-
-window#waybar.fullscreen {
-    background: alpha(@surface0, 0.9);
+    background: alpha(@bg, 0.9);
 }
 
 tooltip {
-    background: alpha(@base, 0.9);
+    background: alpha(@bg, 0.9);
 }
 
 #tags,
@@ -43,25 +48,25 @@ tooltip {
 #workspaces button {
     min-width: 0;
     padding: 0 6px;
-    color: @surface2;
+    color: @fg;
     margin-top: 2px;
     border-bottom: 2px solid transparent;
 }
 
 #tags button.focused,
 #workspaces button.focused {
-    color: @lavender;
-    border-bottom: 2px solid @lavender;
-}
-
-#tags button.urgent,
-#workspaces button.urgent {
     color: @yellow;
     border-bottom: 2px solid @yellow;
 }
 
+#tags button.urgent,
+#workspaces button.urgent {
+    color: @red;
+    border-bottom: 2px solid @red;
+}
+
 #window {
-    color: @lavender;
+    color: @fg;
     /*
     * workaround to make the bar not resize when there are weird characters in
     * the window title
@@ -71,28 +76,24 @@ tooltip {
     margin-bottom: -50px
 }
 
-#layout {
-    color: @lavender;
-}
-
 #pulseaudio {
-    color: @sapphire;
+    color: @green;
 }
 
 #pulseaudio.source-muted {
-    color: @overlay0;
+    color: @gray;
 }
 
 #cpu {
-    color: @sky;
+    color: @blue;
 }
 
 #memory {
-    color: @teal;
+    color: @purple;
 }
 
 #clock {
-    color: @green;
+    color: @yellow;
 }
 
 #battery {
@@ -100,20 +101,20 @@ tooltip {
 }
 
 #battery.critical {
-    color: @base;
+    color: @bg;
     background: @red;
 }
 
 #battery.warning {
-    color: @base;
+    color: @bg;
     background: @yellow;
 }
 
 #battery.charging {
-    color: @base;
+    color: @bg;
     background: @green;
 }
 
 #tray {
-    color: @base;
+    color: @bg;
 }

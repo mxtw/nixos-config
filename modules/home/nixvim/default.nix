@@ -23,11 +23,12 @@
       defaultEditor = true;
       nixpkgs.useGlobalPackages = true;
 
-      colorschemes.catppuccin = {
-        enable = true;
-        settings.transparent_background = true;
-        settings.float.transparent = true;
-      };
+      # colorschemes.catppuccin = {
+      #   enable = true;
+      #   settings.transparent_background = true;
+      #   settings.float.transparent = true;
+      # };
+      colorschemes.gruvbox.enable = true;
 
       globals.mapleader = " ";
 
