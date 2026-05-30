@@ -9,7 +9,7 @@
         address = "ircs://irc.macks.cloud:6697";
         typings = false;
         colors.nicks = "extended";
-        colors.unread = "#b4befe";
+        colors.unread = "#fabd2f";
         shortcuts = {
           "Alt+n" = "buffer-next-unread";
           "Alt+p" = "buffer-previous-unread";

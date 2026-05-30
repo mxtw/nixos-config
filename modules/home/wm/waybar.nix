@@ -1,12 +1,5 @@
 {
-  flake.modules.homeManager.waybar = { config, ... }: {
-    home.file."${config.xdg.configHome}/waybar/mocha.css" = {
-      source = builtins.fetchurl
-        {
-          url = "https://raw.githubusercontent.com/catppuccin/waybar/ee8ed32b4f63e9c417249c109818dcc05a2e25da/themes/mocha.css";
-          sha256 = "05yx7v4j9k1s1xanlak7yngqfwvxvylwxc2fhjcfha68rjbhbqx6";
-        };
-    };
+  flake.modules.homeManager.waybar = {
     programs.waybar = {
       enable = true;
       systemd.enable = true;

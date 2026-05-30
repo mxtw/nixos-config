@@ -75,6 +75,7 @@
           "privacy.resistFingerprinting" = true;
           "privacy.resistFingerprinting.testGranularityMask" = 4;
           "privacy.resistFingerprinting.exemptedDomains" = "monkeytype.com, netflix.com, paypal.com, *.paypal.com, *.netflix.com";
+          "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
         };
       };
     };

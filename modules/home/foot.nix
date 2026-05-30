@@ -7,10 +7,9 @@
           font = "IosevkaTerm Nerd Font:size=15";
           pad = "5x2 center";
           font-size-adjustment = 2;
-          include = "${pkgs.foot.themes}/share/foot/themes/catppuccin-mocha";
+          include = "${pkgs.foot.themes}/share/foot/themes/gruvbox";
         };
         colors-dark.alpha = 0.95;
-        colors-dark.cursor = "1e1e2e cdd6f4";
         cursor.unfocused-style = "hollow";
       };
     };
