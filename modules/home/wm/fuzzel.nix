@@ -14,15 +14,15 @@
           radius = 0;
         };
         colors = {
-          background = "1e1e2eda";
-          text = "cdd6f4ff";
-          input = "cdd6f4ff";
-          prompt = "cdd6f4ff";
-          match = "b4befeff";
-          selection = "585b70ff";
-          selection-match = "b4befeff";
-          selection-text = "cdd6f4ff";
-          border = "b4befeff";
+          background = "282828da";
+          text = "ebdbb2ff";
+          input = "ebdbb2ff";
+          prompt = "ebdbb2ff";
+          match = "83a598ff";
+          selection = "ebdbb25f";
+          selection-match = "83a598ff";
+          selection-text = "ebdbb2ff";
+          border = "ebdbb2ff";
         };
       };
     };

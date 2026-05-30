@@ -4,7 +4,6 @@
     force = true;
     packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
       darkreader
-      firefox-color
       linkding-extension
       sponsorblock
       ublock-origin
@@ -53,55 +52,6 @@
             "adguard-widgets"
             "ublock-annoyances"
           ];
-        };
-      };
-      "FirefoxColor@mozilla.com" = {
-        force = true;
-        settings.firstRunDone = true;
-        settings.theme = {
-          title = "theme";
-          images = { };
-          properties = {
-            additional_backgrounds_alignment = [ "top" ];
-            additional_backgrounds_tiling = [ "repeat" ];
-          };
-          colors = {
-            toolbar = { r = 30; g = 30; b = 46; };
-            toolbar_text = { r = 205; g = 214; b = 244; };
-            frame = { r = 17; g = 17; b = 27; };
-            tab_background_text = { r = 205; g = 214; b = 244; };
-            toolbar_field = { r = 24; g = 24; b = 37; };
-            toolbar_field_text = { r = 205; g = 214; b = 244; };
-            tab_line = { r = 180; g = 190; b = 254; };
-            popup = { r = 30; g = 30; b = 46; };
-            popup_text = { r = 205; g = 214; b = 244; };
-            button_background_active = { r = 108; g = 112; b = 134; };
-            frame_inactive = { r = 17; g = 17; b = 27; };
-            icons_attention = { r = 180; g = 190; b = 254; };
-            icons = { r = 180; g = 190; b = 254; };
-            ntp_background = { r = 17; g = 17; b = 27; };
-            ntp_text = { r = 205; g = 214; b = 244; };
-            popup_border = { r = 180; g = 190; b = 254; };
-            popup_highlight_text = { r = 205; g = 214; b = 244; };
-            popup_highlight = { r = 108; g = 112; b = 134; };
-            sidebar_border = { r = 180; g = 190; b = 254; };
-            sidebar_highlight_text = { r = 17; g = 17; b = 27; };
-            sidebar_highlight = { r = 180; g = 190; b = 254; };
-            sidebar_text = { r = 205; g = 214; b = 244; };
-            sidebar = { r = 30; g = 30; b = 46; };
-            tab_background_separator = { r = 180; g = 190; b = 254; };
-            tab_loading = { r = 180; g = 190; b = 254; };
-            tab_selected = { r = 30; g = 30; b = 46; };
-            tab_text = { r = 205; g = 214; b = 244; };
-            toolbar_bottom_separator = { r = 30; g = 30; b = 46; };
-            toolbar_field_border_focus = { r = 180; g = 190; b = 254; };
-            toolbar_field_border = { r = 30; g = 30; b = 46; };
-            toolbar_field_focus = { r = 30; g = 30; b = 46; };
-            toolbar_field_highlight_text = { r = 30; g = 30; b = 46; };
-            toolbar_field_highlight = { r = 180; g = 190; b = 254; };
-            toolbar_field_separator = { r = 180; g = 190; b = 254; };
-            toolbar_vertical_separator = { r = 180; g = 190; b = 254; };
-          };
         };
       };
     };

@@ -6,11 +6,11 @@
         input-field = [
           {
             outline_thickness = 2;
-            outer_color = "rgb(b4befe)";
-            check_color = "rgb(a6e3a1)";
-            fail_color = "rgb(f38ba8)";
-            inner_color = "rgba(1e1e2e0a)";
-            font_color = "rgb(cdd6f4)";
+            outer_color = "rgb(ebdbb2)";
+            check_color = "rgb(b8bb26)";
+            fail_color = "rgb(fb4934)";
+            inner_color = "rgba(2828280a)";
+            font_color = "rgb(ebdbb2)";
             position = "0, -120";
             fade_on_empty = false;
             size = "300, 40";
@@ -18,20 +18,20 @@
           }
         ];
         background = {
-          color = "rgb(1e1e2e)";
+          color = "rgb(282828)";
           path = "screenshot";
           blur_passes = 4;
           brightness = 0.5;
         };
         label = [
           {
-            color = "rgb(cdd6f4)";
+            color = "rgb(ebdbb2)";
             font_size = "100";
             position = "0, 50";
             text = "cmd[update:1000] date +%H:%M:%S";
           }
           {
-            color = "rgb(cdd6f4)";
+            color = "rgb(ebdbb2)";
             font_size = "32";
             position = "0, -50";
             text = "cmd[update:10000] date +'%a, %x'";

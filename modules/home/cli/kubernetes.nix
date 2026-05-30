@@ -1,15 +1,6 @@
 {
   flake.modules.homeManager.kubernetes = { pkgs, ... }: {
-    programs.k9s = {
-      enable = true;
-      settings.k9s = {
-        ui.skin = "catppuccin-mocha-transparent";
-      };
-      skins = {
-        catppuccin-mocha-transparent = ../configs/k9s-theme.yaml;
-      };
-    };
-
+    programs.k9s.enable = true;
     home.packages = with pkgs; [
       kubectl
       krew
