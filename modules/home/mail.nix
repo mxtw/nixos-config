@@ -1,11 +1,11 @@
 {
   flake.modules.homeManager.mail = { pkgs, config, ... }:
     let
-      catppuccin-aerc = pkgs.fetchFromGitHub {
-        owner = "catppuccin";
-        repo = "aerc";
-        rev = "3580c723ee071e512d5e41bf88cea837b4f23746";
-        sha256 = "jYFk8eZ3um5S7DxiGbGHGa05/HkxYYrqUX8cEhNEEu0=";
+      gruvbox-aerc = pkgs.fetchFromGitHub {
+        owner = "iruzo";
+        repo = "gruvbox-aerc";
+        rev = "02404d48e9d7e1bb9500ab5c8cdb2820550c1567";
+        sha256 = "kTNuM9YitEtk0tNXWA2opT0L24ugbCulvbCEKRJw3o4=";
       };
     in
     {
@@ -64,7 +64,7 @@
       services.imapnotify.path = [ pkgs.coreutils-full ]; # needed in passwordCmd
       programs.msmtp.enable = true;
 
-      xdg.configFile."aerc/stylesets/catppuccin-mocha".source = "${catppuccin-aerc}/dist/catppuccin-mocha";
+      xdg.configFile."aerc/stylesets/gruvbox-dark".source = "${gruvbox-aerc}/gruvbox-dark";
       programs.aerc = {
         enable = true;
         extraAccounts.max.source = "maildir://~/.mail/max";
@@ -73,7 +73,7 @@
           ui = {
             border-char-vertical = "│";
             border-char-horizontal = "─";
-            styleset-name = "catppuccin-mocha";
+            styleset-name = "gruvbox-dark";
             sort = "-r date";
             mouse-enabled = true;
           };
