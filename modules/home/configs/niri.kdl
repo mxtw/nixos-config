@@ -49,6 +49,7 @@ output "DP-2" {
 layout {
     gaps 2
     always-center-single-column
+    background-color "#1e1e2e"
 
     focus-ring {
         off
