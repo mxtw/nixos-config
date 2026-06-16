@@ -32,7 +32,7 @@
       wowup-cf
 
       pcsx2
-      rpcs3
+      # rpcs3 # TODO: re-enable once needed and no longer broken
     ];
   };
 }

@@ -21,6 +21,7 @@
     programs.nixvim = {
       enable = true;
       defaultEditor = true;
+      nixpkgs.useGlobalPackages = true;
 
       colorschemes.catppuccin = {
         enable = true;
