@@ -12,7 +12,7 @@
     };
     nixvim.url = "github:nix-community/nixvim";
     lanzaboote = {
-      url = "github:nix-community/lanzaboote/v0.4.3";
+      url = "github:nix-community/lanzaboote/v1.1.0";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     firefox-addons = {
