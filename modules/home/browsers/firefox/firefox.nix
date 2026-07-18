@@ -8,7 +8,7 @@
     programs.firefox = {
       enable = true;
       profiles.max = {
-        search.default = "ddg";
+        search.default = "Kagi";
         search.force = true;
         settings = {
           "browser.search.region" = "DE";

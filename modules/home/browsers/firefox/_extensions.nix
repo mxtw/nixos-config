@@ -5,11 +5,11 @@
     packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
       darkreader
       firefox-color
-      keepassxc-browser
       linkding-extension
       sponsorblock
       ublock-origin
       web-archives
+      kagi-search
 
       # this is outdated, find an alternative, see https://github.com/samuelmaddock/metastream/issues/456
       (inputs.firefox-addons.lib.${pkgs.stdenv.hostPlatform.system}.buildFirefoxXpiAddon rec {
