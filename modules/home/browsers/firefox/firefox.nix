@@ -8,8 +8,18 @@
     programs.firefox = {
       enable = true;
       profiles.max = {
-        search.default = "Kagi";
-        search.force = true;
+        search = {
+          default = "kagi";
+          force = true;
+          engines.kagi = {
+            name = "kagi";
+            urls = [{
+              template = "https://kagi.com/search";
+              params = [{ name = "q"; value = "{searchTerms}"; }];
+            }];
+            icon = "https://kagi.com/favicon-16x16.png";
+          };
+        };
         settings = {
           "browser.search.region" = "DE";
           "browser.search.isUS" = false;
