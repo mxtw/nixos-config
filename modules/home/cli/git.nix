@@ -23,9 +23,10 @@
     programs.lazygit = {
       enable = true;
       settings = {
-        git.pagers = [
+        git.diffRenderers = [
           {
-            externalDiffCommand = "difft --color=always";
+            command = "difft --color=always";
+            type = "extDiff";
           }
         ];
         gui.theme = {
