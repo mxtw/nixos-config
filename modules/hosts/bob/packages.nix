@@ -23,6 +23,7 @@
       printing
       input
 
+      appimage
       cli
       files
       fonts
