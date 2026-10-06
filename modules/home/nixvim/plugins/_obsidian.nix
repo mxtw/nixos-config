@@ -21,7 +21,7 @@
             template = null;
           };
           templates.subdir = "templates";
-          picker.name = "snacks.pick";
+          picker.name = "snacks.picker";
 
           legacy_commands = false;
           notes_subdir = "notes";
