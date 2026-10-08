@@ -14,6 +14,7 @@
 
     home.packages = [
       pkgs.xwayland-satellite
+      pkgs.bemoji
     ];
 
     home.file."${config.xdg.configHome}/niri/config.kdl".source = ../configs/niri.kdl;

@@ -89,6 +89,7 @@ binds {
     Mod+P hotkey-overlay-title="Open Launcher" { spawn "fuzzel"; }
     Mod+Shift+P hotkey-overlay-title="Open Password Manager" { spawn "pass-fuzzel"; }
     Mod+Shift+S hotkey-overlay-title="Take Screenshot" { screenshot; }
+    Mod+Shift+E hotkey-overlay-title="Open Emoji Picker" { spawn "bemoji"; }
 
     Mod+W repeat=false { toggle-overview; }
     Mod+Shift+C repeat=false { close-window; }
