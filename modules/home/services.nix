@@ -11,6 +11,5 @@
     };
 
     services.ssh-agent.enable = true;
-    services.easyeffects.enable = true;
   };
 }
