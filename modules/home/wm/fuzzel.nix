@@ -4,7 +4,7 @@
       enable = true;
       settings = {
         main = {
-          font = "Hack Nerd Font:size=18";
+          font = "Iosevka Nerd Font:size=18";
           horizontal-pad = 5;
           vertical-pad = 5;
           dpi-aware = false;

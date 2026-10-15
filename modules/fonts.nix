@@ -5,7 +5,9 @@
       noto-fonts
       noto-fonts-color-emoji
       hack-font
+      iosevka
       nerd-fonts.hack
+      nerd-fonts.iosevka
     ];
   };
 }
