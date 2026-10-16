@@ -4,7 +4,7 @@
       enable = true;
       settings = {
         main = {
-          font = "Iosevka Nerd Font:size=15";
+          font = "IosevkaTerm Nerd Font:size=15";
           pad = "5x2 center";
           font-size-adjustment = 2;
           include = "${pkgs.foot.themes}/share/foot/themes/catppuccin-mocha";

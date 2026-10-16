@@ -3,7 +3,7 @@
     services.mako = {
       enable = true;
       settings = {
-        font = "Iosevka Nerd Font 10";
+        font = "IosevkaTerm Nerd Font 10";
         text-color = "#b4befeff";
         border-color = "#b4befeff";
         background-color = "#1e1e2ee6";
