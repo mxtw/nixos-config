@@ -1,0 +1,32 @@
+#tabbrowser-tabs {
+    --tab-inline-padding: 2px !important;
+    --tab-border-radius: 0px !important;
+}
+
+#tabbrowser-tabs .tabbrowser-tab {
+    padding-inline: 4px !important;
+    margin-block: 0 !important;
+}
+
+#tabbrowser-tabs .tab-close-button {
+    margin-inline-start: 2px !important;
+    margin-inline-end: 4px !important;
+}
+
+#tabbrowser-tabs .tab-background,
+#tabbrowser-tabs .tab-group,
+#tabbrowser-tabs .tab-group-label-container,
+#tabbrowser-tabs .tab-group-label,
+#tabbrowser-tabs .tab-group-label-hover-highlight {
+    margin: 0 !important;
+    border-radius: 0 !important;
+}
+
+#tabbrowser-tabs .tab-group-label {
+    padding-inline: 4px !important;
+}
+
+#tabbrowser-tabs .tab-group-line {
+    inset-inline-start: -5px !important;
+    inset-inline-end: auto !important;
+}

@@ -20,6 +20,7 @@
             icon = "https://kagi.com/favicon-16x16.png";
           };
         };
+        userChrome = ../../configs/userChrome.css;
         settings = {
           "browser.search.region" = "DE";
           "browser.search.isUS" = false;
