@@ -10,6 +10,7 @@
           include = "${pkgs.foot.themes}/share/foot/themes/gruvbox";
         };
         colors-dark.alpha = 0.95;
+        colors-dark.cursor = "282828 ebdbb2";
         cursor.unfocused-style = "hollow";
       };
     };
