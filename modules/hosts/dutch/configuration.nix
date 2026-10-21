@@ -10,7 +10,7 @@
 
       cgit
       git-mirror
-      freshrss
+      miniflux
       irc
       linkding
       nginx
