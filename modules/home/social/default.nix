@@ -7,6 +7,9 @@
       profanity
     ];
 
-    programs.vesktop.enable = true;
+    programs.vesktop = {
+      enable = true;
+      vencord.useSystem = true;
+    };
   };
 }
