@@ -18,7 +18,7 @@
     };
     services.nginx = {
       enable = true;
-      recommendedBrotliSettings = true;
+      recommendedBrotliSettings = false;
       recommendedGzipSettings = true;
       recommendedProxySettings = true;
       recommendedTlsSettings = true;
