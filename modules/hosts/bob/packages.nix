@@ -43,6 +43,7 @@
           foot
           home
           mail
+          calendar
           media
           niri
           secrets
