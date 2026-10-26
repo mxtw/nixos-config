@@ -21,6 +21,7 @@
       prosody
       fail2ban
       copyparty
+      radicale
 
       ssh
       user
