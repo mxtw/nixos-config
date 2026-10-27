@@ -21,10 +21,7 @@
       };
 
       servers = {
-        basedpyright = {
-          enable = true;
-          settings.basedpyright.analysis.typeCheckingMode = "basic";
-        };
+        ty.enable = true;
         ruff.enable = true;
         bashls.enable = true;
         clangd.enable = true;
