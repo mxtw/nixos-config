@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.mail = { pkgs, config, ... }:
+  flake.modules.homeManager.mail = { pkgs, ... }:
     let
       gruvbox-aerc = pkgs.fetchFromGitHub {
         owner = "iruzo";
@@ -9,16 +9,8 @@
       };
     in
     {
-      # need to first set it up with
-      # systemctl stop --user protonmail-bridge.service
-      # protonmail-bridge --cli ...
-      # systemctl start --user protonmail-bridge.service
-      home.packages = [ pkgs.protonmail-bridge ];
-      services.protonmail-bridge.enable = true;
-
       accounts.email = {
         maildirBasePath = ".mail";
-        certificatesFile = "${config.xdg.configHome}/protonmail/bridge-v3/cert.pem";
         accounts = {
           max = {
             primary = true;
@@ -27,19 +19,16 @@
             userName = "max@macks.cloud";
             address = "max@macks.cloud";
             maildir.path = "max";
-            # this is not great...
-            passwordCommand = "cat ${config.xdg.configHome}/protonmail/bridge-v3/.password";
+            passwordCommand = "pass mail/macks.cloud/max@macks.cloud";
             smtp = {
-              host = "127.0.0.1";
-              port = 1025;
+              host = "smtp.migadu.com";
+              port = 465;
               tls.enable = true;
-              tls.useStartTls = true;
             };
             imap = {
-              host = "127.0.0.1";
-              port = 1143;
+              host = "imap.migadu.com";
+              port = 993;
               tls.enable = true;
-              tls.useStartTls = true;
             };
             aerc.enable = true;
             msmtp.enable = true;
@@ -48,11 +37,10 @@
               enable = true;
               create = "maildir";
               expunge = "both";
-              patterns = [ "*" "!All Mail" "!Labels/*" ];
             };
             imapnotify = {
               enable = true;
-              boxes = [ "Inbox" "Folders/forwarded" ];
+              boxes = [ "Inbox" ];
               onNotify = "${pkgs.isync}/bin/mbsync max";
             };
           };
