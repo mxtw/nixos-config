@@ -19,6 +19,7 @@
           khal = {
             enable = true;
             addresses = [ "max@macks.cloud" ];
+            color = "#b8bb26";
           };
           vdirsyncer = {
             enable = true;
