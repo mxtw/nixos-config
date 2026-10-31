@@ -26,6 +26,8 @@
       pinentry.package = pkgs.pinentry-all;
       pinentry.program = "pinentry-qt";
       enableFishIntegration = true;
+      defaultCacheTtl = 3600;
+      maxCacheTtl = 86400;
     };
     programs.password-store = {
       enable = true;
