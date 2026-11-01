@@ -31,10 +31,26 @@
               tls.enable = true;
             };
             aerc.enable = true;
-            folders.inbox = "INBOX";
+            msmtp.enable = true;
+            folders.inbox = "Inbox";
+            mbsync = {
+              enable = true;
+              create = "maildir";
+              expunge = "both";
+            };
+            imapnotify = {
+              enable = true;
+              boxes = [ "Inbox" ];
+              onNotify = "${pkgs.isync}/bin/mbsync max";
+            };
           };
         };
       };
+      programs.mbsync.enable = true;
+      services.mbsync.enable = true;
+      services.imapnotify.enable = true;
+      services.imapnotify.path = [ pkgs.coreutils-full ]; # needed in passwordCmd
+      programs.msmtp.enable = true;
 
       xdg.configFile."aerc/stylesets/gruvbox-dark".source = "${gruvbox-aerc}/gruvbox-dark";
       programs.aerc = {
