@@ -35,7 +35,7 @@
             folders.inbox = "Inbox";
             mbsync = {
               enable = true;
-              create = "maildir";
+              create = "both";
               expunge = "both";
             };
             imapnotify = {
@@ -55,7 +55,11 @@
       xdg.configFile."aerc/stylesets/gruvbox-dark".source = "${gruvbox-aerc}/gruvbox-dark";
       programs.aerc = {
         enable = true;
-        extraAccounts.max.source = "maildir://~/.mail/max";
+        extraAccounts.max = {
+          source = "maildir://~/.mail/max";
+          pgp-auto-sign = true;
+          check-mail-cmd = "${pkgs.isync}/bin/mbsync max";
+        };
         extraConfig = {
           general.unsafe-accounts-conf = true;
           ui = {
