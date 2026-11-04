@@ -62,12 +62,15 @@
         };
         extraConfig = {
           general.unsafe-accounts-conf = true;
+          hooks.mail-received = ''${pkgs.libnotify}/bin/notify-send "new mail: $AERC_FROM_NAME - $AERC_SUBJECT"'';
           ui = {
             border-char-vertical = "│";
             border-char-horizontal = "─";
             styleset-name = "gruvbox-dark";
             sort = "-r date";
             mouse-enabled = true;
+            dirlist-tree = true;
+            dirlist-collapse = 1;
           };
           filters = {
             "text/html" = "${pkgs.aerc}/libexec/aerc/filters/html -o display_link_number=true | ${pkgs.aerc}/libexec/aerc/filters/colorize";
