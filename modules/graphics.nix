@@ -3,19 +3,8 @@
     hardware.graphics.enable = true;
     hardware.graphics.enable32Bit = true;
 
-    environment.systemPackages = [
-      (pkgs.catppuccin-sddm.override {
-        flavor = "mocha";
-        accent = "lavender";
-      })
-    ];
     services.displayManager = {
-      sddm = {
-        enable = true;
-        wayland.enable = true;
-        theme = "catppuccin-mocha-lavender";
-        package = pkgs.kdePackages.sddm;
-      };
+      ly.enable = true;
       defaultSession = "niri";
     };
     services.dbus.enable = true;
